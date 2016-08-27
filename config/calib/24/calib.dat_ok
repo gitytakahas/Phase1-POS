@@ -1,0 +1,14 @@
+Mode: TBMDelay
+Parameters:
+DumpFIFOs yes
+CycleFIFO2Channels no
+NoScanOK yes
+Rows:
+ 10 
+Cols:
+ 10
+VcalHigh
+Set: Vcal 255
+Repeat: 10
+Rocs:
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC0

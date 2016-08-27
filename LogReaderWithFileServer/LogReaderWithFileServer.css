@@ -1,0 +1,123 @@
+/** Add css rules here for your application. */
+
+.gwt-Label {
+  font-size: 8pt
+}
+
+.gwt-Label-radioButtonLabel {
+  font-weight: bold;
+}
+
+.gwt-Label-comboLabel {
+  font-weight: bold;
+}
+
+
+.gwt-Label-lineHeaderLabel {
+  background-color: lightgrey;
+}
+
+
+
+.gwt-ListBox {
+  font-size: 8pt
+}
+
+.gwt-LogsFlexTable {
+  border-style: solid;
+  border-width: thin
+}
+
+
+.gwt-LogsFlexTable-HeaderRow {
+/*  background-color: lightgrey; */
+  background-color: grey;
+/*  background-color: rgb(0,0,0); */
+  text-align: center;
+}
+
+
+.gwt-LogsFlexTable-TraceRow {
+  background-color: white;
+  text-align: left;
+}
+
+
+.gwt-LogsFlexTable-DebugRow {
+  background-color: white;
+  text-align: left;
+}
+
+
+.gwt-LogsFlexTable-InfoRow {
+  background-color: white;
+  text-align: left;
+}
+
+
+.gwt-LogsFlexTable-WarnRow {
+  /*background-color: orange;*/
+  background-color:rgb(255, 204, 51);
+  text-align: left;
+}
+
+.gwt-LogsFlexTable-UserinfoRow {
+/*  background-color: green;*/
+/*  background-color: lightgreen; */
+  background-color:rgb(102, 255, 153);
+  text-align: left;
+}
+
+
+.gwt-LogsFlexTable-ErrorRow {
+/*  background-color: red; */
+  background-color:rgb(255, 0, 0);
+  text-align: left;
+}
+
+
+.gwt-LogsFlexTable-FatalRow {
+/*  background-color: darkred; */
+  background-color: rgb(153, 51, 153);
+  text-align: left;
+}
+
+
+
+.gwt-TreeItem-Standard-Item {
+  background-color: white;
+}
+
+.gwt-TreeItem-Masked-Item {
+/*  background-color: grey;*/
+  background-color:rgb(204, 204, 204);
+
+}
+
+.gwt-Popup-Pannel-Background {
+/*  background-color: grey;*/
+  background-color:rgb(255, 255, 153);
+
+}
+
+
+
+
+.gwt-Label-reparsePannel {
+  font-weight: bold;
+  font-size: 10pt
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

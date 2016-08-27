@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ a=`pwd`
+ curdir=`expr match "$a" '.*/\(.*\)'`
+ echo $curdir
+ sed 's/\.cache\.html/_cache\.html/g' $curdir.nocache.js > $curdir.nocache.jst
+ mv $curdir.nocache.jst $curdir.nocache.js
+ ls -1 *.cache.html | awk 'BEGIN{FS="."}{print " mv "$1".cache.html "$1"_cache.html "}' | /bin/sh

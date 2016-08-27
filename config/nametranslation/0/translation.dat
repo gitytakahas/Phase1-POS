@@ -1,0 +1,17 @@
+# name                          ?         FEC   mfec  mfecchannel hubaddress portadd   rocid     FED   channel   roc#
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0 A1       1      8        1          28        0        0        40      27        0
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1 A1       1      8        1          28        0        1        40      27        1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2 A1       1      8        1          28        0        2        40      27        2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3 A1       1      8        1          28        0        3        40      27        3
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4 A2       1      8        1          28        1        4        40      28        0
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5 A2       1      8        1          28        1        5        40      28        1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6 A2       1      8        1          28        1        6        40      28        2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7 A2       1      8        1          28        1        7        40      28        3
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8 B1       1      8        1          28        2        8        40      31        0
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9 B1       1      8        1          28        2        9        40      31        1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10 B1      1      8        1          28        2       10        40      31        2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11 B1      1      8        1          28        2       11        40      31        3
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12 B2      1      8        1          28        3       12        40      32        0
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13 B2      1      8        1          28        3       13        40      32        1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14 B2      1      8        1          28        3       14        40      32        2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15 B2      1      8        1          28        3       15        40      32        3

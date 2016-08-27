@@ -1,0 +1,17 @@
+# name                          ?       FEC   mfec  mfecchannel hubaddress portadd   rocid     FED   channel     roc#
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC0 A       1       8        1        30        0        0         40        7        0
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC1 A       1       8        1        30        0        1         40        7        1
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC2 A       1       8        1        30        0        2         40        7        2
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC3 A       1       8        1        30        0        3         40        7        3
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC4 A       1       8        1        30        1        4         40        7        4
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC5 A       1       8        1        30        1        5         40        7        5
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC6 A       1       8        1        30        1        6         40        7        6
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC7 A       1       8        1        30        1        7         40        7        7
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC8 B       1       8        1        30        2        8         40        8        0
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC9 B       1       8        1        30        2        9         40        8        1
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC10 B      1       8        1        30        2       10         40        8        2
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC11 B      1       8        1        30        2       11         40        8        3
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC12 B      1       8        1        30        3       12         40        8        4
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC13 B      1       8        1        30        3       13         40        8        5
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC14 B      1       8        1        30        3       14         40        8        6
+Pilt_BmI_D3_BLD2_PNL1_PLQ1_ROC15 B      1       8        1        30        3       15         40        8        7
