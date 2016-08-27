@@ -1,8 +1,7 @@
-.svn
-lib
-bin
-*.d
-*.o
-*.so
-*.exe
+__init__.py
+.*.swp
+.#*
+#*#
+*~
+*DS_Store
 *.pyc
