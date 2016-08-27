@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/reps/cmspxldaq/!svn/ver/4903/BPixelTools/trunk/pxfec
+END
+run.bsh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/reps/cmspxldaq/!svn/ver/4613/BPixelTools/trunk/pxfec/run.bsh
+END
+run.csh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/reps/cmspxldaq/!svn/ver/4613/BPixelTools/trunk/pxfec/run.csh
+END
+PFECAddressMap.dat
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/reps/cmspxldaq/!svn/ver/4613/BPixelTools/trunk/pxfec/PFECAddressMap.dat
+END
+setup.bsh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/reps/cmspxldaq/!svn/ver/4905/BPixelTools/trunk/pxfec/setup.bsh
+END
+setup.csh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/reps/cmspxldaq/!svn/ver/4613/BPixelTools/trunk/pxfec/setup.csh
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/reps/cmspxldaq/!svn/ver/4905/BPixelTools/trunk/pxfec/Makefile
+END

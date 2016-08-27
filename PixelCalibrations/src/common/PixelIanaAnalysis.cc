@@ -48,8 +48,8 @@ void PixelIanaAnalysis::go(const std::string& roc,
 
   // adjust data so values are in mA and y intercept is at 0, then refit
   for (int ivana = 0; ivana < npoints; ++ivana) {
-    y[ivana] = 1000*(y[ivana] - yvalatzero);
-    ey[ivana] *= 1000;
+    y[ivana] = y[ivana] - yvalatzero;//1000*(y[ivana] - yvalatzero);
+    //ey[ivana] *= 1000;
   }
 
   delete gr;

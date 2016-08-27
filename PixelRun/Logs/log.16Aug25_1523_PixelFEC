@@ -1,0 +1,188 @@
+nohup: ignoring input
+Run xdaq with options: -p 1955 -e /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml -c ../XDAQConfiguration/XDAQ_ConfigurationUZHLabTest_TTC.xml -z pixel
+LD_LIBRARY_PATH is  /opt/xdaq/lib:/home/cmspixel/root534/lib/root:/usr/lib64/root:/usr/lib64:/home/cmspixel/ph1_TriDAS/pixel/lib:/home/cmspixel/ph1_TriDAS/DiagSystem/tools/lib:/home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/lib:/opt/xdaq/lib/
+25 Aug 2016 13:23:25.982 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59, 64bit
+25 Aug 2016 13:23:25.988 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Loaded profile: /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml
+25 Aug 2016 13:23:25.988 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - b2innub version: 02.01.00, compiled on Oct 18 2012 at 19:18:29
+25 Aug 2016 13:23:25.989 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - executive version: 03.15.04, compiled on Oct 18 2012 at 19:18:12
+25 Aug 2016 13:23:25.989 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - pthttp version: 03.15.01, compiled on Dec  4 2013 at 11:04:24
+25 Aug 2016 13:23:25.990 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - ptfifo version: 04.01.01, compiled on Oct 18 2012 at 19:17:58
+25 Aug 2016 13:23:25.990 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xrelay version: 03.09.00, compiled on Oct 18 2012 at 19:18:25
+25 Aug 2016 13:23:25.991 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - hyperdaq version: 04.01.02, compiled on Oct 18 2012 at 19:18:24
+25 Aug 2016 13:23:25.992 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - pttcp version: 02.13.03, compiled on Oct 18 2012 at 19:19:19
+25 Aug 2016 13:23:25.992 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+25 Aug 2016 13:23:25.992 [140440786356064] DEBUG pixel.ch.uzh.physik.cmspixel.p:1955 <> - Create application descriptor for class: executive::Application id: 0
+25 Aug 2016 13:23:25.993 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.executive::Application.lid(0) <> - Log URL not set (was already console)
+25 Aug 2016 13:23:25.993 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.executive::Application.lid(0) <> - Log URL not set (was already console)
+25 Aug 2016 13:23:25.993 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.executive::Application.lid(0) <> - Changed Log level to INFO
+25 Aug 2016 13:23:25.993 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.executive::Application.lid(0) <> - Changed Log level to INFO
+25 Aug 2016 13:23:25.998 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+25 Aug 2016 13:23:25.998 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+25 Aug 2016 13:23:25.998 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+25 Aug 2016 13:23:25.998 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+25 Aug 2016 13:23:26.000 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+25 Aug 2016 13:23:26.000 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+25 Aug 2016 13:23:26.032 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+25 Aug 2016 13:23:26.032 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - config version: 03.09.02, compiled on Oct 18 2012 at 19:14:13
+25 Aug 2016 13:23:26.032 [140440786356064] WARN  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/opt/xdaq/lib/liblog4cplus.so, version declaration missing.
+25 Aug 2016 13:23:26.033 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - toolbox version: 05.02.03, compiled on Oct 18 2012 at 19:14:55
+25 Aug 2016 13:23:26.045 [140440786356064] WARN  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/opt/xdaq/lib/libxalan-c.so, version declaration missing.
+25 Aug 2016 13:23:26.046 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59
+25 Aug 2016 13:23:26.046 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xdata version: 05.03.01, compiled on Oct 18 2012 at 19:16:07
+25 Aug 2016 13:23:26.046 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xgi version: 03.13.00, compiled on Oct 18 2012 at 19:16:48
+25 Aug 2016 13:23:26.047 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xoap version: 03.12.02, compiled on Oct 18 2012 at 19:15:32
+25 Aug 2016 13:23:26.047 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xoapfilter version: 03.09.02, compiled on Oct 18 2012 at 19:15:33
+25 Aug 2016 13:23:26.656 [140440786356064] WARN  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so, version declaration missing.
+25 Aug 2016 13:23:26.657 [140440786356064] WARN  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so, version declaration missing.
+25 Aug 2016 13:23:26.661 [140440786356064] WARN  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFEDSupervisor/lib/linux/x86_64_slc6/libPixelFEDSupervisor.so, version declaration missing.
+25 Aug 2016 13:23:26.664 [140440786356064] WARN  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelSupervisor/lib/linux/x86_64_slc6/libPixelSupervisor.so, version declaration missing.
+25 Aug 2016 13:23:26.669 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - ttcttcci version: 01.07.02, compiled on Dec  4 2013 at 17:45:41
+25 Aug 2016 13:23:26.669 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - ttcutils version: 01.08.01, compiled on Dec  4 2013 at 17:43:10
+Thu Aug 25 15:23:26 2016
+ DiagWrapper Level 2: The DiagSystem is installed --- this is a bogus error message
+25 Aug 2016 13:23:26.724 [140440786356064] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Ready.
+Thu Aug 25 15:23:30 2016
+ DiagWrapper Level 3: --- INITIALIZE ---
+Thu Aug 25 15:23:30 2016
+ DiagWrapper Level 3: PixelFECSupervisor::Initialize - Instance 0 of PixelSupervisor found.
+Thu Aug 25 15:23:30 2016
+ DiagWrapper Level 4: PixelFECSupervisor::Initialize - Instance 0 of PixelDCSFSMInterface not found. Automatic Detector Startup procedure will not be followed. The detector must be powered on manually.
+Thu Aug 25 15:23:30 2016
+ DiagWrapper Level 4: PixelFECSupervisor::Initialize - Instance 0 of PSX server not found. Automatic Detector Startup procedure will not check for changing currents due to ROC configuration
+Thu Aug 25 15:23:30 2016
+ DiagWrapper Level 3: PixelFECSupervisor::Intitialize -- Exiting function
+Thu Aug 25 15:23:30 2016
+ DiagWrapper Level 3: --- INITIALIZATION DONE ---
+Thu Aug 25 15:23:30 2016
+ DiagWrapper Level 1: New state is:Halted
+Thu Aug 25 15:23:33 2016
+ DiagWrapper Level 3: --- Enter preConfigure ---
+Thu Aug 25 15:23:33 2016
+ DiagWrapper Level 0: The global key is 3
+Thu Aug 25 15:23:33 2016
+ DiagWrapper Level 3: PixelFECSupervisor::preConfigure - The Global Key was received as 3
+Thu Aug 25 15:23:33 2016
+ DiagWrapper Level 3: --- Exit preConfigure ---
+242]	[PixelNameTranslation::PixelNameTranslation()]		    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//nametranslation/0/translation.dat
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+PixelNameTranslation::  summarize tables size 16 16 4
+108]	[[PixelFECConfig::PixelFECConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//fecconfig/0/fecconfig.dat
+112]	[PixelDetectorConfig::PixelDetectorConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//detconfig/0/detectconfig.dat
+129]	[PixelDetectorConfig::PixelDetectorConfig()]		    New format of detconfig
+314]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    Opened:/home/cmspixel/ph1_TriDAS/pixel/config//calib/3/calib.dat
+323]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    PixelCalibConfiguration mode=TBMDelay
+116]	[PixelDACScanRange::setDACChannel()]			    The dac name: TBMANoTokenPass is unknown!
+xdaq.exe: src/PixelDACScanRange.cc:118: void pos::PixelDACScanRange::setDACChannel(std::string): Assertion `0' failed.
+Process [24735] on node cmspixel.physik.uzh.ch terminates abnormally at 2016-08-25T15:23:33.658958+02:00. Caught signal 6 at address [0x1f50000609f]
+Stacktrace follows:
+/opt/xdaq/lib/libtoolbox.so(_ZN7toolbox10stacktraceEiRSo+0xa6) [0x7fbaecd568c5]
+/opt/xdaq/lib/libtoolbox.so(_ZN7toolbox18signalSEGVCallbackEiP7siginfoPv+0x2fa) [0x7fbaecd5758c]
+/lib64/libpthread.so.0() [0x3929c0f7e0]
+/lib64/libc.so.6(gsignal+0x35) [0x39294325e5]
+/lib64/libc.so.6(abort+0x175) [0x3929433dc5]
+/lib64/libc.so.6() [0x392942b70e]
+/lib64/libc.so.6(__assert_perror_fail+0) [0x392942b7d0]
+/home/cmspixel/ph1_TriDAS/pixel/lib/libSiPixelObjects.so(_ZN3pos17PixelDACScanRange13setDACChannelESs+0x36f) [0x7fbacebeaa79]
+/home/cmspixel/ph1_TriDAS/pixel/lib/libSiPixelObjects.so(_ZN3pos17PixelDACScanRangeC1ESsjjijb+0x194) [0x7fbacebeaf40]
+/home/cmspixel/ph1_TriDAS/pixel/lib/libSiPixelObjects.so(_ZN3pos23PixelCalibConfigurationC2ESs+0x1bc1) [0x7fbacebe0431]
+/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so(_ZN3pos15PixelConfigFile3getINS_14PixelCalibBaseEEEvRPT_SsNS_14PixelConfigKeyE+0x1d25) [0x7fbacfb65d65]
+/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so(_ZN20PixelConfigInterface3getIN3pos14PixelCalibBaseEEEvRPT_SsNS1_14PixelConfigKeyE+0x6a7) [0x7fbacfb672d5]
+/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so(_ZN18PixelFECSupervisor15loadCalibObjectEv+0x38) [0x7fbac10dbdd2]
+/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so(_ZN18PixelFECSupervisor21preconfigure_workloopEPN7toolbox4task8WorkLoopE+0x96a) [0x7fbac10e1632]
+/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so(_ZN7toolbox4task6ActionI18PixelFECSupervisorE6invokeEPNS0_8WorkLoopE+0x2d) [0x7fbac10e3d25]
+/opt/xdaq/lib/libtoolbox.so(_ZN7toolbox4task15WaitingWorkLoop7processEv+0xb3) [0x7fbaecd87d69]
+/opt/xdaq/lib/libtoolbox.so(_ZN7toolbox4task8WorkLoop3runEv+0x15) [0x7fbaecd83d6b]
+/opt/xdaq/lib/libtoolbox.so(_ZN7toolbox4task11thread_funcEPv+0x94) [0x7fbaecd83eeb]
+/lib64/libpthread.so.0() [0x3929c07aa1]
+/lib64/libc.so.6(clone+0x6d) [0x39294e8aad]

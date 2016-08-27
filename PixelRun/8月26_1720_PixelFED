@@ -1,0 +1,1203 @@
+nohup: ignoring input
+Run xdaq with options: -p 1956 -e /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml -c ../XDAQConfiguration/XDAQ_ConfigurationUZHLabTest_TTC.xml -z pixel
+LD_LIBRARY_PATH is  /opt/xdaq/lib:/home/cmspixel/root534/lib/root:/usr/lib64/root:/usr/lib64:/home/cmspixel/ph1_TriDAS/pixel/lib:/home/cmspixel/ph1_TriDAS/DiagSystem/tools/lib:/home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/lib:/opt/xdaq/lib/
+26 Aug 2016 15:20:02.285 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59, 64bit
+26 Aug 2016 15:20:02.288 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Loaded profile: /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml
+26 Aug 2016 15:20:02.288 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - b2innub version: 02.01.00, compiled on Oct 18 2012 at 19:18:29
+26 Aug 2016 15:20:02.290 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - executive version: 03.15.04, compiled on Oct 18 2012 at 19:18:12
+26 Aug 2016 15:20:02.291 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - pthttp version: 03.15.01, compiled on Dec  4 2013 at 11:04:24
+26 Aug 2016 15:20:02.292 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - ptfifo version: 04.01.01, compiled on Oct 18 2012 at 19:17:58
+26 Aug 2016 15:20:02.293 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xrelay version: 03.09.00, compiled on Oct 18 2012 at 19:18:25
+26 Aug 2016 15:20:02.294 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - hyperdaq version: 04.01.02, compiled on Oct 18 2012 at 19:18:24
+26 Aug 2016 15:20:02.296 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - pttcp version: 02.13.03, compiled on Oct 18 2012 at 19:19:19
+26 Aug 2016 15:20:02.297 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+26 Aug 2016 15:20:02.297 [139911430690656] DEBUG pixel.ch.uzh.physik.cmspixel.p:1956 <> - Create application descriptor for class: executive::Application id: 0
+26 Aug 2016 15:20:02.299 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.executive::Application.lid(0) <> - Log URL not set (was already console)
+26 Aug 2016 15:20:02.299 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.executive::Application.lid(0) <> - Log URL not set (was already console)
+26 Aug 2016 15:20:02.299 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.executive::Application.lid(0) <> - Changed Log level to INFO
+26 Aug 2016 15:20:02.299 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.executive::Application.lid(0) <> - Changed Log level to INFO
+26 Aug 2016 15:20:02.300 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+26 Aug 2016 15:20:02.300 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+26 Aug 2016 15:20:02.300 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+26 Aug 2016 15:20:02.300 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+26 Aug 2016 15:20:02.302 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+26 Aug 2016 15:20:02.302 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+26 Aug 2016 15:20:02.337 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+26 Aug 2016 15:20:02.337 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - config version: 03.09.02, compiled on Oct 18 2012 at 19:14:13
+26 Aug 2016 15:20:02.338 [139911430690656] WARN  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/opt/xdaq/lib/liblog4cplus.so, version declaration missing.
+26 Aug 2016 15:20:02.338 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - toolbox version: 05.02.03, compiled on Oct 18 2012 at 19:14:55
+26 Aug 2016 15:20:02.356 [139911430690656] WARN  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/opt/xdaq/lib/libxalan-c.so, version declaration missing.
+26 Aug 2016 15:20:02.357 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59
+26 Aug 2016 15:20:02.357 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xdata version: 05.03.01, compiled on Oct 18 2012 at 19:16:07
+26 Aug 2016 15:20:02.357 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xgi version: 03.13.00, compiled on Oct 18 2012 at 19:16:48
+26 Aug 2016 15:20:02.357 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xoap version: 03.12.02, compiled on Oct 18 2012 at 19:15:32
+26 Aug 2016 15:20:02.358 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xoapfilter version: 03.09.02, compiled on Oct 18 2012 at 19:15:33
+26 Aug 2016 15:20:02.646 [139911430690656] WARN  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so, version declaration missing.
+26 Aug 2016 15:20:02.648 [139911430690656] WARN  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so, version declaration missing.
+26 Aug 2016 15:20:02.650 [139911430690656] WARN  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFEDSupervisor/lib/linux/x86_64_slc6/libPixelFEDSupervisor.so, version declaration missing.
+26 Aug 2016 15:20:02.652 [139911430690656] WARN  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelSupervisor/lib/linux/x86_64_slc6/libPixelSupervisor.so, version declaration missing.
+26 Aug 2016 15:20:02.656 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - ttcttcci version: 01.07.02, compiled on Dec  4 2013 at 17:45:41
+26 Aug 2016 15:20:02.656 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - ttcutils version: 01.08.01, compiled on Dec  4 2013 at 17:43:10
+Fri Aug 26 17:20:02 2016
+ DiagWrapper Level 2: The DiagSystem is installed --- this is a bogus error message
+InfoSpace was created
+26 Aug 2016 15:20:02.673 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCXDAQBase::actionPerformed for event type 'ItemChangedEvent', item 'Configuration'
+26 Aug 2016 15:20:02.673 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - Found '[file=...]' in XML variable 'Configuration' --> using file '/home/cmspixel/run/TTC/TTCciConfiguration.txt' for configuration.
+26 Aug 2016 15:20:02.673 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCXDAQBase::actionPerformed for event type 'urn:xdaq-event:setDefaultValues'
+26 Aug 2016 15:20:02.709 [139911430690656] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Ready.
+Fri Aug 26 17:22:19 2016
+ DiagWrapper Level 3: --- INITIALIZE ---
+Fri Aug 26 17:22:19 2016
+ DiagWrapper Level 3: PixelFEDSupervisor::Initialize - Instance 0 of PixelSupervisor found.
+Fri Aug 26 17:22:19 2016
+ DiagWrapper Level 3: No PixelDCStoFEDDpInterface descriptor found
+Fri Aug 26 17:22:19 2016
+ DiagWrapper Level 3: --- INIZIALIZATION DONE ---
+Fri Aug 26 17:22:19 2016
+ DiagWrapper Level 1: New state is:Halted
+26 Aug 2016 15:23:59.612 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCciControl resetting FSM
+26 Aug 2016 15:23:59.615 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCXDAQBase::actionPerformed for event type 'ItemChangedEvent', item 'Configuration'
+26 Aug 2016 15:23:59.615 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - Did not find '[file=...]' in XML variable 'Configuration' --> using XML directly for configuration.
+26 Aug 2016 15:23:59.617 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCXDAQBase::changeState
+26 Aug 2016 15:23:59.617 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCXDAQBase::ExecuteTransition 'configure'
+26 Aug 2016 15:23:59.617 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCciControl::ConfigureAction(): Reading configuration from XML parameter 'Configuration'
+26 Aug 2016 15:23:59.617 [139911056652032] INFO  ttc.utils <> - Trying to instantiate CAENPCI bus adapter object
+26 Aug 2016 15:23:59.618 [139911056652032] INFO  ttc.utils <> - Instantiated CAENLinuxBusAdapter (A2818 PCI card connected to V2718 VME controller).
+26 Aug 2016 15:23:59.618 [139911056652032] INFO  ttc.utils <> - VME64xPNP: Scanning crate for VME64x modules...
+26 Aug 2016 15:23:59.619 [139911056652032] INFO  ttc.utils <> - Position:       Slot 3
+Enabled:        Yes
+ManufacturerId: 080030   (CERN)
+BoardId:        00000162 ()
+RevisionId:     -
+Serial Number:  -
+Description:    -
+
+26 Aug 2016 15:23:59.622 [139911056652032] INFO  ttc.utils <> - Position:       Slot 19
+Enabled:        No
+ManufacturerId: 080030   (CERN)
+BoardId:        00000133 ()
+RevisionId:     20040064 ( )
+Serial Number:  3330323031343042333644453632 (3020140B36DE62)
+Description:    -
+
+26 Aug 2016 15:23:59.622 [139911056652032] INFO  ttc.utils <> - Position:       Slot 21
+Enabled:        No
+ManufacturerId: 080030   (CERN)
+BoardId:        00000133 ()
+RevisionId:     20040064 ( )
+Serial Number:  3330323031343042394333304441 (3020140B9C30DA)
+Description:    -
+
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModule <> - Initialised TTCci hardware
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModule <> -   firmware version: Version 49 (date: 2007-07-16)
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModule <> -   Board-ID 354
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  ttcBoardProxy <> - BoardProxy::recreateResources () done
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModuleConfiguration <> - Configured sequence 'configure' :
+  0)	DisableL1A
+  1)	Periodic Off
+  2)	ResetCounters
+  3)	ResetStatus
+
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModuleConfiguration <> - Configured sequence 'enable' :
+  0)	EnableL1A
+
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModuleConfiguration <> - Configured sequence 'suspend' :
+  0)	DisableL1A
+
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModuleConfiguration <> - Configured sequence 'stop' :
+  0)	DisableL1A
+
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModuleConfiguration <> - Configured sequence 'coldReset' :
+  0)	DisableL1A
+  1)	Periodic Off
+  2)	ResetCounters
+  3)	ResetStatus
+
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModule <> - GenericTTCModule::AddSequence(): Added new sequence with name 'LevelOne'
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModuleConfiguration <> - Configured sequence 'LevelOne' :
+  0)	BGO 11
+
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModule <> - GenericTTCModule::AddSequence(): Added new sequence with name 'CalSync'
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModuleConfiguration <> - Configured sequence 'CalSync' :
+  0)	BGO 12
+
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModule <> - GenericTTCModule::AddSequence(): Added new sequence with name 'ResetROC'
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModuleConfiguration <> - Configured sequence 'ResetROC' :
+  0)	BGO 13
+  1)	uSleep 10
+
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModule <> - GenericTTCModule::AddSequence(): Added new sequence with name 'ResetTBM'
+26 Aug 2016 15:23:59.625 [139911056652032] INFO  GenericTTCModuleConfiguration <> - Configured sequence 'ResetTBM' :
+  0)	BGO 14
+  1)	mSleep 1
+
+26 Aug 2016 15:23:59.626 [139911056652032] ERROR GenericTTCModule <> - TTCci::DisableL1A(): interface 'BCHANNEL' is selected
+26 Aug 2016 15:23:59.626 [139911056652032] ERROR GenericTTCModule <> - TTCci::DisableL1A(): interface 'CYCLIC' is selected
+26 Aug 2016 15:23:59.626 [139911056652032] ERROR GenericTTCModule <> - TTCci::DisableL1A(): interface 'INTERNAL' is selected
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #1:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=0, T2=0      prescale =  0x0 = 0, postscale = 0x0 = 0
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel1:
+ data = 0x1 (=1) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #2:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=0, T2=0      prescale =  0x0 = 0, postscale = 0x0 = 0
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel2:
+ data = 0x0 (=0) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #3:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=3438, T2=0      prescale =  0x0 = 0, postscale = 0x0 = 0
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel3:
+ data = 0x20 (=32) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #4:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=90, T2=0      prescale =  0x0 = 0, postscale = 0x0 = 0
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel4:
+ data = 0x1c (=28) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #5:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=0, T2=0      prescale =  0x0 = 0, postscale = 0x0 = 0
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel5:
+ data = 0x14 (=20) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #6:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=0, T2=0      prescale =  0x0 = 0, postscale = 0x0 = 0
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel6:
+ data = 0x14 (=20) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #7:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=0, T2=0      prescale =  0x0 = 0, postscale = 0x0 = 0
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel7:
+ data = 0x16 (=22) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #9:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=0, T2=0      prescale =  0x0 = 0, postscale = 0x0 = 0
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.553 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel9:
+ data = 0x0 (=0) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #10:
+      data length L=SINGLE,
+      REPETITIVE=NO, T1=0, T2=0      prescale =  0x0 = 0, postscale = 0x0 = 0
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel10:
+ data = 0x0 (=0) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #11:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=0, T2=0      prescale =  0x0 = 0, postscale = 0x1 = 1
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel11:
+ data = 0x1 (=1) as SHORT, 
+      A-Command=true
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #12:
+      data length L=DOUBLE,
+      REPETITIVE=YES, T1=0, T2=115      prescale =  0x0 = 0, postscale = 0x0 = 0
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel12:
+ data = 0x2c (=44) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel12:
+ data = 0x1 (=1) as SHORT, 
+      A-Command=true
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #13:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=0, T2=0      prescale =  0x0 = 0, postscale = 0x1 = 1
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel13:
+ data = 0x1c (=28) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #14:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=0, T2=0      prescale =  0x0 = 0, postscale = 0x1 = 1
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel14:
+ data = 0x14 (=20) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #15:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=0, T2=0      prescale =  0x0 = 0, postscale = 0x0 = 0
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel15:
+ data = 0x2c (=44) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): Settings for BGO-channel #0:
+      data length L=SINGLE,
+      REPETITIVE=YES, T1=0, T2=0      prescale =  0x0 = 0, postscale = 0x0 = 0
+      init-prescale (offset) =  0x0 = 0
+26 Aug 2016 15:24:00.554 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): New data word for channel0:
+ data = 0x1c (=28) as SHORT, 
+      A-Command=false
+26 Aug 2016 15:24:00.557 [139911056652032] INFO  TTCciConfigurationItem <> - Line 338:	 CLOCK_SOURCE will be set to 'INTERNAL'
+26 Aug 2016 15:24:00.558 [139911056652032] INFO  TTCciConfigurationItem <> - TTCci::Configure(): line338 setting QPLL frequency bits to 0x30
+26 Aug 2016 15:24:00.558 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'configure'
+26 Aug 2016 15:24:00.558 [139911056652032] INFO  GenericTTCModule <> - Sequence 'configure' has N(commands)=4
+26 Aug 2016 15:24:00.558 [139911056652032] INFO  GenericTTCModule <> - TTCci::ExecuteSequenceLine(): Resetting TTCci board status
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 3: --- CONFIGURE ---
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 0: The global key is 3
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 0: PixelFEDSupervisor::Configure: The Global Key was received as 3
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 3: --- CONFIGURATION DONE ---
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 3: PixelFEDSupervisor::Configure: A prompt SOAP reply is sent back before exiting function
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 1: New state is:Configuring
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 3: Retrieving Calib object from DataBase...
+314]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    Opened:/home/cmspixel/ph1_TriDAS/pixel/config//calib/3/calib.dat
+323]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    PixelCalibConfiguration mode=TBMDelay
+PixelCalibConfiguration: dacs to scan (1 of them):
+0: name: Vcal dacchannel: 25 isTBM: 0 values: [200 ]
+ next 0 
+ next 1 
+ next 2 
+ next 3 
+ next 4 
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 3: Retrieving Calib object from DataBase done.
+ job configure 
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 1: I think I own the whole VME crate and will create a bus adapter.
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 1: Got a CAEN Linux Bus Adapter to the FED
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 1: Will now get Name translation
+242]	[PixelNameTranslation::PixelNameTranslation()]		    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//nametranslation/0/translation.dat
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+PixelNameTranslation::  summarize tables size 16 16 4
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 1: Will now get detector configuration
+112]	[PixelDetectorConfig::PixelDetectorConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//detconfig/0/detectconfig.dat
+129]	[PixelDetectorConfig::PixelDetectorConfig()]		    New format of detconfig
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 1: Will now get fed configuration
+148]	[PixelFEDConfig::PixelFEDConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//fedconfig/0/fedconfig.dat
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 1: Will now get global delay25 configuration
+[PixelConfigFile.h::get] error loading config list. 3 globaldelay25 0
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 3: Global delay in Delay25 is not specified. Using the default Delay25 settings.
+ skip assert 
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ PixelFEDInterface constructor 
+ pilotFED load fpga  
+FEDID:999 Loading FPGA's from Program EEPROMs
+ --- loadFPGADigFED --- 
+ In reset() 
+FEDID:999 Check / Reset TTCrx
+TTCrx status should be 0xe0 read = 0xf0
+ Pll Ready
+ dll Ready
+ Frame Synced
+ TTCrx OK
+FEDID:999 Enable the Clock40Des2 signal from the TTCrx 
+FEDID:999 Reset Plls
+FEDID:999 Reset PLLs
+ pilotFED resets  
+ --- resetDigFEDPll --- 
+ --- resetDigFEDreg --- 
+FEDID:999 Setting LRES
+FEDID:999 Setting LRES
+FEDID:999 Setting CLRES
+FEDID:999 Setting CLRES
+FEDID:999 Flush SPY FIFOs N and DAC RAM Counter 
+FEDID:999 Flush SPY FIFOs N and DAC RAM Counter 
+FEDID:999 Reset the TTS bits
+FEDID:999 Drain FIFOs
+649]	]	[PixelFEDCard::PixelFEDCard()]				     Get setup parameters from file /home/cmspixel/ph1_TriDAS/pixel/config//fedcard/0/params_fed_40.dat
+*************************************** OUR DEBUG: remember to check why it can't read checkworkd from fedcard 20211**************************************
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+[PixelConfigurationVerifier] Warning in FED#40, channel#1: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#2: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#3: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#4: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#5: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#6: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#7: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#8: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#9: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#10: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#11: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#12: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#13: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#14: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#15: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#16: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#17: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#18: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#19: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#20: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#21: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#22: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#23: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#24: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#25: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#26: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#29: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#30: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#33: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#34: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#35: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+[PixelConfigurationVerifier] Warning in FED#40, channel#36: number of ROCs mismatch: theNameTranslation=0; theFEDCard=4
+ Setup from the parameter structure 
+Setting FEDID:40
+Load FEDID register from DB 0x28
+Set FEDID register 28
+soft FEDID = 40 doesn't match hard board FEDID = 0
+FEDID:40 FIFO2/3 enable 0 0 0 0
+FEDID:40 PixelFEDInterface::generateVMETrigger(void)
+FEDID:40 Load Control register from DB 0x0
+FEDID:40 Set Control register 0
+FEDID:40 Load Mode register 0
+FEDID:40 number of TTs OOS <1, setting to 1 
+FEDID:40 number of TTs EER <1, setting to 1 
+TTS-OOS, TTS-ERROT, TTS-OR limits:640 640 0
+FEDID:40 N fifo-1 almost full level<1! setting to 1 
+FEDID:40 NC fifo-1 almost full level<1! setting to 1 
+FEDID:40 SC fifo-1 almost full level<1! setting to 1 
+FEDID:40 S fifo-1 almost full level<1! setting to 1 
+FEDID:40 fifo-3 almost full level<1! setting to 1 
+ The limit on fifi-2 is 0
+FEDID:40 busy generation enabled when behind 0 events. Busy Minimum width for busy when behind is: 100 us
+set_ROCskip 0 0 0 0
+FEDID:40 Setting Mode REG in Front FPGA's 
+FEDID:40 North FPGA Mode REG 0x0
+FEDID:40 North Center FPGA Mode REG 0x0
+FEDID:40 South Center FPGA Mode REG 0x0
+FEDID:40 South FPGA Mode REG 0x0
+Program the UP/DOWN counter timeout to 3 (1.6ms)
+ --- Start initialization FITEL PiggyN --- 
+
+
+
+PIGGY FITEL I2C readback:      
+
+ fiber#:-2     SQ:1 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#:-1     SQ:1 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#:-1     SQ:1 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#: 0     SQ:1 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#: 1     SQ:1 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#: 1     SQ:1 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#: 2     SQ:1 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#: 3     SQ:1 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#: 4     SQ:1 LOS:0 BSIN:0 OOP:0 warning:0
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+Digital FED: PiggyN FITEL initialized      
+
+ --- Start initialization FITEL PiggyS --- 
+
+
+
+PIGGY FITEL I2C readback:      
+
+ fiber#:-2     SQ:1 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#:-1     SQ:1 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#: 0     SQ:1 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#: 1     SQ:0 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#: 2     SQ:0 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#: 3     SQ:0 LOS:0 BSIN:0 OOP:0 warning:0
+ fiber#: 4     SQ:0 LOS:0 BSIN:0 OOP:0 warning:0
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+ INT[ 7...0]:  0 
+Digital FED: PiggyS FITEL initialized      
+
+FEDID:40 VME FPGA (update via jtag pins only) firmware date d/m/y 12/9/2014
+FEDID:40 LAD_N FPGA firmware date d/m/y 19/11/2015
+FEDID:40 LAD_NC FPGA firmware date d/m/y 23/11/2015
+FEDID:40 LAD_SC FPGA firmware date d/m/y 23/11/2015
+FEDID:40 LAD_S FPGA firmware date d/m/y 23/11/2015
+FEDID:40 LAD_C FPGA firmware date d/m/y 16/9/2014
+FEDID:40 N Piggy version: 1808f1
+FEDID:40 S Piggy version: 1808f1
+Fri Aug 26 17:24:07 2016
+ DiagWrapper Level 3: FED getFEDBoards total calls:1 total time:0.001778  avg time:0.001778
+Fri Aug 26 17:24:07 2016
+ DiagWrapper Level 3: FED card configure :1 total time:6.18466  avg time:6.18466
+ skip assert 
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+FEDSupervisor:Configure
+vmeBaseAddress: 1543503872
+LAD_N; VME ptr readout: 0
+LAD_NC; VME ptr readout: 0
+LAD_SC; VME ptr readout: 0
+LAD_S; VME ptr readout: 0
+Fri Aug 26 17:24:07 2016
+ DiagWrapper Level 3: PixelFEDSupervisor::stateConfiguring: FED configuration: total time=6.69446
+Fri Aug 26 17:24:07 2016
+ DiagWrapper Level 3: PixelFEDSupervisor::stateConfiguring: Triggering transition to the Configured state.
+Fri Aug 26 17:24:07 2016
+ DiagWrapper Level 1: New state is:Configured
+Fri Aug 26 17:24:23 2016
+ DiagWrapper Level 3: --- START ---
+Fri Aug 26 17:24:23 2016
+ DiagWrapper Level 3: Received SOAP message to Start. Run Number = 1690
+Greetings from the PixelFEDCalibrationBase copy constructor.
+In PixelFEDTBMDelayCalibration copy ctor()
+FEDID:40 Set Control register 30010
+26 Aug 2016 15:24:23.874 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCXDAQBase::changeState
+26 Aug 2016 15:24:23.874 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCXDAQBase::ExecuteTransition 'enable'
+26 Aug 2016 15:24:23.874 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'enable'
+26 Aug 2016 15:24:23.874 [139911056652032] INFO  GenericTTCModule <> - Sequence 'enable' has N(commands)=1
+In PixelFEDTBMDelayCalibration::beginCalibration()
+ dac value 0 is 200
+writing histograms to file /home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1690/TBMDelay.root
+Fri Aug 26 17:24:23 2016
+ DiagWrapper Level 1: New state is:Running
+26 Aug 2016 15:24:23.941 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="ResetTBM" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:23.941 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="ResetTBM" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:23.941 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'ResetTBM' sequence
+26 Aug 2016 15:24:23.941 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'ResetTBM' sequence
+26 Aug 2016 15:24:23.941 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'ResetTBM'
+26 Aug 2016 15:24:23.941 [139911056652032] INFO  GenericTTCModule <> - Sequence 'ResetTBM' has N(commands)=2
+set_ROCskip 0 0 0 0
+26 Aug 2016 15:24:24.161 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.161 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.161 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.161 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.161 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'CalSync'
+26 Aug 2016 15:24:24.161 [139911056652032] INFO  GenericTTCModule <> - Sequence 'CalSync' has N(commands)=1
+NEW FEDTBMDelay TRIGGER 0 state 0 Vcal 200 
+FEDID:40 phase stats:
+ch  1/ 2: #locks: 10/24  mean  0.0 rms 0.0000
+ch  3/ 4: #locks: 10/24  mean  0.0 rms 0.0000
+ch  7/ 8: #locks: 10/24  mean  0.0 rms 0.0000
+ch  9/10: #locks: 10/24  mean  0.0 rms 0.0000
+ch 25/26: #locks: 24/24  mean  2.0 rms 3.2154
+ch 27/28: #locks: 24/24  mean  0.4 rms 0.6760
+ch 31/32: #locks: 24/24  mean  1.9 rms 3.1437
+ch 33/34: #locks: 24/24  mean  1.5 rms 2.2967
+-----------------------------------
+Contents of FIFO 1 for channel 27 (status = 12)
+-----------------------------------
+  Decoded channel: 27
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 1
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 4
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+     - ROC #3 - last dac : 8
+     - ROC #4 - last dac : 8
+  Found ROCs with hits: 4
+  Total number of hits found: 5
+     - Channel #27 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #27 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #27 ROC #3 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #27 ROC #4 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #27 ROC #4 dcol 25 pxl 35 col 51 row 63 pulse height 24
+-----------------------------------
+Contents of FIFO 1 for channel 28 (status = 12)
+-----------------------------------
+  Decoded channel: 28
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 1
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 4
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+     - ROC #3 - last dac : 8
+     - ROC #4 - last dac : 8
+  Found ROCs with hits: 4
+  Total number of hits found: 5
+     - Channel #28 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 254
+     - Channel #28 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 207
+     - Channel #28 ROC #3 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #28 ROC #4 dcol 5 pxl 140 col 10 row 10 pulse height 239
+     - Channel #28 ROC #4 dcol 25 pxl 35 col 51 row 63 pulse height 24
+-----------------------------------
+Contents of FIFO 1 for channel 31 (status = 12)
+-----------------------------------
+  Decoded channel: 31
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 0
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 4
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+     - ROC #3 - last dac : 8
+     - ROC #4 - last dac : 8
+  Found ROCs with hits: 4
+  Total number of hits found: 5
+     - Channel #31 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #3 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #4 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #4 dcol 25 pxl 35 col 51 row 63 pulse height 24
+-----------------------------------
+Contents of FIFO 1 for channel 32 (status = 12)
+-----------------------------------
+  Decoded channel: 32
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 0
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 4
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+     - ROC #3 - last dac : 8
+     - ROC #4 - last dac : 8
+  Found ROCs with hits: 4
+  Total number of hits found: 5
+     - Channel #32 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 254
+     - Channel #32 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 207
+     - Channel #32 ROC #3 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #32 ROC #4 dcol 5 pxl 140 col 10 row 10 pulse height 239
+     - Channel #32 ROC #4 dcol 25 pxl 35 col 51 row 63 pulse height 24
+26 Aug 2016 15:24:24.170 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.170 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.170 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.170 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.170 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'CalSync'
+26 Aug 2016 15:24:24.170 [139911056652032] INFO  GenericTTCModule <> - Sequence 'CalSync' has N(commands)=1
+NEW FEDTBMDelay TRIGGER 1 state 0 Vcal 200 
+-----------------------------------
+Contents of FIFO 1 for channel 27 (status = 15)
+-----------------------------------
+  Decoded channel: 27
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 2
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 7
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+     - ROC #3 - last dac : 8
+     - ROC #4 - last dac : 8
+     - ROC #5 - last dac : 0
+     - ROC #6 - last dac : 0
+     - ROC #7 - last dac : 0
+  Found ROCs with hits: 4
+  Total number of hits found: 5
+     - Channel #27 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #27 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #27 ROC #3 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #27 ROC #4 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #27 ROC #4 dcol 25 pxl 32 col 50 row 64 pulse height 16
+-----------------------------------
+Contents of FIFO 1 for channel 28 (status = 15)
+-----------------------------------
+  Decoded channel: 28
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 2
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 7
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+     - ROC #3 - last dac : 8
+     - ROC #4 - last dac : 8
+     - ROC #5 - last dac : 0
+     - ROC #6 - last dac : 0
+     - ROC #7 - last dac : 0
+  Found ROCs with hits: 4
+  Total number of hits found: 5
+     - Channel #28 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 254
+     - Channel #28 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 211
+     - Channel #28 ROC #3 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #28 ROC #4 dcol 5 pxl 140 col 10 row 10 pulse height 239
+     - Channel #28 ROC #4 dcol 25 pxl 32 col 50 row 64 pulse height 16
+-----------------------------------
+Contents of FIFO 1 for channel 31 (status = 15)
+-----------------------------------
+  Decoded channel: 31
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 2
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 7
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+     - ROC #3 - last dac : 8
+     - ROC #4 - last dac : 8
+     - ROC #5 - last dac : 0
+     - ROC #6 - last dac : 0
+     - ROC #7 - last dac : 0
+  Found ROCs with hits: 4
+  Total number of hits found: 5
+     - Channel #31 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #3 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #4 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #4 dcol 25 pxl 32 col 50 row 64 pulse height 16
+-----------------------------------
+Contents of FIFO 1 for channel 32 (status = 15)
+-----------------------------------
+  Decoded channel: 32
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 2
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 7
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+     - ROC #3 - last dac : 8
+     - ROC #4 - last dac : 8
+     - ROC #5 - last dac : 0
+     - ROC #6 - last dac : 0
+     - ROC #7 - last dac : 0
+  Found ROCs with hits: 4
+  Total number of hits found: 5
+     - Channel #32 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 254
+     - Channel #32 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 211
+     - Channel #32 ROC #3 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #32 ROC #4 dcol 5 pxl 140 col 10 row 10 pulse height 239
+     - Channel #32 ROC #4 dcol 25 pxl 32 col 50 row 64 pulse height 16
+26 Aug 2016 15:24:24.175 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.175 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.175 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.175 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.175 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'CalSync'
+26 Aug 2016 15:24:24.175 [139911056652032] INFO  GenericTTCModule <> - Sequence 'CalSync' has N(commands)=1
+NEW FEDTBMDelay TRIGGER 2 state 0 Vcal 200 
+-----------------------------------
+Contents of FIFO 1 for channel 27 (status = 2)
+-----------------------------------
+  Decoded channel: 27
+  Found TBM header: 1
+  Found TBM trailer: 0
+  Event number: 2
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 0
+  Found ROCs with hits: 0
+  Total number of hits found: 0
+-----------------------------------
+Contents of FIFO 1 for channel 28 (status = 2)
+-----------------------------------
+  Decoded channel: 28
+  Found TBM header: 1
+  Found TBM trailer: 0
+  Event number: 2
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 0
+  Found ROCs with hits: 0
+  Total number of hits found: 0
+-----------------------------------
+Contents of FIFO 1 for channel 31 (status = 6)
+-----------------------------------
+  Decoded channel: 31
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 10
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 3
+     - ROC #1 - last dac : 0
+     - ROC #2 - last dac : 0
+     - ROC #3 - last dac : 0
+  Found ROCs with hits: 0
+  Total number of hits found: 0
+-----------------------------------
+Contents of FIFO 1 for channel 32 (status = 2)
+-----------------------------------
+  Decoded channel: 32
+  Found TBM header: 1
+  Found TBM trailer: 0
+  Event number: 2
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 0
+  Found ROCs with hits: 0
+  Total number of hits found: 0
+26 Aug 2016 15:24:24.180 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.180 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.180 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.180 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.180 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'CalSync'
+26 Aug 2016 15:24:24.180 [139911056652032] INFO  GenericTTCModule <> - Sequence 'CalSync' has N(commands)=1
+NEW FEDTBMDelay TRIGGER 3 state 0 Vcal 200 
+-----------------------------------
+Contents of FIFO 1 for channel 31 (status = 7)
+-----------------------------------
+  Decoded channel: 31
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 4
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 2
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+  Found ROCs with hits: 2
+  Total number of hits found: 2
+     - Channel #31 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 255
+-----------------------------------
+Contents of FIFO 1 for channel 32 (status = 7)
+-----------------------------------
+  Decoded channel: 32
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 4
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 2
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+  Found ROCs with hits: 2
+  Total number of hits found: 2
+     - Channel #32 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 254
+     - Channel #32 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 216
+26 Aug 2016 15:24:24.184 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.184 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.184 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.184 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.184 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'CalSync'
+26 Aug 2016 15:24:24.184 [139911056652032] INFO  GenericTTCModule <> - Sequence 'CalSync' has N(commands)=1
+NEW FEDTBMDelay TRIGGER 4 state 0 Vcal 200 
+-----------------------------------
+Contents of FIFO 1 for channel 31 (status = 8)
+-----------------------------------
+  Decoded channel: 31
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 5
+  ROCs enabled: 0
+  TBM trailer errors: 0
+  Found ROCs without hits: 4
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 0
+     - ROC #3 - last dac : 0
+     - ROC #4 - last dac : 0
+  Found ROCs with hits: 1
+  Total number of hits found: 1
+     - Channel #31 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 255
+-----------------------------------
+Contents of FIFO 1 for channel 32 (status = 8)
+-----------------------------------
+  Decoded channel: 32
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 5
+  ROCs enabled: 0
+  TBM trailer errors: 0
+  Found ROCs without hits: 4
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 0
+     - ROC #3 - last dac : 0
+     - ROC #4 - last dac : 0
+  Found ROCs with hits: 1
+  Total number of hits found: 1
+     - Channel #32 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 255
+26 Aug 2016 15:24:24.189 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.189 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.189 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.189 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.189 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'CalSync'
+26 Aug 2016 15:24:24.189 [139911056652032] INFO  GenericTTCModule <> - Sequence 'CalSync' has N(commands)=1
+NEW FEDTBMDelay TRIGGER 5 state 0 Vcal 200 
+-----------------------------------
+Contents of FIFO 1 for channel 31 (status = 12)
+-----------------------------------
+  Decoded channel: 31
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 6
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 4
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+     - ROC #3 - last dac : 8
+     - ROC #4 - last dac : 8
+  Found ROCs with hits: 4
+  Total number of hits found: 5
+     - Channel #31 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #3 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #4 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #4 dcol 25 pxl 32 col 50 row 64 pulse height 16
+-----------------------------------
+Contents of FIFO 1 for channel 32 (status = 12)
+-----------------------------------
+  Decoded channel: 32
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 6
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 4
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+     - ROC #3 - last dac : 8
+     - ROC #4 - last dac : 8
+  Found ROCs with hits: 4
+  Total number of hits found: 5
+     - Channel #32 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 254
+     - Channel #32 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 211
+     - Channel #32 ROC #3 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #32 ROC #4 dcol 5 pxl 140 col 10 row 10 pulse height 239
+     - Channel #32 ROC #4 dcol 25 pxl 32 col 50 row 64 pulse height 16
+26 Aug 2016 15:24:24.194 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.194 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.194 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.194 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.194 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'CalSync'
+26 Aug 2016 15:24:24.194 [139911056652032] INFO  GenericTTCModule <> - Sequence 'CalSync' has N(commands)=1
+NEW FEDTBMDelay TRIGGER 6 state 0 Vcal 200 
+-----------------------------------
+Contents of FIFO 1 for channel 31 (status = 5)
+-----------------------------------
+  Decoded channel: 31
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 7
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 1
+     - ROC #1 - last dac : 8
+  Found ROCs with hits: 1
+  Total number of hits found: 1
+     - Channel #31 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 255
+-----------------------------------
+Contents of FIFO 1 for channel 32 (status = 5)
+-----------------------------------
+  Decoded channel: 32
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 7
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 1
+     - ROC #1 - last dac : 8
+  Found ROCs with hits: 1
+  Total number of hits found: 1
+     - Channel #32 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 255
+26 Aug 2016 15:24:24.198 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.198 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.198 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.198 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.198 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'CalSync'
+26 Aug 2016 15:24:24.198 [139911056652032] INFO  GenericTTCModule <> - Sequence 'CalSync' has N(commands)=1
+NEW FEDTBMDelay TRIGGER 7 state 0 Vcal 200 
+-----------------------------------
+Contents of FIFO 1 for channel 31 (status = 12)
+-----------------------------------
+  Decoded channel: 31
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 8
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 4
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+     - ROC #3 - last dac : 8
+     - ROC #4 - last dac : 8
+  Found ROCs with hits: 4
+  Total number of hits found: 5
+     - Channel #31 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #3 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #4 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #31 ROC #4 dcol 25 pxl 32 col 50 row 64 pulse height 16
+-----------------------------------
+Contents of FIFO 1 for channel 32 (status = 12)
+-----------------------------------
+  Decoded channel: 32
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 8
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 4
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 8
+     - ROC #3 - last dac : 8
+     - ROC #4 - last dac : 8
+  Found ROCs with hits: 4
+  Total number of hits found: 5
+     - Channel #32 ROC #1 dcol 5 pxl 140 col 10 row 10 pulse height 254
+     - Channel #32 ROC #2 dcol 5 pxl 140 col 10 row 10 pulse height 214
+     - Channel #32 ROC #3 dcol 5 pxl 140 col 10 row 10 pulse height 255
+     - Channel #32 ROC #4 dcol 5 pxl 140 col 10 row 10 pulse height 239
+     - Channel #32 ROC #4 dcol 25 pxl 32 col 50 row 64 pulse height 16
+26 Aug 2016 15:24:24.202 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.202 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.202 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.202 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.202 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'CalSync'
+26 Aug 2016 15:24:24.202 [139911056652032] INFO  GenericTTCModule <> - Sequence 'CalSync' has N(commands)=1
+NEW FEDTBMDelay TRIGGER 8 state 0 Vcal 200 
+-----------------------------------
+Contents of FIFO 1 for channel 31 (status = 6)
+-----------------------------------
+  Decoded channel: 31
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 10
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 3
+     - ROC #1 - last dac : 0
+     - ROC #2 - last dac : 0
+     - ROC #3 - last dac : 0
+  Found ROCs with hits: 0
+  Total number of hits found: 0
+-----------------------------------
+Contents of FIFO 1 for channel 32 (status = 6)
+-----------------------------------
+  Decoded channel: 32
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 63
+  ROCs enabled: 0
+  TBM trailer errors: 0
+  Found ROCs without hits: 3
+     - ROC #1 - last dac : 0
+     - ROC #2 - last dac : 0
+     - ROC #3 - last dac : 0
+  Found ROCs with hits: 0
+  Total number of hits found: 0
+26 Aug 2016 15:24:24.206 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.206 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - TTCciControlSoapHandler::userCommand: SOAP message received:
+<soap-env:Envelope soap-env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Header/><soap-env:Body><xdaq:userCommand xdaq:CommandPar="Execute Sequence" xdaq:sequence_name="CalSync" xmlns:xdaq="urn:xdaq-soap:3.0"/></soap-env:Body></soap-env:Envelope>
+26 Aug 2016 15:24:24.206 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.206 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0).TTCciControlSoapHandler <> - Executing 'CalSync' sequence
+26 Aug 2016 15:24:24.206 [139911056652032] INFO  GenericTTCModule <> - Executing sequence 'CalSync'
+26 Aug 2016 15:24:24.206 [139911056652032] INFO  GenericTTCModule <> - Sequence 'CalSync' has N(commands)=1
+NEW FEDTBMDelay TRIGGER 9 state 0 Vcal 200 
+-----------------------------------
+Contents of FIFO 1 for channel 31 (status = 7)
+-----------------------------------
+  Decoded channel: 31
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 10
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 4
+     - ROC #1 - last dac : 8
+     - ROC #2 - last dac : 0
+     - ROC #3 - last dac : 0
+     - ROC #4 - last dac : 0
+  Found ROCs with hits: 0
+  Total number of hits found: 0
+-----------------------------------
+Contents of FIFO 1 for channel 32 (status = 5)
+-----------------------------------
+  Decoded channel: 32
+  Found TBM header: 1
+  Found TBM trailer: 1
+  Event number: 10
+  ROCs enabled: 1
+  TBM trailer errors: 0
+  Found ROCs without hits: 1
+     - ROC #1 - last dac : 8
+  Found ROCs with hits: 1
+  Total number of hits found: 1
+     - Channel #32 ROC #1 dcol 5 pxl 137 col 11 row 12 pulse height 250
+In PixelFEDTBMDelayCalibration::endCalibration()
+26 Aug 2016 15:30:31.384 [139911056652032] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCciControl resetting FSM
+Fri Aug 26 17:30:31 2016
+ DiagWrapper Level 3: --- HALT ---
+SLEEPIGN IN FED HALT
+done sleeping IN FED HALT
+Fri Aug 26 17:30:36 2016
+ DiagWrapper Level 0: -- closing FED output files --
+Fri Aug 26 17:30:36 2016
+ DiagWrapper Level 0: -- done closing FED output files --
+ skip assert 
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+
+Fri Aug 26 17:30:36 2016
+ DiagWrapper Level 1: [PixelFEDSupervisor::Halt] There was a FEDCalibrationBase_
+Fri Aug 26 17:30:36 2016
+ DiagWrapper Level 1: But not anymore!
+FEDID:40 Set Control register 8
+ PixelFEDInterface destructor 
+Fri Aug 26 17:30:36 2016
+ DiagWrapper Level 3: -- Exit HALT -- 5.00128
+Fri Aug 26 17:30:36 2016
+ DiagWrapper Level 1: New state is:Halted
+Terminating...

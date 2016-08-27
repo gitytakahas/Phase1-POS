@@ -1,0 +1,13 @@
+echo this is d.ini
+sys
+fec  19
+mfec 19 8 +6P 
+cn +6PL12
+
+
+module 15
+tbm
+disableauto
+
+
+echo done with d.ini

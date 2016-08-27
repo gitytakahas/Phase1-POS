@@ -64,14 +64,17 @@ DigTransDecoder::DigTransDecoder(const uint32_t* buffer) {
 	if (word12 == tbm_header) {
 	  //if (j==0) std::cout << "tbm header\n";
 	  tbm_header_l[j].push_back(nb);
+          std::cout << " ***** tbm header nb " << nb << std::endl;
 	}
 	else if (word12 == tbm_trailer) {
 	  //if (j==0) std::cout << "tbm trailer\n";
 	  tbm_trailer_l[j].push_back(nb);
+          std::cout << " ***** tbm trailer nb " << nb << std::endl;
 	}
 	if (word10 == roc_header) {
 	  //if (j==0) std::cout << "roc header\n";
 	  roc_header_l[j].push_back(nb);
+          std::cout << " ***** roc header nb " << nb << std::endl;
 	}
       }
     }
@@ -87,8 +90,12 @@ DigTransDecoder::DigTransDecoder(const uint32_t* buffer) {
 	word = buffer[i] & 0xFFFF;
       else
 	word = buffer[i] >> 16;
-      for (int k = 15; k >= 0; --k)
+      for (int k = 15; k >= 0; --k){
 	bits[j].push_back(int((word & (1 << k)) != 0));
+      }
+      /*for( int kk=0; kk < bits[j].size(); ++kk ){
+        std::cout << "****** get bits --> word " << word << " j " << j << " kk " << kk << " bits " << bits[j][kk] << std::endl; 
+      }*/ 
     }
   }
 
@@ -129,6 +136,7 @@ DigTransDecoder::DigTransDecoder(const uint32_t* buffer) {
       const int at = roc_header_l[j][i];
       unsigned n = 0;
 
+      std::cout << " roc header i " << i << " at " << at << std::endl;
       if (at+10+2 > 16*size)
 	n = -1;
       else {

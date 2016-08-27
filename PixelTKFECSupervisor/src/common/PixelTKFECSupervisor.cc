@@ -18,8 +18,8 @@
  */
 #include "FecVmeRingDevice.h"
 
-#include <diagbag/DiagBagWizard.h>
-#include "DiagCompileOptions.h"
+//#include <diagbag/DiagBagWizard.h>
+//#include "DiagCompileOptions.h"
 #include <toolbox/convertstring.h>
 
 #include "toolbox/task/Timer.h"
@@ -60,6 +60,8 @@ using namespace pos::PortCardSettingNames;
 
 #define NO_PILOT_RESET // don't send crate/ring resets for pilot blade since this turns off/on modules on BmO
 
+#define SETUP_TIF
+
 const bool DEBUG = true; // some additinal debuging messages
 const bool do_force_ccu_readout = false; // force reading of CCU for each workloop (also force reset if enabled)
 
@@ -89,19 +91,19 @@ PixelTKFECSupervisor::PixelTKFECSupervisor(xdaq::ApplicationStub * s) throw (xda
 {
   //gio
   
-  diagService_ = new DiagBagWizard(
-                                   ("ReconfigurationModule") ,
-                                   this->getApplicationLogger(),
-                                   getApplicationDescriptor()->getClassName(),
-                                   getApplicationDescriptor()->getInstance(),
-                                   getApplicationDescriptor()->getLocalId(),
-                                   (xdaq::WebApplication *)this,
-                                   "Pixel",
-                                   "PixelTKFECSupervisor"
-                                   );
+  // diagService_ = new DiagBagWizard(
+  //                                  ("ReconfigurationModule") ,
+  //                                  this->getApplicationLogger(),
+  //                                  getApplicationDescriptor()->getClassName(),
+  //                                  getApplicationDescriptor()->getInstance(),
+  //                                  getApplicationDescriptor()->getLocalId(),
+  //                                  (xdaq::WebApplication *)this,
+  //                                  "Pixel",
+  //                                  "PixelTKFECSupervisor"
+  //                                  );
 
 
-  DIAG_DECLARE_USER_APP
+  //DIAG_DECLARE_USER_APP
 
   diagService_->reportError("The DiagSystem is installed --- this is a bogus error message",DIAGUSERINFO);
 
@@ -150,9 +152,9 @@ PixelTKFECSupervisor::PixelTKFECSupervisor(xdaq::ApplicationStub * s) throw (xda
   xgi::bind(this, &PixelTKFECSupervisor::CCUBoardGUI_XgiHandler, "CCUBoardGUI_XgiHandler");
 
   //DIAGNOSTIC REQUESTED CALLBACK
-  xgi::bind(this,&PixelTKFECSupervisor::configureDiagSystem, "configureDiagSystem");
-  xgi::bind(this,&PixelTKFECSupervisor::applyConfigureDiagSystem, "applyConfigureDiagSystem");
-  xgi::bind(this,&PixelTKFECSupervisor::callDiagSystemPage, "callDiagSystemPage");
+  // xgi::bind(this,&PixelTKFECSupervisor::configureDiagSystem, "configureDiagSystem");
+  // xgi::bind(this,&PixelTKFECSupervisor::applyConfigureDiagSystem, "applyConfigureDiagSystem");
+  // xgi::bind(this,&PixelTKFECSupervisor::callDiagSystemPage, "callDiagSystemPage");
 
   // Defining the states of the State Machine
   fsm_.addState('I', "Initial" ,this, &PixelTKFECSupervisor::stateChanged);
@@ -247,14 +249,15 @@ PixelTKFECSupervisor::PixelTKFECSupervisor(xdaq::ApplicationStub * s) throw (xda
   PixelDCStoTKFECDpInterface_=0;
   PixelDCSFSMInterface_=0;
 	
-  std::stringstream timerName;
-  timerName << getApplicationDescriptor()->getContextDescriptor()->getURL() << ":";
-  timerName << getApplicationDescriptor()->getClassName() << ":" << getApplicationDescriptor()->getLocalId() << ":" << getApplicationDescriptor()->getInstance();
-  toolbox::task::Timer * timer = toolbox::task::getTimerFactory()->createTimer(timerName.str());
-  toolbox::TimeInterval interval(AUTO_UP_CONFIGURE_DELAY,0);
-  toolbox::TimeVal start;
-  start = toolbox::TimeVal::gettimeofday() + interval;
-  timer->schedule( this, start,  0, "" );	
+  // std::stringstream timerName;
+  // timerName << getApplicationDescriptor()->getContextDescriptor()->getURL() << ":";
+  // timerName << getApplicationDescriptor()->getClassName() << ":" << getApplicationDescriptor()->getLocalId() << ":" << getApplicationDescriptor()->getInstance();
+  // toolbox::task::Timer * timer = toolbox::task::getTimerFactory()->createTimer(timerName.str());
+  // toolbox::TimeInterval interval(AUTO_UP_CONFIGURE_DELAY,0);
+  // toolbox::TimeVal start;
+  // start = toolbox::TimeVal::gettimeofday() + interval;
+  // timer->schedule( this, start,  0, "" );
+  
 
   GlobalTimer_.setName("PixelTKFECSupervisor");
   GlobalTimer_.setVerbose(true);  
@@ -273,14 +276,14 @@ PixelTKFECSupervisor::~PixelTKFECSupervisor()
 //gio
 void PixelTKFECSupervisor::timeExpired (toolbox::task::TimerEvent& e)
 {
-  DIAG_EXEC_FSM_INIT_TRANS
+  //DIAG_EXEC_FSM_INIT_TRANS
 }
     
 // DiagSystem XGI Binding
-void PixelTKFECSupervisor::callDiagSystemPage(xgi::Input * in, xgi::Output * out ) throw (xgi::exception::Exception)
-{
-  diagService_->getDiagSystemHtmlPage(in, out,getApplicationDescriptor()->getURN());
-}
+// void PixelTKFECSupervisor::callDiagSystemPage(xgi::Input * in, xgi::Output * out ) throw (xgi::exception::Exception)
+// {
+//   diagService_->getDiagSystemHtmlPage(in, out,getApplicationDescriptor()->getURN());
+// }
 
 
 void PixelTKFECSupervisor::helpMe ( char *programName ){
@@ -1578,7 +1581,7 @@ void PixelTKFECSupervisor::stateConfiguring(toolbox::fsm::FiniteStateMachine &fs
 		  addressTablePath_string=getenv("ENV_CMS_TK_ONLINE_ROOT");
 		  addressTablePath_string+="/config/FecAddressTable.dat";
 		}
-		
+
 		if (extratimers_) GlobalTimer_.printTime("stateConfiguring -- After addressTable");
 		
 		char *addressTablePath=(char *)addressTablePath_string.c_str();
@@ -1606,9 +1609,11 @@ void PixelTKFECSupervisor::stateConfiguring(toolbox::fsm::FiniteStateMachine &fs
     argv2[2]=argv2_2c;
     argv2[3]=const_cast<char*>(itoa(slot).c_str());
     argv2[4]=addressTablePath; 
-    
+
+                  GlobalTimer_.printTime("*********** ADDITIONAL DEBUG: Before crateFecAccess!! ***********");    
     // char * argv2[]={"portcard.exe","-vmecaenpci", "-fec", const_cast<char*>(itoa(slot).c_str()), addressTablePath};
 		createFecAccess ( argc, argv2, &cnt, false ) ;
+                  GlobalTimer_.printTime("*********** ADDITIONAL DEBUG: After crateFecAccess!! ***********");
 		
 		if (extratimers_)     GlobalTimer_.printTime("stateConfiguring -- After createFecAccess");
 		

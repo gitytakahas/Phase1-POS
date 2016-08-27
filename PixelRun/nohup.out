@@ -1,0 +1,169 @@
+Run xdaq with options: -p 1953 -e /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml -c ../XDAQConfiguration/XDAQ_ConfigurationUZHLabTest_TTC.xml
+LD_LIBRARY_PATH is  /opt/xdaq/lib:/home/cmspixel/root534/lib/root:/usr/lib64/root:/usr/lib64:/home/cmspixel/ph1_TriDAS/pixel/lib:/home/cmspixel/ph1_TriDAS/DiagSystem/tools/lib:/home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/lib:/opt/xdaq/lib/
+Run xdaq with options: -p 1954 -e /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml -c ../XDAQConfiguration/XDAQ_ConfigurationUZHLabTest_TTC.xml
+LD_LIBRARY_PATH is  /opt/xdaq/lib:/home/cmspixel/root534/lib/root:/usr/lib64/root:/usr/lib64:/home/cmspixel/ph1_TriDAS/pixel/lib:/home/cmspixel/ph1_TriDAS/DiagSystem/tools/lib:/home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/lib:/opt/xdaq/lib/
+Run xdaq with options: -p 1955 -e /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml -c ../XDAQConfiguration/XDAQ_ConfigurationUZHLabTest_TTC.xml
+LD_LIBRARY_PATH is  /opt/xdaq/lib:/home/cmspixel/root534/lib/root:/usr/lib64/root:/usr/lib64:/home/cmspixel/ph1_TriDAS/pixel/lib:/home/cmspixel/ph1_TriDAS/DiagSystem/tools/lib:/home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/lib:/opt/xdaq/lib/
+Run xdaq with options: -p 1956 -e /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml -c ../XDAQConfiguration/XDAQ_ConfigurationUZHLabTest_TTC.xml
+LD_LIBRARY_PATH is  /opt/xdaq/lib:/home/cmspixel/root534/lib/root:/usr/lib64/root:/usr/lib64:/home/cmspixel/ph1_TriDAS/pixel/lib:/home/cmspixel/ph1_TriDAS/DiagSystem/tools/lib:/home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/lib:/opt/xdaq/lib/
+09 Feb 2016 15:57:08.629 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59, 64bit
+09 Feb 2016 15:57:08.629 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59, 64bit
+09 Feb 2016 15:57:08.631 [09 Feb 2016 15:57:08.631 [140406592915296] 140188843128672INFO] INFO    ch.uzh.physik.cmspixel.p:1955ch.uzh.physik.cmspixel.p:1954 < <> - > - Loaded profile: /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xmlxdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59, 64bit
+
+09 Feb 2016 15:57:08.631 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - b2innub version: 02.01.00, compiled on Oct 18 2012 at 19:18:29
+09 Feb 2016 15:57:08.632 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - executive version: 03.15.04, compiled on Oct 18 2012 at 19:18:12
+09 Feb 2016 15:57:08.632 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - Loaded profile: /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml
+09 Feb 2016 15:57:08.632 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - b2innub version: 02.01.00, compiled on Oct 18 2012 at 19:18:29
+09 Feb 2016 15:57:08.633 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - pthttp version: 03.15.01, compiled on Dec  4 2013 at 11:04:24
+09 Feb 2016 15:57:08.633 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - executive version: 03.15.04, compiled on Oct 18 2012 at 19:18:12
+09 Feb 2016 15:57:08.633 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - ptfifo version: 04.01.01, compiled on Oct 18 2012 at 19:17:58
+09 Feb 2016 15:57:08.633 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <09 Feb 2016 15:57:08.633> -  [pthttp version: 03.15.01, compiled on Dec  4 2013 at 11:04:24
+140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - xrelay version: 03.09.00, compiled on Oct 18 2012 at 19:18:25
+09 Feb 2016 15:57:08.634 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59, 64bit
+09 Feb 2016 15:57:08.634 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - ptfifo version: 04.01.01, compiled on Oct 18 2012 at 19:17:58
+09 Feb 2016 15:57:08.634 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - hyperdaq version: 04.01.02, compiled on Oct 18 2012 at 19:18:24
+09 Feb 2016 15:57:08.634 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - xrelay version: 03.09.00, compiled on Oct 18 2012 at 19:18:25
+09 Feb 2016 15:57:08.634 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - Loaded profile: /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml
+09 Feb 2016 15:57:08.634 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - b2innub version: 02.01.00, compiled on Oct 18 2012 at 19:18:29
+09 Feb 2016 15:57:08.635 [140442533259104] INFO09 Feb 2016 15:57:08.635  [ ch.uzh.physik.cmspixel.p:1953140188843128672 <] > - INFOhyperdaq version: 04.01.02, compiled on Oct 18 2012 at 19:18:24 
+ ch.uzh.physik.cmspixel.p:1954 <> - pttcp version: 02.13.03, compiled on Oct 18 2012 at 19:19:19
+09 Feb 2016 15:57:08.635 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - executive version: 03.15.04, compiled on Oct 18 2012 at 19:18:12
+09 Feb 2016 15:57:08.635 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+09 Feb 2016 15:57:08.635 [140188843128672] DEBUG ch.uzh.physik.cmspixel.p:1954 <> - Create application descriptor for class: executive::Application id: 0
+09 Feb 2016 15:57:08.635 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - pttcp version: 02.13.03, compiled on Oct 18 2012 at 19:19:19
+09 Feb 2016 15:57:08.635 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - pthttp version: 03.15.01, compiled on Dec  4 2013 at 11:04:24
+09 Feb 2016 15:57:08.636 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+09 Feb 2016 15:57:08.636 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - ptfifo version: 04.01.01, compiled on Oct 18 2012 at 19:17:58
+09 Feb 2016 15:57:08.636 [140442533259104] DEBUG ch.uzh.physik.cmspixel.p:1953 <> - Create application descriptor for class: executive::Application id: 0
+09 Feb 2016 15:57:08.636 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <09 Feb 2016 15:57:08.636> -  [Loaded profile: /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml
+140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954.executive::Application.lid(0)09 Feb 2016 15:57:08.636 < [> - Log URL not set (was already console)140406592915296
+] INFO 09 Feb 2016 15:57:08.636  [ch.uzh.physik.cmspixel.p:1955140188843128672 <] > - INFOxrelay version: 03.09.00, compiled on Oct 18 2012 at 19:18:25 
+ ch.uzh.physik.cmspixel.p:1954.executive::Application.lid(0) <> - Log URL not set (was already console)
+09 Feb 2016 15:57:08.636 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954.executive::Application.lid(0) <> - Changed Log level to INFO
+09 Feb 2016 15:57:08.636 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954.executive::Application.lid(0) <> - Changed Log level to INFO
+09 Feb 2016 15:57:08.636 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - b2innub version: 02.01.00, compiled on Oct 18 2012 at 19:18:29
+09 Feb 2016 15:57:08.637 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - hyperdaq version: 04.01.02, compiled on Oct 18 2012 at 19:18:24
+09 Feb 2016 15:57:08.637 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Log URL not set (was already console)
+09 Feb 2016 15:57:08.637 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Log URL not set (was already console)
+09 Feb 2016 15:57:08.637 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Changed Log level to INFO
+09 Feb 2016 15:57:08.637 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Changed Log level to INFO
+09 Feb 2016 15:57:08.637 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - executive version: 03.15.04, compiled on Oct 18 2012 at 19:18:12
+09 Feb 2016 15:57:08.637 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - pttcp version: 02.13.03, compiled on Oct 18 2012 at 19:19:19
+09 Feb 2016 15:57:08.637 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - pthttp version: 03.15.01, compiled on Dec  4 2013 at 11:04:24
+09 Feb 2016 15:57:08.638 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+09 Feb 2016 15:57:08.638 [140406592915296] DEBUG ch.uzh.physik.cmspixel.p:1955 <> - Create application descriptor for class: executive::Application id: 0
+09 Feb 2016 15:57:08.638 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - ptfifo version: 04.01.01, compiled on Oct 18 2012 at 19:17:58
+09 Feb 2016 15:57:08.638 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - xrelay version: 03.09.00, compiled on Oct 18 2012 at 19:18:25
+09 Feb 2016 15:57:08.638 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955.executive::Application.lid(0) <> - Log URL not set (was already console)
+09 Feb 2016 15:57:08.638 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955.executive::Application.lid(0) <> - Log URL not set (was already console)
+09 Feb 2016 15:57:08.639 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955.executive::Application.lid(0) <> - Changed Log level to INFO
+09 Feb 2016 15:57:08.639 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955.executive::Application.lid(0) <> - Changed Log level to INFO
+09 Feb 2016 15:57:08.639 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - hyperdaq version: 04.01.02, compiled on Oct 18 2012 at 19:18:24
+09 Feb 2016 15:57:08.639 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - pttcp version: 02.13.03, compiled on Oct 18 2012 at 19:19:19
+09 Feb 2016 15:57:08.640 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+09 Feb 2016 15:57:08.640 [140234832906080] DEBUG ch.uzh.physik.cmspixel.p:1956 <> - Create application descriptor for class: executive::Application id: 0
+09 Feb 2016 15:57:08.641 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.executive::Application.lid(0) <> - Log URL not set (was already console)
+09 Feb 2016 15:57:08.641 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.executive::Application.lid(0) <> - Log URL not set (was already console)
+09 Feb 2016 15:57:08.641 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.executive::Application.lid(0) <> - Changed Log level to INFO
+09 Feb 2016 15:57:08.641 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.executive::Application.lid(0) <> - Changed Log level to INFO
+09 Feb 2016 15:57:08.641 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+09 Feb 2016 15:57:08.641 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+09 Feb 2016 15:57:08.642 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+09 Feb 2016 15:57:08.642 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+09 Feb 2016 15:57:08.642 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+09 Feb 2016 15:57:08.642 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+09 Feb 2016 15:57:08.642 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+09 Feb 2016 15:57:08.64209 Feb 2016 15:57:08.642 [ [140406592915296140442533259104] ] INFOINFO    ch.uzh.physik.cmspixel.p:1955.pt::tcp::PeerTransportTCP.lid(20)ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) < <> - > - stop receiver and sender threadsstart receiver and sender threads
+
+09 Feb 2016 15:57:08.642 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+09 Feb 2016 15:57:08.643 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+09 Feb 2016 15:57:08.643 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+09 Feb 2016 15:57:08.643 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+09 Feb 2016 15:57:08.643 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+09 Feb 2016 15:57:08.643 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+09 Feb 2016 15:57:08.643 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+09 Feb 2016 15:57:08.643 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+09 Feb 2016 15:57:08.643 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+09 Feb 2016 15:57:08.644 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+09 Feb 2016 15:57:08.644 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+09 Feb 2016 15:57:08.645 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+09 Feb 2016 15:57:08.645 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+09 Feb 2016 15:57:08.645 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+09 Feb 2016 15:57:08.645 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+09 Feb 2016 15:57:08.672 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+09 Feb 2016 15:57:08.672 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - config version: 03.09.02, compiled on Oct 18 2012 at 19:14:13
+09 Feb 2016 15:57:08.673 [140442533259104] WARN  ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/opt/xdaq/lib/liblog4cplus.so, version declaration missing.
+09 Feb 2016 15:57:08.673 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - toolbox version: 05.02.03, compiled on Oct 18 2012 at 19:14:55
+09 Feb 2016 15:57:08.677 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+09 Feb 2016 15:57:08.677 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - config version: 03.09.02, compiled on Oct 18 2012 at 19:14:13
+09 Feb 2016 15:57:08.677 [140188843128672] WARN  ch.uzh.physik.cmspixel.p:1954 <> - Could not perform version checking on module file:/opt/xdaq/lib/liblog4cplus.so, version declaration missing.
+09 Feb 2016 15:57:08.678 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - toolbox version: 05.02.03, compiled on Oct 18 2012 at 19:14:55
+09 Feb 2016 15:57:08.680 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+09 Feb 2016 15:57:08.680 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - config version: 03.09.02, compiled on Oct 18 2012 at 19:14:13
+09 Feb 2016 15:57:08.680 [140406592915296] WARN  ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/opt/xdaq/lib/liblog4cplus.so, version declaration missing.
+09 Feb 2016 15:57:08.680 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - toolbox version: 05.02.03, compiled on Oct 18 2012 at 19:14:55
+09 Feb 2016 15:57:08.681 [140442533259104] WARN  ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/opt/xdaq/lib/libxalan-c.so, version declaration missing.
+09 Feb 2016 15:57:08.681 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59
+09 Feb 2016 15:57:08.681 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - xdata version: 05.03.01, compiled on Oct 18 2012 at 19:16:07
+09 Feb 2016 15:57:08.681 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - xgi version: 03.13.00, compiled on Oct 18 2012 at 19:16:48
+09 Feb 2016 15:57:08.681 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - xoap version: 03.12.02, compiled on Oct 18 2012 at 19:15:32
+09 Feb 2016 15:57:08.682 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - xoapfilter version: 03.09.02, compiled on Oct 18 2012 at 19:15:33
+09 Feb 2016 15:57:08.682 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+09 Feb 2016 15:57:08.682 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - config version: 03.09.02, compiled on Oct 18 2012 at 19:14:13
+09 Feb 2016 15:57:08.682 [140234832906080] WARN  ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/opt/xdaq/lib/liblog4cplus.so, version declaration missing.
+09 Feb 2016 15:57:08.683 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - toolbox version: 05.02.03, compiled on Oct 18 2012 at 19:14:55
+09 Feb 2016 15:57:08.683 [140188843128672] WARN  ch.uzh.physik.cmspixel.p:1954 <> - Could not perform version checking on module file:/opt/xdaq/lib/libxalan-c.so, version declaration missing.
+09 Feb 2016 15:57:08.683 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59
+09 Feb 2016 15:57:08.683 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - xdata version: 05.03.01, compiled on Oct 18 2012 at 19:16:07
+09 Feb 2016 15:57:08.683 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <09 Feb 2016 15:57:08.683> -  [xgi version: 03.13.00, compiled on Oct 18 2012 at 19:16:48
+140406592915296] WARN  ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/opt/xdaq/lib/libxalan-c.so, version declaration missing.
+09 Feb 2016 15:57:08.684 [140188843128672] INFO 09 Feb 2016 15:57:08.684  [ch.uzh.physik.cmspixel.p:1954140406592915296 <] > - INFOxoap version: 03.12.02, compiled on Oct 18 2012 at 19:15:32 
+ ch.uzh.physik.cmspixel.p:1955 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59
+09 Feb 2016 15:57:08.684 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - xdata version: 05.03.01, compiled on Oct 18 2012 at 19:16:07
+09 Feb 2016 15:57:08.684 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - xgi version: 03.13.00, compiled on Oct 18 2012 at 19:16:48
+09 Feb 2016 15:57:08.684 [140188843128672] INFO 09 Feb 2016 15:57:08.684  [ch.uzh.physik.cmspixel.p:1954140406592915296 <] > - INFOxoapfilter version: 03.09.02, compiled on Oct 18 2012 at 19:15:33 
+ ch.uzh.physik.cmspixel.p:1955 <> - xoap version: 03.12.02, compiled on Oct 18 2012 at 19:15:32
+09 Feb 2016 15:57:08.684 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - xoapfilter version: 03.09.02, compiled on Oct 18 2012 at 19:15:33
+09 Feb 2016 15:57:08.688 [140234832906080] WARN  ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/opt/xdaq/lib/libxalan-c.so, version declaration missing.
+09 Feb 2016 15:57:08.688 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59
+09 Feb 2016 15:57:08.688 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - xdata version: 05.03.01, compiled on Oct 18 2012 at 19:16:07
+09 Feb 2016 15:57:08.688 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - xgi version: 03.13.00, compiled on Oct 18 2012 at 19:16:48
+09 Feb 2016 15:57:08.688 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - xoap version: 03.12.02, compiled on Oct 18 2012 at 19:15:32
+09 Feb 2016 15:57:08.689 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - xoapfilter version: 03.09.02, compiled on Oct 18 2012 at 19:15:33
+09 Feb 2016 15:57:08.862 [140406592915296] WARN  ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.863 [140406592915296] WARN  ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.867 [140406592915296] WARN  ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFEDSupervisor/lib/linux/x86_64_slc6/libPixelFEDSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.870 [140406592915296] WARN  ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelSupervisor/lib/linux/x86_64_slc6/libPixelSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.875 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - ttcttcci version: 01.07.02, compiled on Dec  4 2013 at 17:45:41
+09 Feb 2016 15:57:08.876 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - ttcutils version: 01.08.01, compiled on Dec  4 2013 at 17:43:10
+09 Feb 2016 15:57:08.933 [140188843128672] WARN  ch.uzh.physik.cmspixel.p:1954 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.935 [140188843128672] WARN  ch.uzh.physik.cmspixel.p:1954 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.939 [140188843128672] WARN  ch.uzh.physik.cmspixel.p:1954 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFEDSupervisor/lib/linux/x86_64_slc6/libPixelFEDSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.942 [140188843128672] WARN  ch.uzh.physik.cmspixel.p:1954 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelSupervisor/lib/linux/x86_64_slc6/libPixelSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.947 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - ttcttcci version: 01.07.02, compiled on Dec  4 2013 at 17:45:41
+09 Feb 2016 15:57:08.948 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - ttcutils version: 01.08.01, compiled on Dec  4 2013 at 17:43:10
+09 Feb 2016 15:57:08.951 [140406592915296] INFO  ch.uzh.physik.cmspixel.p:1955 <> - Ready.
+09 Feb 2016 15:57:08.960 [140442533259104] WARN  ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.961 [140442533259104] WARN  ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.963 [140442533259104] WARN  ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFEDSupervisor/lib/linux/x86_64_slc6/libPixelFEDSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.965 [140442533259104] WARN  ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelSupervisor/lib/linux/x86_64_slc6/libPixelSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.969 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - ttcttcci version: 01.07.02, compiled on Dec  4 2013 at 17:45:41
+09 Feb 2016 15:57:08.969 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - ttcutils version: 01.08.01, compiled on Dec  4 2013 at 17:43:10
+useTCDS is 1 pixel::tcds::PixeliCISupervisor pixel::tcds::PixelPISupervisor
+09 Feb 2016 15:57:08.978 [140234832906080] WARN  ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.979 [140234832906080] WARN  ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.981 [140234832906080] WARN  ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFEDSupervisor/lib/linux/x86_64_slc6/libPixelFEDSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.983 [140234832906080] WARN  ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelSupervisor/lib/linux/x86_64_slc6/libPixelSupervisor.so, version declaration missing.
+09 Feb 2016 15:57:08.986 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - ttcttcci version: 01.07.02, compiled on Dec  4 2013 at 17:45:41
+09 Feb 2016 15:57:08.986 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - ttcutils version: 01.08.01, compiled on Dec  4 2013 at 17:43:10
+09 Feb 2016 15:57:08.997 [140188843128672] INFO  ch.uzh.physik.cmspixel.p:1954 <> - Ready.
+InfoSpace was created
+09 Feb 2016 15:57:09.014 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCXDAQBase::actionPerformed for event type 'ItemChangedEvent', item 'Configuration'
+09 Feb 2016 15:57:09.015 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - Found '[file=...]' in XML variable 'Configuration' --> using file '/home/cmspixel/run/TTC/TTCciConfiguration.txt' for configuration.
+09 Feb 2016 15:57:09.015 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCXDAQBase::actionPerformed for event type 'urn:xdaq-event:setDefaultValues'
+09 Feb 2016 15:57:09.020 [140442533259104] INFO  ch.uzh.physik.cmspixel.p:1953 <> - Ready.
+09 Feb 2016 15:57:09.065 [140234832906080] INFO  ch.uzh.physik.cmspixel.p:1956 <> - Ready.
+Terminating...
+Terminating...
+Terminating...
+Terminating...

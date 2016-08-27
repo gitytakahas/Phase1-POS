@@ -27,7 +27,9 @@ PixelSupervisorConfiguration::PixelSupervisorConfiguration(std::string* runNumbe
   theFECConfiguration_=0;
   theFEDConfiguration_=0;
   theCalibObject_=0;
-  diagService_=0;
+  //*LC
+  //diagService_=0;
+  //*LC
   
   //TTCSupervisorApplicationName_="pixel::ici::PixeliCISupervisor";
   useTTC_=false;
@@ -50,7 +52,9 @@ PixelSupervisorConfiguration::PixelSupervisorConfiguration(const PixelSupervisor
   theFEDConfiguration_ = tempConfiguration.theFEDConfiguration_;
   mapNamePortCard_ = tempConfiguration.mapNamePortCard_;
   thePortcardMap_ = tempConfiguration.thePortcardMap_;
-  diagService_ = tempConfiguration.diagService_;
+  //*LC
+  //diagService_ = tempConfiguration.diagService_;
+  //*LC
   
   //ApplicationDescriptors
   PixelFECSupervisors_ = tempConfiguration.PixelFECSupervisors_;

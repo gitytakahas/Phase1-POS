@@ -40,7 +40,7 @@ FECSOFTWARE_ROOT:=${ENV_CMS_TK_ONLINE_ROOT}
 Project=pixel
 Package=PixelTKFECSupervisor
 
-Sources=PixelTKFECSupervisor.cc 
+Sources=PixelTKFECSupervisor.cc DiagWrapper.cc
 
 IncludeDirs = \
         $(BUILD_HOME)/$(Project) \

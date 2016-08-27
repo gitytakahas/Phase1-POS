@@ -20,9 +20,28 @@
 
 #include "xdaq/NamespaceURI.h"
 
+//*LC
+#include "xdata/UnsignedLong.h"
+#include "xdata/String.h"
+#include "xdata/Boolean.h"
+#include "b2in/nub/exception/Exception.h"
+
+#include "xdata/InfoSpace.h"
+#include "xdata/ActionListener.h"
+#include "xdata/InfoSpaceFactory.h"
+#include "xdata/ItemEvent.h"
+#include "xdata/ItemGroupEvent.h"
+#include "xdata/UnsignedInteger32.h"
+#include "xdata/Float.h"
+#include "xdata/Table.h"
+//*LC
+
 // gio
-#include <diagbag/DiagBagWizard.h>
-#include "DiagCompileOptions.h"
+//*LC
+//#include <diagbag/DiagBagWizard.h>
+//#include "DiagCompileOptions.h"
+#include "PixelSupervisorConfiguration/include/DiagWrapper.h"
+//*
 
 #include "CalibFormats/SiPixelObjects/interface/PixelConfigKey.h"
 #include "CalibFormats/SiPixelObjects/interface/PixelCalibBase.h"
@@ -36,6 +55,7 @@
 #include "PixelUtilities/Pixelb2inUtilities/include/Pixelb2inCommander.h"
 #include "xdaq/Application.h"
 #include "PixelSupervisorConfiguration/include/PixelSupervisorConfigurationBase.h"
+
 
 
 //class PixelSupervisorConfiguration : public PixelSupervisorConfigurationBase{
@@ -119,7 +139,19 @@ class PixelSupervisorConfiguration : public PixelSupervisorConfigurationBase, pu
   pos::PixelLTCConfig* theLTCConfig_;
   pos::PixelTTCciConfig* theTTCciConfig_;
   pos::PixelPortcardMap *thePortcardMap_;
-  DiagBagWizard* diagService_;
+  //*LC
+  //DiagBagWizard* diagService_;
+  //*LC
+  //*LC
+  DiagWrapper* diagService_;
+  static const int DIAGDEBUG = 0;
+  static const int DIAGTRACE = 1;
+  static const int DIAGUSERINFO = 2;
+  static const int DIAGINFO = 3;
+  static const int DIAGWARN = 4;
+  static const int DIAGERROR = 5;
+  static const int DIAGFATAL = 6;
+  //*LC
 
   void clearMapNamePortCard() ;
   void writeAllFEDCards(std::vector<std::string> filenames);
@@ -145,6 +177,7 @@ class PixelSupervisorConfiguration : public PixelSupervisorConfigurationBase, pu
 
   bool contains(const std::vector<std::string>& filenames,std::string filename);
   PixelSupervisorConfiguration();
+
   
 };
 

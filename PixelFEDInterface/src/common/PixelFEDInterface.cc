@@ -25,6 +25,11 @@ namespace {
 
 #define PILOT_FED
 
+//**added LC for BPIX PH1
+#define FITEL 
+#define CHa_CHb_mux  0x80000000
+//**
+
 #ifdef USE_HAL // Access VME with HAL
 
 //// Constructor //////////////////////////////////////////////////
@@ -754,6 +759,1636 @@ int PixelFEDInterface::resetDigFEDpll(void) {
   return(0);
 }
 
+
+//** added LC for BPIX PH1
+void PixelFEDInterface::InitFitelPiggyN() {
+
+
+  
+  uint32_t write_FITELmemaddr = 0x3100;
+  uint32_t write_FITELdata    = 0x3200; 
+  uint32_t FITELreadI2C       = 0x2000; 
+  uint32_t FITELwriteI2C      = 0x3000; 
+  uint32_t write_selectLEDs   = 0x3300; 
+  uint32_t write_resetFITEL   = 0x3400;
+
+
+  uint32_t data = 0x0;
+
+#ifdef USE_HAL // Use HAL
+  cout<< " --- Start initialization FITEL PiggyN --- " << endl;
+
+  //%%%%% test read/write
+  uint32_t d; 
+
+
+  /* vmeDevicePtr->write("TopDauCard_com",0xffffffff  );
+    //vmeDevicePtr->write("LAD_N",0xffffffff,HAL::HAL_NO_VERIFY,0x1a8000);
+  vmeDevicePtr->read("LAD_N", &d , 0x1a8000);
+  // VXIout(0x3,LAD_S+0x1a8000,4,0xffffffff); VXIin(0x3,LAD_S+0x1a8000,4,&d);
+  printf("written: 0xffffffff   read:%08x\n",d );
+  vmeDevicePtr->write("TopDauCard_com",0x0 );
+  //vmeDevicePtr->write("LAD_N",0x0,HAL::HAL_NO_VERIFY,0x1a8000); 
+  vmeDevicePtr->read("LAD_N", &d , 0x1a8000);
+  //VXIout(0x3,LAD_S+0x1a8000,4,0x0);  VXIin(0x3,LAD_S+0x1a8000,4,&d);
+  printf("written: 0x00000000   read:%08x\n",d );
+  vmeDevicePtr->write("TopDauCard_com",0x55555555 );
+  //vmeDevicePtr->write("LAD_N",0x55555555,HAL::HAL_NO_VERIFY,0x1a8000); 
+  vmeDevicePtr->read("LAD_N", &d , 0x1a8000);
+  //VXIout(0x3,LAD_S+0x1a8000,4,0x55555555);  VXIin(0x3,LAD_S+0x1a8000,4,&d);
+  printf("written: 0x55555555   read:%08x\n",d );
+  //vmeDevicePtr->write("LAD_N",0xaaaaaaaa,HAL::HAL_NO_VERIFY,0x1a8000);
+  vmeDevicePtr->write("TopDauCard_com",0xaaaaaaaa ); 
+  vmeDevicePtr->read("LAD_N", &d , 0x1a8000);
+  // VXIout(0x3,LAD_S+0x1a8000,4,0xaaaaaaaa);  VXIin(0x3,LAD_S+0x1a8000,4,&d);
+  printf("written: 0xaaaaaaaa   read:%08x\n",d );
+  //%%%%%%
+  */
+
+
+  //*********
+  // select which fiber is shown at the LEDs
+  
+  uint32_t LAD_N = 0x4C000000;
+  data = CHa_CHb_mux + write_selectLEDs + 0x04;
+  vmeDevicePtr->write("TopDauCard_com", data );// select LEDS for fiber#2 (1..12)
+  usleep(500);
+  //vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_selectLEDs + 0x04 << endl; 
+                 
+  // reset FITEL------
+  data = CHa_CHb_mux + write_resetFITEL + 0x01;
+  vmeDevicePtr->write("TopDauCard_com", data );
+  usleep(500); 
+  //vmeDevicePtr->read("LAD_N", &d , 0x1a8000);
+  //usleep(500);
+  //printf("written: %08x   read:%08x\n",data, d );
+  //vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);  
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_resetFITEL + 0x01 << endl;
+  data = CHa_CHb_mux + write_resetFITEL + 0x00;
+  vmeDevicePtr->write("TopDauCard_com", data );
+  usleep(500);
+  //vmeDevicePtr->read("LAD_N", &d , 0x1a8000);
+  //usleep(500);
+  //printf("written: %08x   read:%08x\n",data, d );
+  //vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_resetFITEL + 0x00 << endl;
+  //------------------
+                    
+  //configure FITEL
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x00; // read Memaddr 00
+  vmeDevicePtr->write("TopDauCard_com", data );  
+  usleep(500);
+  //vmeDevicePtr->read("LAD_N", &d , 0x1a8000);
+  //usleep(500);
+  //printf("written: %08x   read:%08x\n",data, d );
+  //vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELmemaddr + 0x00 << endl;
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  vmeDevicePtr->write("TopDauCard_com", data );
+  usleep(500);
+  //vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);  
+  // vmeDevicePtr->read("LAD_N", &d , 0x1a8000);
+  //usleep(500);
+  //printf("written: %08x   read:%08x\n",data, d );
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELdata + 0x00 << endl;
+  data = CHa_CHb_mux + FITELreadI2C; 
+  vmeDevicePtr->write("TopDauCard_com", data );
+  usleep(500);
+  //vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+  //vmeDevicePtr->read("LAD_N", &d , 0x1a8000);
+  //usleep(500);
+  // printf("written: %08x   read:%08x\n",data, d ); 
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + FITELreadI2C << endl;
+  usleep(500);
+  data = 0x4;  //  start I2C cycle 
+  //vmeDevicePtr->write("NWrModeReg", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  //vmeDevicePtr->read("LAD_N", &d , 0x1c0000);
+  //printf("NWrModeReg: written: %08x   read:%08x\n",data, d );
+  usleep(500);
+  data = 0x0;  
+  //vmeDevicePtr->write("NWrModeReg", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  //vmeDevicePtr->read("LAD_N", &d , 0x1c0000);
+  //printf("NWrModeReg: written: %08x   read:%08x\n",data, d );
+  usleep(500);
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  4 << endl; 
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  0 << endl;
+
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x01; // read Memaddr 01
+  //vmeDevicePtr->write("TopDauCard_com", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+  usleep(500); 
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " <<  CHa_CHb_mux + write_FITELmemaddr + 0x01 << endl; 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  //vmeDevicePtr->write("TopDauCard_com", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+  usleep(500); 
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " <<  CHa_CHb_mux + write_FITELdata + 0x00 << endl; 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  //vmeDevicePtr->write("TopDauCard_com", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+  usleep(500); 
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + FITELreadI2C << endl; 
+  usleep(500);
+  data = 0x4;  //  start I2C cycle 
+  //vmeDevicePtr->write("NWrModeReg", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  usleep(500);
+  data = 0x0;  
+  //vmeDevicePtr->write("NWrModeReg", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  usleep(500);
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  4 << endl; 
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  0 << endl;
+
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x02; // read Memaddr 02
+  //vmeDevicePtr->write("TopDauCard_com", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+  usleep(500);
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELmemaddr + 0x02 << endl; 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  //vmeDevicePtr->write("TopDauCard_com", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELdata + 0x00 << endl;  
+  data = CHa_CHb_mux + FITELreadI2C; 
+  //vmeDevicePtr->write("TopDauCard_com", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+  usleep(500);
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + FITELreadI2C << endl;
+  usleep(500);
+  data = 0x4;  //  start I2C cycle 
+  //vmeDevicePtr->write("NWrModeReg", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  usleep(500);
+  data = 0x0;  
+  //vmeDevicePtr->write("NWrModeReg", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  usleep(500);
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  4 << endl; 
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  0 << endl;
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x03; // read Memaddr 03
+  //vmeDevicePtr->write("TopDauCard_com", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+  usleep(500); 
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELmemaddr + 0x03 << endl; 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  //vmeDevicePtr->write("TopDauCard_com", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+  usleep(500);   
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELdata + 0x00 << endl; 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  //vmeDevicePtr->write("TopDauCard_com", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+  usleep(500);   
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + FITELreadI2C << endl;
+  usleep(500);
+  data = 0x4;  //  start I2C cycle 
+  //vmeDevicePtr->write("NWrModeReg", data );  
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  usleep(500);
+  data = 0x0;  
+  //vmeDevicePtr->write("NWrModeReg", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  usleep(500);
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  4 << endl; 
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  0 << endl;
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x13; // read Memaddr 13 -- device ID
+  //vmeDevicePtr->write("TopDauCard_com", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+  usleep(500);
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELmemaddr + 0x13 << endl;
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  //vmeDevicePtr->write("TopDauCard_com", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+  usleep(500);
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELdata + 0x00 << endl;
+  data = CHa_CHb_mux + FITELreadI2C; 
+  //vmeDevicePtr->write("TopDauCard_com", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+  usleep(500);  
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + FITELreadI2C << endl;
+  usleep(20000);
+  data = 0x4;  //  start I2C cycle 
+  //vmeDevicePtr->write("NWrModeReg", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(500);
+  data = 0x0;  
+  //vmeDevicePtr->write("NWrModeReg", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  usleep(500);
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  4 << endl; 
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  0 << endl;
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x14; // read Memaddr 14 -- Temp index 
+  //vmeDevicePtr->write("TopDauCard_com", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+  usleep(500); 
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELmemaddr + 0x14 << endl;
+  data = CHa_CHb_mux + write_FITELdata + 0x00;
+  //vmeDevicePtr->write("TopDauCard_com", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+  usleep(500);  
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELdata + 0x00 << endl;
+  data = CHa_CHb_mux + FITELreadI2C; 
+  //vmeDevicePtr->write("TopDauCard_com", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+  usleep(500);
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + FITELreadI2C << endl;
+  usleep(500);
+  data = 0x4;  //  start I2C cycle 
+  //vmeDevicePtr->write("NWrModeReg", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  usleep(500);
+  data = 0x0;  
+  //vmeDevicePtr->write("NWrModeReg", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  usleep(500);
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  4 << endl; 
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  0 << endl;
+
+ 
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x1c; // ANAMUX => RSSISUM
+  //vmeDevicePtr->write("TopDauCard_com", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+  usleep(500);
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELmemaddr + 0x1c << endl; 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  //vmeDevicePtr->write("TopDauCard_com", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+  usleep(500); 
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELdata + 0x00 << endl; 
+  data = CHa_CHb_mux + FITELwriteI2C; 
+  //vmeDevicePtr->write("TopDauCard_com", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+  usleep(500); 
+  //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + FITELwriteI2C << endl;
+  usleep(500);
+  data = 0x4;  //  start I2C cycle 
+  //vmeDevicePtr->write("NWrModeReg", data ); 
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  usleep(500);
+  data = 0x0;  
+  //vmeDevicePtr->write("NWrModeReg", data );
+  vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+  usleep(20000);
+  usleep(500);
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  4 << endl; 
+  //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  0 << endl;
+ 
+ 
+  
+  
+  for(int i=1;i<13;i++) {
+    usleep(500);
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x2f; // set PAGE
+    //vmeDevicePtr->write("TopDauCard_com", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+    usleep(500); 
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELmemaddr + 0x2f << endl; 
+    data = CHa_CHb_mux + write_FITELdata + i; 
+    //vmeDevicePtr->write("TopDauCard_com", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+    usleep(500);
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELdata + i << endl; 
+    data = CHa_CHb_mux + FITELwriteI2C; 
+    //vmeDevicePtr->write("TopDauCard_com", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);  
+    usleep(500);
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + FITELwriteI2C << endl;
+    usleep(500);
+    data = 0x4;  //  start I2C cycle 
+    //vmeDevicePtr->write("NWrModeReg", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+    usleep(20000);
+    usleep(500);
+    data = 0x0;  
+    //vmeDevicePtr->write("NWrModeReg", data ); 
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+    usleep(20000);
+    usleep(500);
+    //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  4 << endl; 
+    //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  0 << endl;
+    
+    //this is the block
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x39; // set internalVT 
+    //vmeDevicePtr->write("TopDauCard_com", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+    usleep(500); 
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELmemaddr + 0x39 << endl; 
+    data = CHa_CHb_mux + write_FITELdata + 0x20; 
+    //vmeDevicePtr->write("TopDauCard_com", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+    usleep(500);
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELdata + 0x20 << endl; 
+    data = CHa_CHb_mux + FITELwriteI2C; 
+    //vmeDevicePtr->write("TopDauCard_com", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+    usleep(500);   
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + FITELwriteI2C << endl;
+    usleep(500);
+    data = 0x4;  //  start I2C cycle 
+    //vmeDevicePtr->write("NWrModeReg", data ); 
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+    usleep(20000);
+    usleep(500);
+    data = 0x0;  
+    //vmeDevicePtr->write("NWrModeReg", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+    usleep(20000);
+    usleep(500);
+    //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  4 << endl; 
+    //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  0 << endl;
+    
+
+     data = CHa_CHb_mux + write_FITELmemaddr + 0x3b; //  BWCTRL 
+    //vmeDevicePtr->write("TopDauCard_com", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+    usleep(500);  
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELmemaddr + 0x3b << endl; 
+    data = CHa_CHb_mux + write_FITELdata + 0x00; 
+    //vmeDevicePtr->write("TopDauCard_com", data ); 
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);  
+    usleep(500);
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELdata + 0x00 << endl; 
+    data = CHa_CHb_mux + FITELwriteI2C; 
+    //vmeDevicePtr->write("TopDauCard_com", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+    usleep(500);  
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + FITELwriteI2C << endl;
+    usleep(500);
+    data = 0x4;  //  start I2C cycle 
+    //vmeDevicePtr->write("NWrModeReg", data ); 
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+    usleep(20000);
+    usleep(500);
+    data = 0x0;  
+    //vmeDevicePtr->write("NWrModeReg", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+    usleep(20000);
+    usleep(500);
+    //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  4 << endl; 
+    //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  0 << endl;
+
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x30; //  readback IRQ
+    //vmeDevicePtr->write("TopDauCard_com", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+    usleep(500);
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELmemaddr + 0x30 << endl;  
+    data = CHa_CHb_mux + write_FITELdata + 0x00; 
+    //vmeDevicePtr->write("TopDauCard_com", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000);
+    usleep(500);  
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELdata + 0x00 << endl;  
+    data = CHa_CHb_mux + FITELreadI2C; 
+    //vmeDevicePtr->write("TopDauCard_com", data ); 
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+    usleep(500);
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + FITELreadI2C << endl;
+    usleep(500);
+    data = 0x4;  //  start I2C cycle 
+    //vmeDevicePtr->write("NWrModeReg", data ); 
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+    usleep(20000);
+    usleep(500);
+    data = 0x0;  
+    //vmeDevicePtr->write("NWrModeReg", data ); 
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+    usleep(20000);
+    usleep(500);
+    //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  4 << endl; 
+    //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  0 << endl;
+
+   
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x31; //  readback FAULT
+    //vmeDevicePtr->write("TopDauCard_com", data ); 
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+    usleep(500);
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELmemaddr + 0x31 << endl;  
+    data = CHa_CHb_mux + write_FITELdata + 0x00; 
+    //vmeDevicePtr->write("TopDauCard_com", data );
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+    usleep(500); 
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + write_FITELdata + 0x00 << endl;  
+    data = CHa_CHb_mux + FITELreadI2C; 
+    //vmeDevicePtr->write("TopDauCard_com", data ); 
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1a8000); 
+    usleep(500); 
+    //cout << "address " << std::hex << LAD_N+0x1a8000 << " data " << CHa_CHb_mux + FITELreadI2C << endl;
+    usleep(500);
+    data = 0x4;  //  start I2C cycle 
+    //vmeDevicePtr->write("NWrModeReg", data ); 
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+    usleep(20000);
+    usleep(500);
+    data = 0x0;  
+    //vmeDevicePtr->write("NWrModeReg", data ); 
+    vmeDevicePtr->write("LAD_N",data,HAL::HAL_NO_VERIFY,0x1c0000);
+    usleep(20000);
+    usleep(500);
+    //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  4 << endl; 
+    //cout << "address " << std::hex <<  LAD_N+0x1c0000 << " data " <<  0 << endl;
+    
+    
+  } 
+  usleep(500);
+  usleep(20000);
+  
+  //************
+  printf("\n\n\nPIGGY FITEL I2C readback:      \n\n");
+  for(int i=0;i<128;i++)  { // read till FIFO is empty
+    //uint32_t d;
+    //vmeDevicePtr->read("LAD_N", &d , 0x170000);
+    usleep(500);
+    vmeDevicePtr->read("NRdSpyFif2Dn", &d );
+    if(i<30) {
+      //printf("%x\n",d);
+      if ((d&0xff) == 0x00)printf(" INT[ 7...0]: %2x \n",int((d>>8)&0xff));
+      if ((d&0xff) == 0x01)printf(" INT[15...8]: %2x \n",int((d>>8)&0xff)); 
+      if ((d&0xff) == 0x02)printf(" INT[23..16]: %2x \n",int((d>>8)&0xff));
+      
+      if ((d&0xff) == 0x13)printf(" Device REV:  %2x \n",int((d>>8)&0xff)); 
+      
+      if ((d&0xff) == 0x30)printf(" fiber#:%2d     SQ:%1x LOS:%1x BSIN:%1x OOP:%1x warning:%1x\n",
+				  int((i-4)/2),int((d>>12)&0x1),int((d>>13)&0x1),int((d>>14)&0x1),int((d>>15)&0x1),int((d>>16)&0x1));
+      
+   
+    }
+    
+  } 
+  // uint32_t du, dd;
+  // vmeDevicePtr->read("LAD_N", &du, 0x158000);
+  // vmeDevicePtr->read("LAD_N", &dd, 0x178000);
+  // printf("%1x%1x%1x%1x%1x%1x\n", (dd>>20)&0xf, (dd>>12)&0xf, (dd>>4)&0xf, (du>>20)&0xf, (du>>12)&0xf, (du>>4)&0xf);
+  // cout << "++--++--++--" << endl;
+  
+  //********
+
+#else // Use direct CAEN
+
+  // select which fiber is shown at the LEDs
+  data = CHa_CHb_mux + write_selectLEDs + 0x04;
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw);  // select LEDS for fiber#2 (1..12)  
+                 
+  // reset FITEL------
+  data = CHa_CHb_mux + write_resetFITEL + 0x01;
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_resetFITEL + 0x00;
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw);	 
+  //------------------
+                    
+  //configure FITEL
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x00; // read Memaddr 00
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(1000);
+
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x01; // read Memaddr 01
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(1000);
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x02; // read Memaddr 02
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(1000);
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x03; // read Memaddr 03
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(1000);
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x13; // read Memaddr 13 -- device ID
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(1000);
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x14; // read Memaddr 14 -- Temp index
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(1000);
+
+ 
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x1c; // ANAMUX => RSSISUM
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELwriteI2C; 
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+  usleep(1000);
+ 
+  
+  
+  for(int i=1;i<13;i++) {
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x2f; // set PAGE
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + write_FITELdata + i; 
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + FITELwriteI2C; 
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    
+    data = 0x4;  //  start I2C cycle 
+    ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+    usleep(100);
+    data = 0x0;  
+    ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+    usleep(1000);
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x39; // set internalVT 
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + write_FITELdata + 0x20; 
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + FITELwriteI2C; 
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    
+    data = 0x4;  //  start I2C cycle 
+    ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+    usleep(100);
+    data = 0x0;  
+    ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+    usleep(1000);
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x3b; //  BWCTRL 
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + write_FITELdata + 0x00; 
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + FITELwriteI2C; 
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    
+    data = 0x4;  //  start I2C cycle 
+    ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+    usleep(100);
+    data = 0x0;  
+    ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+    usleep(1000);
+
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x30; //  readback IRQ
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + write_FITELdata + 0x00; 
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + FITELreadI2C; 
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    
+    data = 0x4;  //  start I2C cycle 
+    ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+    usleep(100);
+    data = 0x0;  
+    ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+    usleep(1000);
+
+    
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x31; //  readback FAULT
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + write_FITELdata + 0x00; 
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + FITELreadI2C; 
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    
+    data = 0x4;  //  start I2C cycle 
+    ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+    usleep(100);
+    data = 0x0;  
+    ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw); 
+    usleep(1000);
+    
+    
+  } 
+  usleep(1000);
+  
+  
+#endif // Use HAL
+
+  printf("Digital FED: PiggyN FITEL initialized      \n\n");
+ 
+}
+
+void PixelFEDInterface::InitFitelPiggyS() {
+
+
+  
+  uint32_t write_FITELmemaddr = 0x3100;
+  uint32_t write_FITELdata    = 0x3200; 
+  uint32_t FITELreadI2C       = 0x2000; 
+  uint32_t FITELwriteI2C      = 0x3000; 
+  uint32_t write_selectLEDs   = 0x3300;  
+  uint32_t write_resetFITEL   = 0x3400;
+
+
+  uint32_t data = 0x0;
+
+#ifdef USE_HAL // Use HAL
+  cout<< " --- Start initialization FITEL PiggyS --- " << endl;
+
+  //*********
+  // select which fiber is shown at the LEDs
+  data = CHa_CHb_mux + write_selectLEDs + 0x04;
+  vmeDevicePtr->write("BottomDauCard_com", data );// select LEDS for fiber#2 (1..12)  
+  usleep(1000);      
+  // reset FITEL------
+  data = CHa_CHb_mux + write_resetFITEL + 0x01;
+  vmeDevicePtr->write("BottomDauCard_com", data ); 
+  usleep(1000);
+  data = CHa_CHb_mux + write_resetFITEL + 0x00;
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000);
+  //------------------
+                    
+  //configure FITEL
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x00; // read Memaddr 00
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000);
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000);
+  data = CHa_CHb_mux + FITELreadI2C; 
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000); 
+
+  data = 0x4;  //  start I2C cycle 
+  vmeDevicePtr->write("SCWrModeReg", data );
+  usleep(20000);
+  usleep(100);
+  data = 0x0;  
+  vmeDevicePtr->write("SCWrModeReg", data );
+  usleep(20000);
+  usleep(1000);
+
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x01; // read Memaddr 01
+  vmeDevicePtr->write("BottomDauCard_com", data ); 
+  usleep(1000);
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000); 
+
+  data = 0x4;  //  start I2C cycle 
+  vmeDevicePtr->write("SCWrModeReg", data );
+  usleep(20000);
+  usleep(100);
+  data = 0x0;  
+  vmeDevicePtr->write("SCWrModeReg", data );
+  usleep(20000);
+  usleep(1000);
+
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x02; // read Memaddr 02
+  vmeDevicePtr->write("BottomDauCard_com", data ); 
+  usleep(1000);
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  vmeDevicePtr->write("BottomDauCard_com", data ); 
+  usleep(1000);
+  
+  data = 0x4;  //  start I2C cycle 
+  vmeDevicePtr->write("SCWrModeReg", data );
+  usleep(20000);
+  usleep(100);
+  data = 0x0;  
+  vmeDevicePtr->write("SCWrModeReg", data );
+  usleep(20000);
+  usleep(1000);
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x03; // read Memaddr 03
+  vmeDevicePtr->write("BottomDauCard_com", data ); 
+  usleep(1000);
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000); 
+
+  data = 0x4;  //  start I2C cycle 
+  vmeDevicePtr->write("SCWrModeReg", data );
+  usleep(20000);
+  usleep(100);
+  data = 0x0;  
+  vmeDevicePtr->write("SCWrModeReg", data );
+  usleep(20000);
+  usleep(1000);
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x13; // read Memaddr 13 -- device ID
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  vmeDevicePtr->write("BottomDauCard_com", data ); 
+  usleep(1000);
+  data = CHa_CHb_mux + FITELreadI2C; 
+  vmeDevicePtr->write("BottomDauCard_com", data );  
+  usleep(1000);
+
+  data = 0x4;  //  start I2C cycle 
+  vmeDevicePtr->write("SCWrModeReg", data ); 
+  usleep(20000);
+  usleep(100);
+  data = 0x0;  
+  vmeDevicePtr->write("SCWrModeReg", data );
+  usleep(20000);
+  usleep(1000);
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x14; // read Memaddr 14 -- Temp index
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000); 
+
+  data = 0x4;  //  start I2C cycle 
+  vmeDevicePtr->write("SCWrModeReg", data ); 
+  usleep(20000);
+  usleep(100);
+  data = 0x0;  
+  vmeDevicePtr->write("SCWrModeReg", data ); 
+  usleep(20000);
+  usleep(1000);
+
+ 
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x1c; // ANAMUX => RSSISUM
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(1000); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  vmeDevicePtr->write("BottomDauCard_com", data ); 
+  usleep(1000);
+  data = CHa_CHb_mux + FITELwriteI2C; 
+  vmeDevicePtr->write("BottomDauCard_com", data ); 
+  usleep(1000);
+
+  data = 0x4;  //  start I2C cycle 
+  vmeDevicePtr->write("SCWrModeReg", data ); 
+  usleep(20000);
+  usleep(100);
+  data = 0x0;  
+  vmeDevicePtr->write("SCWrModeReg", data ); 
+  usleep(20000);
+  usleep(1000);
+ 
+ 
+  
+  
+  for(int i=1;i<13;i++) {
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x2f; // set PAGE
+    vmeDevicePtr->write("BottomDauCard_com", data );  
+    usleep(1000);
+    data = CHa_CHb_mux + write_FITELdata + i; 
+    vmeDevicePtr->write("BottomDauCard_com", data ); 
+    usleep(1000);
+    data = CHa_CHb_mux + FITELwriteI2C; 
+    vmeDevicePtr->write("BottomDauCard_com", data ); 
+    usleep(1000);
+    
+    data = 0x4;  //  start I2C cycle 
+    vmeDevicePtr->write("SCWrModeReg", data ); 
+    usleep(20000);
+    usleep(100);
+    data = 0x0;  
+    vmeDevicePtr->write("SCWrModeReg", data );
+    usleep(20000);
+    usleep(1000);
+    
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x39; // set internalVT 
+    vmeDevicePtr->write("BottomDauCard_com", data ); 
+    usleep(1000);
+    data = CHa_CHb_mux + write_FITELdata + 0x20; 
+    vmeDevicePtr->write("BottomDauCard_com", data );
+    usleep(1000); 
+    data = CHa_CHb_mux + FITELwriteI2C; 
+    vmeDevicePtr->write("BottomDauCard_com", data ); 
+    usleep(1000);
+    
+    data = 0x4;  //  start I2C cycle 
+    vmeDevicePtr->write("SCWrModeReg", data ); 
+    usleep(20000);
+    usleep(100);
+    data = 0x0;  
+    vmeDevicePtr->write("SCWrModeReg", data ); 
+    usleep(20000);
+    usleep(1000);
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x3b; //  BWCTRL 
+    vmeDevicePtr->write("BottomDauCard_com", data ); 
+    usleep(1000);
+    data = CHa_CHb_mux + write_FITELdata + 0x00; 
+    vmeDevicePtr->write("BottomDauCard_com", data ); 
+    usleep(1000);
+    data = CHa_CHb_mux + FITELwriteI2C; 
+    vmeDevicePtr->write("BottomDauCard_com", data ); 
+    usleep(1000);
+    
+    data = 0x4;  //  start I2C cycle 
+    vmeDevicePtr->write("SCWrModeReg", data );
+    usleep(20000);
+    usleep(100);
+    data = 0x0;  
+    vmeDevicePtr->write("SCWrModeReg", data ); 
+    usleep(20000);
+    usleep(1000);
+
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x30; //  readback IRQ
+    vmeDevicePtr->write("BottomDauCard_com", data ); 
+    usleep(1000);
+    data = CHa_CHb_mux + write_FITELdata + 0x00; 
+    vmeDevicePtr->write("BottomDauCard_com", data );
+    usleep(1000); 
+    data = CHa_CHb_mux + FITELreadI2C; 
+    vmeDevicePtr->write("BottomDauCard_com", data );  
+    usleep(1000);
+    
+    data = 0x4;  //  start I2C cycle 
+    vmeDevicePtr->write("SCWrModeReg", data ); 
+    usleep(20000);
+    usleep(100);
+    data = 0x0;  
+    vmeDevicePtr->write("SCWrModeReg", data ); 
+    usleep(20000);
+    usleep(1000);
+
+   
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x31; //  readback FAULT
+    vmeDevicePtr->write("BottomDauCard_com", data ); 
+    usleep(1000);
+    data = CHa_CHb_mux + write_FITELdata + 0x00; 
+    vmeDevicePtr->write("BottomDauCard_com", data ); 
+    usleep(1000);
+    data = CHa_CHb_mux + FITELreadI2C; 
+    vmeDevicePtr->write("BottomDauCard_com", data );  
+    usleep(1000);
+    
+    data = 0x4;  //  start I2C cycle 
+    vmeDevicePtr->write("SCWrModeReg", data ); 
+    usleep(20000);
+    usleep(100);
+    data = 0x0;  
+    vmeDevicePtr->write("SCWrModeReg", data );  
+    usleep(20000);
+    usleep(1000);
+    
+    
+  } 
+  usleep(1000);
+
+ //************
+  printf("\n\n\nPIGGY FITEL I2C readback:      \n\n");
+  for(int i=0;i<128;i++)  { // read till FIFO is empty
+    uint32_t d;
+    vmeDevicePtr->read("SCRdSpyFif2Dn", &d );
+    if(i<30) {
+      //printf("%x\n",d);
+      if ((d&0xff) == 0x00)printf(" INT[ 7...0]: %2x \n",int((d>>8)&0xff));
+      if ((d&0xff) == 0x01)printf(" INT[15...8]: %2x \n",int((d>>8)&0xff)); 
+      if ((d&0xff) == 0x02)printf(" INT[23..16]: %2x \n",int((d>>8)&0xff));
+      
+      if ((d&0xff) == 0x13)printf(" Device REV:  %2x \n",int((d>>8)&0xff)); 
+      
+      if ((d&0xff) == 0x30)printf(" fiber#:%2d     SQ:%1x LOS:%1x BSIN:%1x OOP:%1x warning:%1x\n",
+				  int((i-4)/2),int((d>>12)&0x1),int((d>>13)&0x1),int((d>>14)&0x1),int((d>>15)&0x1),int((d>>16)&0x1));
+      
+   
+    }
+  }
+  
+  //********
+
+  //********
+
+#else // Use direct CAEN
+
+  // select which fiber is shown at the LEDs
+  data = CHa_CHb_mux + write_selectLEDs + 0x04;
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw);  // select LEDS for fiber#2 (1..12)  
+                 
+  // reset FITEL------
+  data = CHa_CHb_mux + write_resetFITEL + 0x01;
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_resetFITEL + 0x00;
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw);	 
+  //------------------
+                    
+  //configure FITEL
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x00; // read Memaddr 00
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(1000);
+
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x01; // read Memaddr 01
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(1000);
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x02; // read Memaddr 02
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(1000);
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x03; // read Memaddr 03
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(1000);
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x13; // read Memaddr 13 -- device ID
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(1000);
+
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x14; // read Memaddr 14 -- Temp index
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELreadI2C; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(1000);
+
+ 
+  data = CHa_CHb_mux + write_FITELmemaddr + 0x1c; // ANAMUX => RSSISUM
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + write_FITELdata + 0x00; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  data = CHa_CHb_mux + FITELwriteI2C; 
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+
+  data = 0x4;  //  start I2C cycle 
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(100);
+  data = 0x0;  
+  ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+  usleep(1000);
+ 
+  
+  
+  for(int i=1;i<13;i++) {
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x2f; // set PAGE
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + write_FITELdata + i; 
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + FITELwriteI2C; 
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    
+    data = 0x4;  //  start I2C cycle 
+    ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+    usleep(100);
+    data = 0x0;  
+    ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+    usleep(1000);
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x39; // set internalVT 
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + write_FITELdata + 0x20; 
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + FITELwriteI2C; 
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    
+    data = 0x4;  //  start I2C cycle 
+    ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+    usleep(100);
+    data = 0x0;  
+    ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+    usleep(1000);
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x3b; //  BWCTRL 
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + write_FITELdata + 0x00; 
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + FITELwriteI2C; 
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    
+    data = 0x4;  //  start I2C cycle 
+    ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+    usleep(100);
+    data = 0x0;  
+    ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+    usleep(1000);
+
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x30; //  readback IRQ
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + write_FITELdata + 0x00; 
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + FITELreadI2C; 
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    
+    data = 0x4;  //  start I2C cycle 
+    ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+    usleep(100);
+    data = 0x0;  
+    ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+    usleep(1000);
+
+    
+
+    data = CHa_CHb_mux + write_FITELmemaddr + 0x31; //  readback FAULT
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + write_FITELdata + 0x00; 
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    data = CHa_CHb_mux + FITELreadI2C; 
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    
+    data = 0x4;  //  start I2C cycle 
+    ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+    usleep(100);
+    data = 0x0;  
+    ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw); 
+    usleep(1000);
+    
+    
+  } 
+  usleep(1000);
+  
+
+
+  
+#endif // Use HAL
+
+  printf("Digital FED: PiggyS FITEL initialized      \n\n");
+ 
+}
+
+//fiber switch for FITEL receiver
+//0: use fibers 4, 11, 12, 1, 2, 3
+//1: use fibers 5, 6, 7, 8, 9, 10
+void PixelFEDInterface::SetFitelFiberSwitchTopDauCard(int select_fibers=0) {
+
+  if (! (select_fibers==0 || select_fibers==1) ) {
+    cout << "ERROR: PixelFEDInterface::SetFitelFiberSwitchTopDauCard: Did not configuer Fitel Fiber Switch " << endl;
+    cout << "Argument must be 0 or 1, argument given " <<  select_fibers << endl;
+    return;
+  }
+    
+
+  uint32_t write_select_fibers_1to6  = 0x3700;
+ 
+
+  uint32_t data = 0x0;
+
+#ifdef USE_HAL // Use HAL
+ 
+
+  //*********
+  data = CHa_CHb_mux + write_select_fibers_1to6 + select_fibers;
+  vmeDevicePtr->write("TopDauCard_com", data );
+  usleep(100);
+  //********
+
+#else // Use direct CAEN
+
+ 
+  data = CHa_CHb_mux + write_select_fibers_1to6 + select_fibers;
+  ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+  usleep(100);
+                 
+#endif // Use HAL
+
+  /*if (select_fibers == 0) 
+    printf("Digital FED PiggyN FITEL: Using fibers 4, 11, 12, 1, 2, 3     \n\n");
+  else
+    printf("Digital FED PiggyN FITEL: Using fibers 5, 6, 7, 8, 9, 10     \n\n");*/
+ 
+}
+
+
+//fiber switch for FITEL receiver
+//0: use fibers 4, 11, 12, 1, 2, 3
+//1: use fibers 5, 6, 7, 8, 9, 10
+void PixelFEDInterface::SetFitelFiberSwitchBottomDauCard(int select_fibers=0) {
+
+  if (! (select_fibers==0 || select_fibers==1) ) {
+    cout << "ERROR: PixelFEDInterface::SetFitelFiberSwitchBottomDauCard: Did not configuer Fitel Fiber Switch " << endl;
+    cout << "Argument must be 0 or 1, argument given " <<  select_fibers << endl;
+    return;
+  }
+    
+
+  uint32_t write_select_fibers_1to6  = 0x3700;
+ 
+
+  uint32_t data = 0x0;
+
+#ifdef USE_HAL // Use HAL
+ 
+
+  //*********
+  data = CHa_CHb_mux + write_select_fibers_1to6 + select_fibers;
+  vmeDevicePtr->write("BottomDauCard_com", data );
+  usleep(100);
+  //********
+
+#else // Use direct CAEN
+
+ 
+  data = CHa_CHb_mux + write_select_fibers_1to6 + select_fibers;
+  ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+  usleep(100);
+                 
+#endif // Use HAL
+
+  /*if (select_fibers == 0) 
+    printf("Digital FED PiggyS FITEL: Using fibers 4, 11, 12, 1, 2, 3     \n\n");
+  else
+    printf("Digital FED PiggyS FITEL: Using fibers 5, 6, 7, 8, 9, 10     \n\n");*/
+ 
+}
+
+
+//Channel selection for transparent mode for given FED channel
+void PixelFEDInterface::SelectTransparnetChannel(int ch=0) {
+
+  if (! ((ch>0 && ch<13) || (ch>24 && ch<37)) ) {
+    cout << "ERROR: PixelFEDInterface::SelectTransparnetChannel: FED channel not valid " << endl;
+    cout << "Valid channels: 1-12 and 25-36, channel given " <<  ch << endl;
+    return;
+  }
+    
+  uint32_t enable_trp_select = 0x2300;
+
+  uint32_t data = 0x0;
+
+#ifdef USE_HAL // Use HAL
+
+  if (ch<13) { //PiggyN
+    int fsel = (ch+ch%2)/2-1;
+
+    data = CHa_CHb_mux + enable_trp_select + fsel;
+    vmeDevicePtr->write("TopDauCard_com", data );
+    usleep(100);
+
+  }
+
+  if (ch>24) { //PiggyS
+    int fsel = ((ch-24)+(ch-24)%2)/2-1;
+
+    data = CHa_CHb_mux + enable_trp_select + fsel;
+    vmeDevicePtr->write("BottomDauCard_com", data );
+    usleep(100);
+
+  }
+
+#else // Use direct CAEN
+
+  if (ch<13) { //PiggyN
+    int fsel = (ch+ch%2)/2-1;
+
+    data = CHa_CHb_mux + enable_trp_select + fsel;
+    ret = CAENVME_WriteCycle(BHandle,TopDauCard_com,&data,am,dw); 
+    usleep(100);
+
+  }
+
+  if (ch>24) { //PiggyS
+    int fsel = ((ch-24)+(ch-24)%2)/2-1;
+
+    data = CHa_CHb_mux + enable_trp_select + fsel;
+    ret = CAENVME_WriteCycle(BHandle,BottomDauCard_com,&data,am,dw); 
+    usleep(100);
+
+  }
+ 
+                 
+#endif // Use HAL
+
+  
+  //printf("Digital FED Transparent mode set for FED channel %d\n\n", ch);
+ 
+ 
+}   
+
+void PixelFEDInterface::ReadTemp(uint32_t* d, int channel) {
+
+ std::string chipname = "";
+ if( channel < 5 ) chipname = "NRdTmpFifoUp";
+ else if( channel < 10 ) chipname = "NRdTmpFifoDn";
+ else if( channel < 14 ) chipname = "NCRdTmpFifoUp";
+ else if( channel < 19 ) chipname = "NCRdTmpFifoDn";
+ else if( channel < 23 ) chipname = "SCRdTmpFifoUp";
+ else if( channel < 28 ) chipname = "SCRdTmpFifoDn";
+ else if( channel < 32 ) chipname = "SRdTmpFifoUp";
+ else if( channel < 37 ) chipname = "SRdTmpFifoDn";
+ else return;
+
+#ifdef USE_HAL // Use HAL
+ for(int i=0;i<256;i++) vmeDevicePtr->read(chipname, &d[i] );
+#else
+
+#endif // Use HAL
+}
+
+void PixelFEDInterface::SetFIFO1Mode() {
+
+ vmeDevicePtr->write("CtrlReg",0x1001c );
+
+}
+
+
+void PixelFEDInterface::InitDummy() {
+ 
+  usleep(10000);
+#ifdef USE_HAL // Use HAL
+
+  //##########################################################3	
+  /*  //Resets
+  vmeDevicePtr->write("LRES", 0x80000000 ); 
+  vmeDevicePtr->write("CLRES", 0x80000000 ); 
+  vmeDevicePtr->write("ResetPls",0x20000000 );
+
+ 
+   
+ 
+
+  unsigned long int d;
+  //vmeDevicePtr->read("READ_GA", &d ,0x0);
+  //vmeDevicePtr->write("SetFedID",d&0x3f );	
+  usleep(1000);
+
+  //reset PLL
+  vmeDevicePtr->write("NWrResetPls",0x20000000 );
+  vmeDevicePtr->write("NCWrResetPls",0x20000000 );
+  vmeDevicePtr->write("SCWrResetPls",0x20000000 );
+  vmeDevicePtr->write("SWrResetPls",0x20000000 );
+  usleep(1000);
+ 
+  */
+
+  //What is this?
+  vmeDevicePtr->write("SWrRdTestReg",0x80000000 );
+  vmeDevicePtr->write("NCWrRdTestReg",0x80000000 );
+  
+
+  //Other settings 
+  vmeDevicePtr->write("CtrlReg",0x10014 );
+  //vmeDevicePtr->write("CtrlReg",0x1001c ); //works for fifo-1 and scope fifo but not for temp fifo and transparent fifo
+  vmeDevicePtr->write("TTCBigDelay",0x0 );
+
+  //Set number of ROCs
+  /*for(int is=1;is<10;is++){
+    vmeDevicePtr->write((0x000000+(is<<17)),4);
+    vmeDevicePtr->write((0x200000+(is<<17)),4);
+    vmeDevicePtr->write((0x600000+(is<<17)),4);
+    vmeDevicePtr->write((0x400000+(is<<17)),4);
+    
+  }*/
+
+  //##########################################################3	
+
+  
+#else
+
+#endif // Use HAL
+}
+
+void PixelFEDInterface::InitDummy2() {
+ 
+  usleep(10000);
+#ifdef USE_HAL // Use HAL
+
+  //##########################################################3	
+  //Resets
+  vmeDevicePtr->write("LRES", 0x80000000 ); 
+  vmeDevicePtr->write("CLRES", 0x80000000 ); 
+  vmeDevicePtr->write("ResetPls",0x20000000 );
+
+  //RegResetPiggy
+  vmeDevicePtr->write("SWrModeReg", 0x2 );  //  REGreset PIGGY bottom   
+  usleep(100);
+  vmeDevicePtr->write("SWrModeReg", 0x0 );
+
+  vmeDevicePtr->write("NCWrModeReg", 0x2 );  //  REGreset PIGGY top  
+  usleep(100);
+  vmeDevicePtr->write("NCWrModeReg", 0x0 ); 
+ 
+  usleep(1000);    
+  vmeDevicePtr->write("ModeReg",0x0 );
+  usleep(1000);  
+  
+  //##########################################################3	
+
+  
+#else
+
+#endif // Use HAL
+}
+
+//Channel selection for transparent mode for given FED channel
+void PixelFEDInterface::SelectScopeChannel(int ch=0) {
+
+  if (! ((ch>0 && ch<13) || (ch>24 && ch<37)) ) {
+    cout << "ERROR: PixelFEDInterface::SelectScopeChannel: FED channel not valid " << endl;
+    cout << "Valid channels: 1-12 and 25-36, channel given " <<  ch << endl;
+    return;
+  }
+    
+  uint32_t enable_trp_select = 0x2300;
+
+  uint32_t data = 0x0;
+
+#ifdef USE_HAL // Use HAL
+
+  if (ch<10) { //N
+    int csel = ch-1;
+    data = (pixelFEDCard.SpecialDac&0x1)|((csel&0xF)<<8)|((pixelFEDCard.N_Pword&0xff)<<16)|((pixelFEDCard.N_TBMmask&0xff)<<24);
+    vmeDevicePtr->write("NWrModeReg", data );
+    usleep(100);
+  }
+  else if (ch<13) { //NC
+    int csel = ch-10;
+    data = ((csel&0xF)<<8)|((pixelFEDCard.NC_Pword&0xff)<<16)|((pixelFEDCard.NC_TBMmask&0xff)<<24);
+    vmeDevicePtr->write("NCWrModeReg", data );
+    usleep(100);
+  }
+
+  else if (ch>24 && ch<28) { //SC  
+    int csel = ch-19;
+    data = ((csel&0xF)<<8)|((pixelFEDCard.NC_Pword&0xff)<<16)|((pixelFEDCard.NC_TBMmask&0xff)<<24);
+    vmeDevicePtr->write("SCWrModeReg", data );
+    usleep(100);
+  }
+  else if (ch>27) { //S  
+    int csel = ch-28;
+    data = ((csel&0xF)<<8)|((pixelFEDCard.NC_Pword&0xff)<<16)|((pixelFEDCard.NC_TBMmask&0xff)<<24);
+    vmeDevicePtr->write("SWrModeReg", data );
+    usleep(100);
+  }
+ 
+
+#else // Use direct CAEN
+
+  if (ch<10) { //N
+    int csel = ch-1;
+    data = (pixelFEDCard.SpecialDac&0x1)|((csel&0xF)<<8)|((pixelFEDCard.N_Pword&0xff)<<16)|((pixelFEDCard.N_TBMmask&0xff)<<24);
+    ret = CAENVME_WriteCycle(BHandle,NWrModeReg,&data,am,dw);
+    usleep(100);
+  }
+  else if (ch<13) { //NC
+    int csel = ch-10;
+    data = ((csel&0xF)<<8)|((pixelFEDCard.NC_Pword&0xff)<<16)|((pixelFEDCard.NC_TBMmask&0xff)<<24);
+    ret = CAENVME_WriteCycle(BHandle,NCWrModeReg,&data,am,dw);
+    usleep(100);
+  }
+
+  else if (ch>24 && ch<28) { //SC  
+    int csel = ch-19;
+    data = ((csel&0xF)<<8)|((pixelFEDCard.NC_Pword&0xff)<<16)|((pixelFEDCard.NC_TBMmask&0xff)<<24);
+    ret = CAENVME_WriteCycle(BHandle,SCWrModeReg,&data,am,dw);
+    usleep(100);
+  }
+  else if (ch>27) { //S  
+    int csel = ch-28;
+    data = ((csel&0xF)<<8)|((pixelFEDCard.NC_Pword&0xff)<<16)|((pixelFEDCard.NC_TBMmask&0xff)<<24);
+    ret = CAENVME_WriteCycle(BHandle,SWrModeReg,&data,am,dw);
+    usleep(100);
+  }
+
+ 
+                 
+#endif // Use HAL
+
+  
+  //printf("Digital FED Transparent mode set for FED channel %d\n\n", ch);
+ 
+ 
+}
+
+
+//*********
+// Read the data FIFOs (FIFO2, scopeFIFO) for one channel
+int PixelFEDInterface::drainDataChannelFifo2(int ch, uint32_t *data) {
+
+  int wordCount = 0;
+
+#ifdef USE_HAL // Use HAL
+
+  uint32_t offset;
+  string item;
+
+  if(ch<5)      {
+    offset = 0x150000;  // North, UP
+    item = "BLAD_N";
+  } else if(ch<10) {
+    offset = 0x170000;  // North, DOWN
+    item = "BLAD_N";
+  } else if(ch<14) {
+    item = "BLAD_NC";
+    offset = 0x150000; // NorthCenter, UP
+  } else if(ch<19) {
+    item = "BLAD_NC";
+    offset = 0x170000; // NorthCenter DOWN
+  } else if(ch<23) { 
+    item = "BLAD_SC";
+    offset = 0x150000; // SouthCenter, UP
+  } else if(ch<28) { 
+    item = "BLAD_SC";
+    offset = 0x170000; // SouthCenter DOWN
+  } else if(ch<32) { 
+    item = "BLAD_S";
+    offset = 0x150000;  // South UP
+  } else if(ch<37) { 
+    item = "BLAD_S";
+    offset = 0x170000;  // South DOWN
+  } else return(0); // invalid
+
+
+  
+  // Chanege to block read at some point
+  const uint32_t length = 4096; //spyFifo2Length; // size of SPY-FIFO2 in bytes, is it 128? 
+  char * buffer = (char *) data;
+  vmeDevicePtr->readBlock(item,length,buffer,HAL::HAL_NO_INCREMENT,offset);
+  //find the wordCount?
+  for(uint32_t i=0; i<(length/4);i++) {
+    cout<<i<<" "<<hex<<data[i]<<dec<<endl;
+    if(i>0 && data[i]==0) {  // Assume taht after data=0 there is nothing more? 
+      wordCount=i;          // Problem, sometomes 0s are already at the beginning.
+      break;
+    }
+    wordCount=i;
+  }
+
+
+#else // direct CAEN VME access
+
+  uint32_t vmeAddress=0;  
+  if(chip==1) vmeAddress =      LAD_N+ 0x150000; // North, UP
+  else if(chip==2) vmeAddress = LAD_N+ 0x170000; // North DOWN
+  else if(chip==3) vmeAddress = LAD_NC+0x150000; // NorthCenter, UP
+  else if(chip==4) vmeAddress = LAD_NC+0x170000; // NorthCenter DOWN
+  else if(chip==5) vmeAddress = LAD_SC+0x150000; // SouthCenter, UP
+  else if(chip==6) vmeAddress = LAD_SC+0x170000; // SouthCenter DOWN
+  else if(chip==7) vmeAddress = LAD_S+ 0x150000; // South UP
+  else if(chip==8) vmeAddress = LAD_S+ 0x170000; // South DOWN
+  else return(0); // invalid
+  if(ch<5)      {
+    vmeAddress =      LAD_N+ 0x150000; // North, UP
+  } else if(ch<10) {
+    vmeAddress = LAD_N+ 0x170000; // North DOWN
+  } else if(ch<14) {
+    vmeAddress = LAD_NC+0x150000; // NorthCenter, UP
+  } else if(ch<19) {
+    vmeAddress = LAD_NC+0x170000; // NorthCenter DOWN
+  } else if(ch<23) { 
+    vmeAddress = LAD_SC+0x150000; // SouthCenter, UP
+  } else if(ch<28) { 
+    vmeAddress = LAD_SC+0x170000; // SouthCenter DOWN
+  } else if(ch<32) { 
+    vmeAddress = LAD_S+ 0x150000; // South UP
+  } else if(ch<37) { 
+    vmeAddress = LAD_S+ 0x170000; // South DOWN
+  } else return(0); // invalid
+
+  
+  int wordCount = drainFifo2(vmeAddress, data);
+
+#endif // USE_HAL
+
+  
+  return wordCount;
+}
+//** end added LC for BPIX PH1
+
+
+
+
+
 // Test Method for Piggy Board register Reset
 int PixelFEDInterface::resetDigFEDreg(void) {
   // This code is written for Pilot FED
@@ -978,6 +2613,7 @@ void PixelFEDInterface::armDigFEDOSDFifo(int channel, int rochi, int roclo) {
   const int chip = (channel - 1)/9;
   const unsigned offset = (channel % 9) * 0x20000 + 0x8000;
   const uint32_t data = ((rochi & 0x1F) << 5) | (roclo & 0x1F);
+  //std::cout << " *** roclo " << roclo << " roc hi " << rochi << " channel: " << channel << std::endl; 
   //std::cout << "armDigFEDOSDFifo chip = " << chip << " offset = 0x" << std::hex << offset << std::dec << " data = 0x" << std::hex << data << std::dec << std::endl;
 #ifdef USE_HAL
   vmeDevicePtr->write(FPGAName[chip], data, HAL::HAL_NO_VERIFY, offset);
@@ -1706,6 +3342,8 @@ int PixelFEDInterface::setup(void) {
 
   loadFedIDRegister();
 
+ 
+
 #ifndef PILOT_FED
   if(Printlevel&2) cout<<"FEDID:"<<pixelFEDCard.fedNumber<<" Setting Optical reciever parameters"<<endl;
   set_opto_params();
@@ -1819,6 +3457,12 @@ int PixelFEDInterface::setup(void) {
    vmeDevicePtr->write("LAD_SC",0x3,HAL::HAL_NO_VERIFY,0x198000);	
    vmeDevicePtr->write("LAD_S", 0x3,HAL::HAL_NO_VERIFY,0x198000);	
 
+   //** added LC BPIX PH1
+#ifdef FITEL
+   InitFitelPiggyN();
+   InitFitelPiggyS();
+#endif
+   //**
 
   return status;
 }
@@ -2145,6 +3789,18 @@ if(status<0)cout<<"FEDID:"<<pixelFEDCard.fedNumber<<" Error Setting Mode Word! s
 
 }
 
+void PixelFEDInterface::drainDigTransFifoByChannel(const int channel, uint32_t* data) {
+  std::string chipname;
+  if(channel<10) chipname = "BLAD_N";
+  else if(channel<19) chipname = "BLAD_NC";
+  else if(channel<28) chipname = "BLAD_SC";
+  else if(channel<37) chipname = "BLAD_S";
+  else return; // invalid
+
+  vmeDevicePtr->readBlock(chipname, 1024, (char*)data, HAL::HAL_NO_INCREMENT, 0x20000);
+
+}
+
 void PixelFEDInterface::drainDigTransFifo(const int chip, uint32_t* data) {
   std::string chipname;
   if      (chip == 1) chipname = "BLAD_N";
@@ -2277,7 +3933,7 @@ int PixelFEDInterface::drainFifo1(uint32_t *data) {
   for(int chan=1;chan<37;chan++) {
     status = drainFifo1(chan,&data[count],length);
     //cout<<chan<<" "<<count<<" "<<status<<endl;
-    if(status>0) count += status;
+   if(status>0) count += status;
   }
 
   return count;
@@ -2354,8 +4010,9 @@ int PixelFEDInterface::drainFifo1(int chnl, uint32_t *data,
   uint32_t datadum;
   vmeDevicePtr->read(item0,&datadum,offset);//dummy read to align buffer
   vmeDevicePtr->readBlock(item,length,buffer,HAL::HAL_NO_INCREMENT,offset);
-  //for(int icx=0;icx<256;icx++) { // READ FIFO1 for V2
-  //vmeDevicePtr->read(item0,&data[icx],offset);
+  //for(int icx=0;icx<1024;icx++) { // READ FIFO1 for V2
+  //  vmeDevicePtr->read(item0,&data[icx],offset);
+  //  std::cout << data[icx] << std::endl;
   //}
 
   // Find the real length
@@ -2365,7 +4022,7 @@ int PixelFEDInterface::drainFifo1(int chnl, uint32_t *data,
   // For the moment I loop over data and check is they are the same.
   // After a sequence od same data I stop. This does not work for transparent data.
   for(uint32_t i = 0; i<(length/4);i++) {
-    //if(chnl==1) cout<<i<<" "<<count<<" "<<hex<<data[i]<<dec<<endl;
+    //cout<<i<<" ********************** "<<count<<" "<<hex<<data[i]<<dec<<endl;
     if(i>0 && data[i]==olddata) { // check if data the same
       count++;
       if(count>1) {  // exit if too many same data
@@ -2840,8 +4497,8 @@ int PixelFEDInterface::drainDataFifo2(const int chip, uint32_t *data) {
 
 #endif // USE_HAL
 
-  if(Printlevel&2)
-    cout<<"FEDID:"<<pixelFEDCard.fedNumber<<" Drain FIFO2 for channel "<<chip<<" count = "<<wordCount<<endl;
+  if(Printlevel&2) cout<<"FEDID:"<<pixelFEDCard.fedNumber<<" Drain FIFO2 for channel "<<chip<<" count = "<<wordCount<<endl;
+
   return wordCount;
 }
 //////////////////////////////////////////////////////////////////////
@@ -2971,7 +4628,7 @@ int PixelFEDInterface::generateVMETrigger(void) {
     analyzeError(ret);
   }
 #endif // USE_HAL
-  usleep(100);
+  usleep(100000);
   return 0;
 } // end
 ////////////////////////////////////////////////////////////////////////////
@@ -3002,7 +4659,7 @@ int PixelFEDInterface::loadControlRegister(void) {
 ////////////////////////////////////////////////////////////////////////////
 // Set the Control Register to value
  int PixelFEDInterface::setControlRegister(const int value) {
-   if(Printlevel&1)cout<<"FEDID:"<<pixelFEDCard.fedNumber<<" Set Control register "<<hex<<value<<dec<<endl;
+   cout<<"FEDID:"<<pixelFEDCard.fedNumber<<" Set Control register "<<hex<<value<<dec<<endl;
    uint32_t data = value;
 #ifdef USE_HAL // Use HAL
    vmeDevicePtr->write("CtrlReg",data);
@@ -3949,6 +5606,7 @@ void PixelFEDInterface::set_chnls_onoff() {
 
   // bits 0-8 on = channels 1-9 off
   uint32_t data = pixelFEDCard.Ncntrl; 
+
 #ifdef USE_HAL // Use HAL
   vmeDevicePtr->write("NWrRdCntrReg",data);
 
@@ -6266,6 +7924,17 @@ void PixelFEDInterface::sendResets() {
   usleep(10);
   vmeDevicePtr->write("CLRES",data);
   usleep(10);
+
+  //jen
+  vmeDevicePtr->write("SWrModeReg",0x2);   //  REGreset PIGGY bottom   
+  usleep(10);
+  vmeDevicePtr->write("SWrModeReg",0x0); 
+  usleep(10);
+  vmeDevicePtr->write("NCWrModeReg",0x2);   //  REGreset PIGGY top   
+  usleep(10);
+  vmeDevicePtr->write("NCWrModeReg",0x0);
+  usleep(10);
+
 }
 
 uint32_t PixelFEDInterface::testReg(uint32_t data) {

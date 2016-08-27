@@ -9,6 +9,7 @@
 #include "PixelUtilities/PixelFEDDataTools/include/DigTransDecoder.h"
 #include "PixelUtilities/PixelFEDDataTools/include/FIFO3Decoder.h"
 #include "PixelUtilities/PixelRootUtilities/include/PixelRootDirectoryMaker.h"
+#include "PixelUtilities/PixelFEDDataTools/include/DigFIFO1Decoder.h"
 #include "TFile.h"
 #include "TH1F.h"
 #include "TH2F.h"
@@ -45,14 +46,12 @@ xoap::MessageReference PixelFEDTBMDelayCalibration::beginCalibration(xoap::Messa
   tempCalibObject->writeASCII(outputDir());
 
   DumpFIFOs = tempCalibObject->parameterValue("DumpFIFOs") == "yes";
-  PrintHits = tempCalibObject->parameterValue("PrintHits") == "yes";
-  ReadTransFifo = tempCalibObject->parameterValue("ReadTransFifo") == "yes";
-  ReadScopeFifo = tempCalibObject->parameterValue("ReadScopeFifo") == "yes";
-  ReadTmpFifo = tempCalibObject->parameterValue("ReadTmpFifo") == "yes";
   ReadFifo1 = tempCalibObject->parameterValue("ReadFifo1") == "yes";
   ReadFifo3 = tempCalibObject->parameterValue("ReadFifo3") == "yes";
   //  const std::vector<PixelROCName>& rocs = tempCalibObject->rocList();
   //PixelRootDirectoryMaker rootDirs(rocs, rootf);
+
+  if( ReadFifo1 ) setFIFO1Mode();//jen
 
   inject_ = false;
   const std::vector<std::vector<unsigned int> > cols = tempCalibObject->columnList();
@@ -68,13 +67,7 @@ xoap::MessageReference PixelFEDTBMDelayCalibration::beginCalibration(xoap::Messa
     for( unsigned int i = 0; i < dacvals.size(); ++i ) std::cout << " dac value " << i << " is " << dacvals[i] << std::endl;
   }
 
-  if (dacsToScan.empty() && tempCalibObject->parameterValue("NoScanOK") != "yes") {
-    cout << "no dacs in scan?" << endl;
-    assert(0);
-  }
-
-  if (dacsToScan.size() < 3)
-    BookEm("");
+  BookEm("");
 
   xoap::MessageReference reply = MakeSOAPMessageReference("BeginCalibrationDone");
   return reply;
@@ -102,6 +95,7 @@ xoap::MessageReference PixelFEDTBMDelayCalibration::execute(xoap::MessageReferen
   return reply;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////
 xoap::MessageReference PixelFEDTBMDelayCalibration::endCalibration(xoap::MessageReference msg) {
 
   std::cout << "In PixelFEDTBMDelayCalibration::endCalibration()" << std::endl;
@@ -110,41 +104,11 @@ xoap::MessageReference PixelFEDTBMDelayCalibration::endCalibration(xoap::Message
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-void PixelFEDTBMDelayCalibration::BinDisplay(unsigned long int In_Word, int Bits,int Header,int del)  
-
-{
-  int i1;
-  unsigned long mask;
-  
-  mask=1<<(Bits-1);  
-  
-  if (Header) {
-    //printf("\n\233\67\155\n");
-    if(del) printf("|");
-    for (i1=Bits;i1>0;i1--) {
-      printf("%1d",(i1-1)%10);
-    if(del) {if ( !((i1-1)%4) ) printf("|");}
-    }
-    printf("\n");
-    //printf("\233\60\155 \n");
-  } 
-  if (del) printf("|");
-  for (i1=0;i1<Bits;i1++) {
-    if ((In_Word<<i1) & mask) printf("1");
-    else printf("0");
-    if(del) {if ( !((i1+1)%4) ) printf("|");  }
-  }
-  
-  return;
-  
-}
-
-///////////////////////////////////////////////////////////////////////////////////////////////
 void PixelFEDTBMDelayCalibration::RetrieveData(unsigned state) {
   PixelCalibConfiguration* tempCalibObject = dynamic_cast<PixelCalibConfiguration*>(theCalibObject_);
   assert(tempCalibObject != 0);
 
-  const std::vector<PixelROCName>& rocs = tempCalibObject->rocList();
+  /*const std::vector<PixelROCName>& rocs = tempCalibObject->rocList();
   typedef std::set< std::pair<unsigned int, unsigned int> > colrow_t;
   const colrow_t colrows = tempCalibObject->pixelsWithHits(state);
   if (PrintHits) {
@@ -152,7 +116,7 @@ void PixelFEDTBMDelayCalibration::RetrieveData(unsigned state) {
     for (colrow_t::const_iterator cr = colrows.begin(); cr != colrows.end(); ++cr)
       std::cout << "c " << cr->first << " r " << cr->second << " ";
     std::cout << std::endl;
-  }
+  }*/
 
   const std::vector<std::pair<unsigned, std::vector<unsigned> > >& fedsAndChannels = tempCalibObject->fedCardsAndChannels(crate_, theNameTranslation_, theFEDConfiguration_, theDetectorConfiguration_);
 
@@ -169,16 +133,6 @@ void PixelFEDTBMDelayCalibration::RetrieveData(unsigned state) {
    event_ = 0;
    lastTBMPLL = currentDACValues["TBMPLL"];
   }
-  /*if(dacsToScan.size() == 2 && currentDACValues["TBMADelay"] != lastTBMADelay && currentDACValues["TBMBDelay"] != lastTBMBDelay){
-   event_ = 0;
-   lastTBMADelay = currentDACValues["TBMADelay"];
-   lastTBMBDelay = currentDACValues["TBMBDelay"];
-   lastTBMPLL = currentDACValues["TBMPLL"];
-  }*/
-  /*if (dacsToScan.size() >= 3 && currentDACValues["TBMPLL"] != lastTBMPLL) {
-    lastTBMPLL = currentDACValues["TBMPLL"];
-    BookEm(TString::Format("TBMPLL%03i", lastTBMPLL));
-  }*/
 
   //////
 
@@ -191,11 +145,8 @@ void PixelFEDTBMDelayCalibration::RetrieveData(unsigned state) {
     //const uint32_t fifoStatus = iFED->getFifoStatus();
 
     const int MaxChans = 37;    
-    uint32_t bufferT[MaxChans][256];
-    uint32_t bufferS[MaxChans][256];
     uint64_t buffer3[2048];
     uint32_t bufferErr[36*1024];
-    int statusS[MaxChans] = {0};
     DigTransDecoder* decodeT[MaxChans] = {0};
     DigScopeDecoder* decodeS[MaxChans] = {0};
     FIFO3Decoder* decode3 = 0;
@@ -203,274 +154,68 @@ void PixelFEDTBMDelayCalibration::RetrieveData(unsigned state) {
     //const int statusErr;
     uint32_t bufferFifo1[MaxChans][1024];
     int statusFifo1[MaxChans] = {0};
-    uint32_t bufferFifo1Add[MaxChans][1024];
-    int statusFifo1Add[MaxChans] = {0};
 
-    iFED->SetFitelFiberSwitchTopDauCard(0); // this should be configurable from outside
-    iFED->SetFitelFiberSwitchBottomDauCard(0);
+    //iFED->SetFitelFiberSwitchTopDauCard(0); // this should be configurable from outside
+    //iFED->SetFitelFiberSwitchBottomDauCard(0);
 
     /* read fifo1 */
     if( ReadFifo1 ){
 
       for( unsigned int ch = 0; ch < fedsAndChannels[ifed].second.size(); ch++ ){
        statusFifo1[ch] = iFED->drainFifo1(fedsAndChannels[ifed].second[ch], bufferFifo1[ch], 1024);
-       statusFifo1Add[ch] = iFED->drainFifo1(fedsAndChannels[ifed].second[ch]+1, bufferFifo1Add[ch], 1024);
       }
 
       for( unsigned int ch = 0; ch < fedsAndChannels[ifed].second.size(); ch++ ){
 
        int channel = (fedsAndChannels[ifed].second)[ch];
-       bool found_TBMA_H = false;
-       bool found_TBMA_T = false;
-       int addChannel = (fedsAndChannels[ifed].second)[ch]+1;
-       bool found_TBMB_H = false;
-       bool found_TBMB_T = false;
+       bool found_TBMA = false;
        std::vector<int> ch_decodedROCs;
-       std::vector<int> addCh_decodedROCs;
-       bool ch_foundWrongHit = false;
-       bool addCh_foundWrongHit = false;
        bool ch_foundHit = false;
-       bool addCh_foundHit = false;
-
-       if( DumpFIFOs ){
-       std::cout << "-----------------------------------" << std::endl;
-       std::cout << "Contents of FIFO 1 for channel " << channel << " (status = " << statusFifo1[ch] << ")" << std::endl;
-       std::cout << "-----------------------------------" << std::endl;
-       }
 
        if (statusFifo1[ch] > 0) {
 
-        for (int i = 0; i < statusFifo1[ch]; ++i) {
-	      
-         uint32_t w = bufferFifo1[ch][i];
-         uint32_t decodeCh = (w >> 26) & 0x3f;
-         if( decodeCh != channel ) continue;
-         if( found_TBMA_H && found_TBMA_T ) continue;
+        DigFIFO1Decoder theFIFO1Decoder(bufferFifo1[ch],statusFifo1[ch]);
+        if( theFIFO1Decoder.globalChannel() != channel ) continue;
+        found_TBMA = theFIFO1Decoder.foundTBM();
+        if( !inject_ ) ch_decodedROCs = theFIFO1Decoder.ROCHeaders();
+        else{
+         for( unsigned int h = 0; h < theFIFO1Decoder.nhits(); ++h ){
+          if(std::find(ch_decodedROCs.begin(),ch_decodedROCs.end(),theFIFO1Decoder.rocid(h))==ch_decodedROCs.end()) ch_decodedROCs.push_back(theFIFO1Decoder.rocid(h));
+         }
+        } 
 
-         if( DumpFIFOs ){
-	  std::cout << "Word " << std::setw(4) << std::setfill(' ') << i << " = 0x " << std::hex << std::setw(4) << std::setfill('0') << (bufferFifo1[ch][i]>>16) << " " << std::setw(4) << std::setfill('0') << (bufferFifo1[ch][i] & 0xFFFF) << std::dec << "  ";
-	  for (int j = 31; j >= 0; --j){
-	   if (w & (1 << j)) std::cout << "1";
-	   else std::cout << "0";
-	   if (j % 4 == 0) std::cout << " ";
-	  }
-	  std::cout << std::setfill(' ') << "  " << std::endl;
-	  }
- 
-	 uint32_t mk = (w >> 21) & 0x1f;
-	 uint32_t az = (w >> 8) & 0x1fff;
-	 uint32_t dc = (w >> 16) & 0x1f;
-	 uint32_t px = (w >> 8) & 0xff;
-	 uint32_t f8 = w & 0xff;
+        if( DumpFIFOs ){
+         std::cout << "-----------------------------------" << std::endl;
+         std::cout << "Contents of FIFO 1 for channel " << channel << " (status = " << statusFifo1[ch] << ")" << std::endl;
+         std::cout << "-----------------------------------" << std::endl;
+         theFIFO1Decoder.printToStream(std::cout);
+        }
 
-	 if( DumpFIFOs ) std::cout << "  Decoded channel: " << decodeCh << std::endl;
-
-	 if (!found_TBMA_H && mk == 0x1f) {
-          if( DumpFIFOs ) printf("  TBM_H_status:%4x event# %i\n",((w>>1)&0xff00)+(w&0xff),f8);
-          found_TBMA_H = true;
-	 }
-	 else if (!found_TBMA_T && mk == 0x1e) {
-           if( DumpFIFOs ){
-            printf("  TBM_T_status:%4x\n",((w>>4)&0xff00)+(w&0xff)); 
-            if( (w&0x00000080)== 0x00000080 ) std::cout << "  ROCs disabled " << std::endl; 
-            else if( (w&0x00000080)== 0 ) std::cout << "  ROCs enabled " << std::endl; 
-           }
-           found_TBMA_T = true;
-	 }
-	 else { 
-	   if (az == 0 && !inject_ ){
-            if( DumpFIFOs && mk <= 8 ) std::cout << "  ROC #" << std::dec << mk << "  lastdac: " << std::hex << f8 << std::dec << std::endl;
-            if( mk <= 8 ) ch_decodedROCs.push_back(mk);
-           }
-           else if( az!=0 ){
-            int column = dc*2 + px%2;
-            int row = 80 - (px/2);
-            if( DumpFIFOs && inject_ && mk <= 8 && column < 53 && row < 81 ){
-              std::cout << "  FOUND HIT : ROC # " << std::dec << mk << " dcol " << dc << " pxl " << px;
-              std::cout << " col " << column << " row " << row << " pulse height " << f8 << std::endl;
-            }
-            if( !inject_ ) ch_foundWrongHit = true;
-            else{
-             if( column == 25 && row == 25 && mk<=8 ){
-              ch_decodedROCs.push_back(mk);
-              //ch_foundHit = true;
-             }
-            }
-           }
-	 }
-         if( DumpFIFOs ) std::cout << std::endl;
-        }//close loop on status lenght
-
-       }//close if status > 0
-
-       //dump fifo for consecutive channel
-       if( channel == 8 ) continue;
-
-       if( DumpFIFOs ){
-        std::cout << "-----------------------------------" << std::endl;
-        std::cout << "Contents of FIFO 1 for channel " << addChannel << " (status = " << statusFifo1[ch+1] << ")" << std::endl;
-        std::cout << "-----------------------------------" << std::endl;
        }
-       if (statusFifo1Add[ch] > 0) {
 
-        for (int i = 0; i < statusFifo1Add[ch]; ++i) {
-	      
-         uint32_t w = bufferFifo1Add[ch][i];
-         uint32_t decodeAddCh = (w >> 26) & 0x3f;
-         if( decodeAddCh != addChannel ) continue;
-         if( found_TBMB_H && found_TBMB_T ) continue;
-
-         if( DumpFIFOs ){
-	  std::cout << "Word " << std::setw(4) << std::setfill(' ') << i << " = 0x " << std::hex << std::setw(4) << std::setfill('0') << (bufferFifo1Add[ch][i]>>16) << " " << std::setw(4) << std::setfill('0') << (bufferFifo1Add[ch][i] & 0xFFFF) << std::dec << "  ";
-	  for (int j = 31; j >= 0; --j){
-	   if (w & (1 << j)) std::cout << "1";
-	   else std::cout << "0";
-	   if (j % 4 == 0) std::cout << " ";
-	  }
-	  std::cout << std::setfill(' ') << "  " << std::endl;
-	 }
-
-	 uint32_t mk = (w >> 21) & 0x1f;
-	 uint32_t az = (w >> 8) & 0x1fff;
-	 uint32_t dc = (w >> 16) & 0x1f;
-	 uint32_t px = (w >> 8) & 0xff;
-	 uint32_t f8 = w & 0xff;
-
-	 if( DumpFIFOs ) std::cout << "  Decoded channel: " << decodeAddCh << std::endl;
-
-	 if (!found_TBMB_H && mk == 0x1f) {
-          if( DumpFIFOs ) printf("  TBM_H_status:%4x event# %i\n",((w>>1)&0xff00)+(w&0xff),f8);
-          found_TBMB_H = true;
-	 }
-	 else if (!found_TBMB_T && mk == 0x1e) {
-           if( DumpFIFOs ){ 
-            printf("  TBM_T_status:%4x\n",((w>>4)&0xff00)+(w&0xff)); 
-            if( (w&0x00000080)== 0x00000080 ) std::cout << "  ROCs disabled " << std::endl; 
-            else if( (w&0x00000080)== 0 ) std::cout << "  ROCs enabled " << std::endl; 
-           }
-           found_TBMB_T = true;
-	 }
-	 else { 
-	   if (az == 0 && !inject_){
-            if( DumpFIFOs ) std::cout << "  ROC #" << std::dec << mk << "  lastdac: " << std::hex << f8 << std::dec << std::endl;
-            if (mk <= 8) addCh_decodedROCs.push_back(mk);
-           }
-           else if( az!=0 ){
-            int column = dc*2 + px%2;
-            int row = 80 - (px/2);
-            if( DumpFIFOs && inject_ && mk <= 8 && column < 53 && row < 81 ){
-              std::cout << "  FOUND HIT : ROC # " << std::dec << mk << " dcol " << dc << " pxl " << px;
-              std::cout << " col " << column << " row " << row << " pulse height " << f8 << std::endl;
-            }
-            if( !inject_ ) addCh_foundWrongHit = true;
-            else{
-             if( column == 25 && row == 25 && mk<=8 ){
-              addCh_decodedROCs.push_back(mk);
-              //addCh_foundHit = true;
-             }
-            }
-           }
-	 }
-         if( DumpFIFOs ) std::cout << std::endl;
-        }//close loop on status lenght
-
-       }//close if status > 0
-
-       addCh_foundHit = (addCh_decodedROCs.size() == 4);
        ch_foundHit = (ch_decodedROCs.size() == 4);
-
-       //std::cout << "**************************** " << addCh_decodedROCs.size() << " " << ch_decodedROCs.size() << " ";
-       //std::cout << addCh_foundHit << " " << ch_foundHit << std::endl; 
-
-       FillEm(state, fedsAndChannels[ifed].first, channel, 0, (!inject_ && found_TBMA_H && found_TBMA_T) || (inject_ && found_TBMA_H && found_TBMA_T && ch_foundHit) );
-       FillEm(state, fedsAndChannels[ifed].first, addChannel, 0, (!inject_ && found_TBMB_H && found_TBMB_T) || (inject_ && found_TBMB_H && found_TBMB_T && addCh_foundHit) );
+       FillEm(state, fedsAndChannels[ifed].first, channel, 0, (!inject_ && found_TBMA) || (inject_ && found_TBMA && ch_foundHit) );
 
        if( dacsToScan.size() == 0 ){
         for( int r = 0; r < 8; ++r ){
 
          bool ch_foundROC = std::find(ch_decodedROCs.begin(),ch_decodedROCs.end(),r+1)!=ch_decodedROCs.end();
-         bool addCh_foundROC = std::find(addCh_decodedROCs.begin(),addCh_decodedROCs.end(),r+1)!=addCh_decodedROCs.end();
          if( ch_foundROC ) FillEm(state, fedsAndChannels[ifed].first, channel, 1, r);
-         if( addCh_foundROC ) FillEm(state, fedsAndChannels[ifed].first, addChannel, 1, r);
         }
        }
-       else if( dacsToScan.size() == 1 && tempCalibObject->scanName(0) == "TBMPLL"){
+       else if( dacsToScan.size() == 1){
         FillEm(state, fedsAndChannels[ifed].first, channel, 1, ch_decodedROCs.size());
-        FillEm(state, fedsAndChannels[ifed].first, addChannel, 1, addCh_decodedROCs.size());
-       }
-       else if( dacsToScan.size() == 1 && tempCalibObject->scanName(0) == "TBMADelay" ){
-
-        for( int r = 0; r < 8; ++r ){
-
-         bool ch_foundROC = std::find(ch_decodedROCs.begin(),ch_decodedROCs.end(),r+1)!=ch_decodedROCs.end();
-         bool addCh_foundROC = std::find(addCh_decodedROCs.begin(),addCh_decodedROCs.end(),r+1)!=addCh_decodedROCs.end();
-         if( ch_foundROC ) FillEm(state, fedsAndChannels[ifed].first, channel, 0, 1, r);
-         if( addCh_foundROC ) FillEm(state, fedsAndChannels[ifed].first, addChannel, 1, 1, r);
-
-        }
        }
 
       }// end loop on channels
 
     }//end readFifo1
 
-    /* read transparent fifo*/
-    if( ReadTransFifo ){
-     for( unsigned int ch = 0; ch < fedsAndChannels[ifed].second.size(); ch++ ){
-      iFED->SelectTransparnetChannel(fedsAndChannels[ifed].second[ch]);
-      iFED->drainDigTransFifoByChannel(fedsAndChannels[ifed].second[ch], bufferT[ch]);
-      decodeT[ch] = new DigTransDecoder(bufferT[ch]);
-     }
-     //fill histos
-     for( unsigned int ch = 0; ch < fedsAndChannels[ifed].second.size(); ch++ ){
-
-      DigTransDecoder* d = decodeT[ch];
-      int channel = (fedsAndChannels[ifed].second)[ch];
-
-      FillEm(state, fedsAndChannels[ifed].first, channel, 0, bool(d->tbm_header_l[0].size()) && bool(d->tbm_trailer_l[0].size()) );
-      FillEm(state, fedsAndChannels[ifed].first, channel+1, 0, bool(d->tbm_header_l[1].size()) && bool(d->tbm_trailer_l[1].size()) );
-      FillEm(state, fedsAndChannels[ifed].first, channel, 1, d->roc_header_l[0].size());
-      FillEm(state, fedsAndChannels[ifed].first, channel+1, 1, d->roc_header_l[1].size());
-
-     }
-     //print content
-     if (DumpFIFOs) {
-      for( unsigned int ch = 0; ch < fedsAndChannels[ifed].second.size(); ch++ ){
-
-       std::cout << "-----------------------------------------\n";
-       std::cout << "Contents of transparent FIFO for FED " << fednumber << " channel " << (fedsAndChannels[ifed].second)[ch] << std::endl;
-       std::cout << "-----------------------------------------\n";
-
-       std::cout << "** TBM-A ** " << std::endl;  
-       std::cout << " number of tbm headers = " << decodeT[ch]->tbm_header_l[0].size() << std::endl;
-       std::cout << " number of tbm trailers = " << decodeT[ch]->tbm_trailer_l[0].size() << std::endl;
-       std::cout << " number of roc headers = " << decodeT[ch]->roc_header_l[0].size() << std::endl;
-       std::cout << "** TBM-B ** " << std::endl;  
-       std::cout << " number of tbm headers = " << decodeT[ch]->tbm_header_l[1].size() << std::endl;
-       std::cout << " number of tbm trailers = " << decodeT[ch]->tbm_trailer_l[1].size() << std::endl;
-       std::cout << " number of roc headers = " << decodeT[ch]->roc_header_l[1].size() << std::endl;
-
-       std::cout << "---" << std::endl;
-       std::cout << "DigTransDecoder thinks:\n";
-       std::cout << "---" << std::endl;
-       decodeT[ch]->printToStream(std::cout);
-       std::cout << "---" << std::endl;
-       for( int i = 0; i < 42; ++i ){
-
-        unsigned long int tmp  = bufferT[ch][i];
-        printf("%04x %04x              ",int((tmp>>16)&0xffff), int(tmp&0xffff)); //show in hex
-        BinDisplay((tmp>>16)&0xffff, 16,0,0); //show in binary
-        printf("    ");
-        BinDisplay(tmp&0xffff, 16,0,0); //show in binary
-        printf("\n");
-
-       }//end read buffer for trans fifo for a given channel
-      }// end loop on channel     
-     }//end dumping trans fifo
-    }// end ReadTransFifo case
+    uint32_t bufferS[MaxChans][256];
+    int statusS[MaxChans] = {0};
 
     /* read scope fifo */
-    if( ReadScopeFifo ){
+    /*if( true ){
      //read
      for( unsigned int ch = 0; ch < fedsAndChannels[ifed].second.size(); ch++ ){     
       iFED->SelectScopeChannel(fedsAndChannels[ifed].second[ch]);
@@ -478,7 +223,7 @@ void PixelFEDTBMDelayCalibration::RetrieveData(unsigned state) {
       decodeS[ch] = new DigScopeDecoder(bufferS[ch], statusS[ch]);
      }
      //fill histos
-     for( unsigned int ch = 0; ch < fedsAndChannels[ifed].second.size(); ch++ ){
+     /*for( unsigned int ch = 0; ch < fedsAndChannels[ifed].second.size(); ch++ ){
 
       DigScopeDecoder* d = decodeS[ch];
 
@@ -512,87 +257,8 @@ void PixelFEDTBMDelayCalibration::RetrieveData(unsigned state) {
        }
       }//end loop on channels
      }// end dumping fifo content
-    }//end ReadScopeFifo case
+    }//end ReadScopeFifo case*/
 
-    /*read tmp fifo*/
-    if( ReadTmpFifo ){ 
-     
-     uint32_t bufferTemp[8][256];
-     iFED->ReadTemp(bufferTemp[0],1);
-     iFED->ReadTemp(bufferTemp[1],5);
-     iFED->ReadTemp(bufferTemp[2],10);
-     iFED->ReadTemp(bufferTemp[3],14);
-     iFED->ReadTemp(bufferTemp[4],19);
-     iFED->ReadTemp(bufferTemp[5],23);
-     iFED->ReadTemp(bufferTemp[6],28);
-     iFED->ReadTemp(bufferTemp[7],32);
-     for( unsigned int ch = 0; ch < fedsAndChannels[ifed].second.size(); ch++ ){
-
-      int channel = (fedsAndChannels[ifed].second)[ch];
-      if( channel == 8 ) continue;
-      int addChannel = (fedsAndChannels[ifed].second)[ch]+1;
-      int chip = channel/5; if( channel > 27 && chip < 7 ) chip=chip+1;
-      int addChip = (addChannel+1)/5; if( addChannel > 27 && addChip < 7 ) addChip=addChip+1;
-
-      if(DumpFIFOs){
-       std::cout << "----------------------------------" << std::endl;
-       std::cout << "Contents of Temp FIFO for FED " << fednumber << " channels " << channel << "/" << addChannel;
-       std::cout << " chip " << chip << "/" << addChip << std::endl;
-       std::cout << "----------------------------------" << std::endl;
-      }
-
-      bool foundCh = false;
-      bool foundAddCh = false;
-      bool found_TBMA_H = false;
-      bool found_TBMA_T = false;
-      bool found_TBMB_H = false;
-      bool found_TBMB_T = false;
-
-      for( int i=0; i < 256; ++i ){
-       uint32_t d = bufferTemp[chip][i];
-       bool foundChTmp = false;
-       bool foundAddChTmp = false;
-
-       if(d){
-        int decodeCh = (d>>26)&0x3f;
-        if(decodeCh == channel){ foundCh = true; foundChTmp = true; }
-        if(foundCh && ((d>>21)&0x1f)== 31 && (d&0x000000ff)==event_+1) found_TBMA_H = true;
-        if(foundCh && ((d>>21)&0x1f)== 30) found_TBMA_T = true;
-       
-        if(DumpFIFOs && foundChTmp){
-         printf("check %x\n",d); 
-         printf("CH#:%2d\n",((d>>26)&0x3f));
-         if(((d>>21)&0x1f)== 31) printf("  TBM_H_status:%4x event# %i\n",((d>>1)&0xff00)+(d&0xff),(d&0x000000ff));
-         if(((d>>21)&0x1f)== 30) printf("  TBM_T_status:%4x\n",((d>>4)&0xff00)+(d&0xff)); 
-        }//close printing fifo content
-       }
-
-       uint32_t d1 = bufferTemp[addChip][i];
-       if(d1){
-        int decodeAddCh = (d1>>26)&0x3f;
-        if(decodeAddCh == addChannel){ foundAddCh = true; foundAddChTmp = true; }
-        if(foundAddCh && ((d1>>21)&0x1f)== 31 && (d1&0x000000ff)==event_+1) found_TBMB_H = true;
-        if(foundAddCh && ((d1>>21)&0x1f)== 30) found_TBMB_T = true;
-
-        if(DumpFIFOs && foundAddChTmp){
-         printf("check %x\n",d1); 
-         printf("CH#:%2d\n",((d1>>26)&0x3f));
-         if(((d1>>21)&0x1f)== 31) printf("  TBM_H_status:%4x event# %i\n",((d1>>1)&0xff00)+(d1&0xff),(d1&0x000000ff));
-         if(((d1>>21)&0x1f)== 30) printf("  TBM_T_status:%4x\n",((d1>>4)&0xff00)+(d1&0xff)); 
-        }//close printing fifo content
-       }
-
-      }//close loop on buffer for given channel
-
-      if(DumpFIFOs){std::cout << "----------------------------------" << std::endl;}
-
-      FillEm(state, fedsAndChannels[ifed].first, channel, 0, found_TBMA_H && found_TBMA_T && foundCh );
-      FillEm(state, fedsAndChannels[ifed].first, channel+1, 0, found_TBMB_H && found_TBMB_T && foundAddCh );
-
-     }//close loop on channels
-
-    }//close readtmpfifo case
-    
     if( ReadFifo3 ){
      //read
      const int status3 = iFED->spySlink64(buffer3);
@@ -639,6 +305,7 @@ void PixelFEDTBMDelayCalibration::RetrieveData(unsigned state) {
         int hits_by_roc[37][8] = {{0}};
         unsigned lastroc = 0;
         for (unsigned i = 0; i < decode3->nhits(); ++i) {
+         if( decode3->channel(i) != (fedsAndChannels[ifed].second)[ch] ) continue;
          const PixelROCName& rocname = theNameTranslation_->ROCNameFromFEDChannelROC(fednumber, decode3->channel(i), decode3->rocid(i)-1);
          ++hits_by_ch[decode3->channel(i)];
          ++hits_by_roc[decode3->channel(i)][decode3->rocid(i)-1];
@@ -692,6 +359,8 @@ void PixelFEDTBMDelayCalibration::Analyze() {
   PixelCalibConfiguration* tempCalibObject = dynamic_cast<PixelCalibConfiguration*>(theCalibObject_);
   assert(tempCalibObject != 0);
   int ntriggers = event_-1;
+  std::map<std::string,int> bestTBMPLLSettings;
+
   if (dacsToScan.size() == 0){
 
     for( std::map<int,std::map<int,std::vector<TH1F*> > >::iterator it1 = ntrigsTBM.begin(); it1 != ntrigsTBM.end(); ++it1 ){
@@ -704,21 +373,121 @@ void PixelFEDTBMDelayCalibration::Analyze() {
 
   if (dacsToScan.size() == 1){
 
+   //fill histo with sum of channels
+   for( std::map<int,std::map<int,std::vector<TH2F*> > >::iterator it1 = scansTBM.begin(); it1 != scansTBM.end(); ++it1 ){
+    std::string moduleName = "";
+    PixelChannel theChannel;
+    for( std::map<int,std::vector<TH2F*> >::iterator it2 = it1->second.begin(); it2 != it1->second.end(); ++it2 ){  
+     
+     if( theNameTranslation_->FEDChannelExist(it1->first, it2->first) ){
+      theChannel = theNameTranslation_->ChannelFromFEDChannel(it1->first, it2->first);
+      moduleName = theChannel.modulename();
+     }
+
+     //std::cout << "*********************** ::analyze() " << it1->first << " " << it2->first << " " << moduleName << std::endl;
+     for(unsigned int i = 0; i < it2->second.size(); ++i ) TBMsHistoSum[it1->first][moduleName][i]->Add(it2->second[i]);
+
+    }//close loop on channels
+   }//close loop on fed
+
+   //normalize by number of triggers
    for( std::map<int,std::map<int,std::vector<TH2F*> > >::iterator it1 = scansTBM.begin(); it1 != scansTBM.end(); ++it1 ){
     for( std::map<int,std::vector<TH2F*> >::iterator it2 = it1->second.begin(); it2 != it1->second.end(); ++it2 ){
      for(unsigned int i = 0; i < it2->second.size(); ++i ) it2->second[i]->Scale(1./ntriggers);
     }
    }
 
-   /*for( std::map<int,std::map<int,std::vector<TH2F*> > >::iterator it1 = scansTBM.begin(); it1 != scansROCs.end(); ++it1 ){
-    for( std::map<int,std::vector<TH2F*> >::iterator it2 = it1->second.begin(); it2 != it1->second.end(); ++it2 ){
-     for(unsigned int i = 0; i < it2->second.size(); ++i ) it2->second[i]->Scale(1./ntriggers);
+   for( std::map<int,std::map<std::string,std::vector<TH2F*> > >::iterator it1 = TBMsHistoSum.begin(); it1 != TBMsHistoSum.end(); ++it1 ){
+    for( std::map<std::string,std::vector<TH2F*> >::iterator it2 = it1->second.begin(); it2 != it1->second.end(); ++it2 ){
+     for(unsigned int i = 0; i < it2->second.size(); ++i ) it2->second[i]->Scale(1./(4*ntriggers));
     }
-   }*/
+   }
+
+   //find best settings for each module
+   std::cout << "******************************************************" << std::endl;
+   for( std::map<int,std::map<std::string,std::vector<TH2F*> > >::iterator it1 = TBMsHistoSum.begin(); it1 != TBMsHistoSum.end(); ++it1 ){
+    for( std::map<std::string,std::vector<TH2F*> >::iterator it2 = it1->second.begin(); it2 != it1->second.end(); ++it2 ){
+     
+     float eff = 0;
+     std::map<int,int> bestBins;
+     for( int bx = 1; bx < it2->second[0]->GetNbinsX()+1; ++bx ){
+      for( int by = 1; by < it2->second[0]->GetNbinsY()+1; ++by ){
+       
+       //std::cout << bx << " " << by << " " << it2->second[0]->GetBinContent(bx,by) << " " << it2->second[1]->GetBinContent(bx,by) << std::endl;
+       if( it2->second[0]->GetBinContent(bx,by) >= eff ){
+        eff = it2->second[0]->GetBinContent(bx,by);
+        bestBins[bx-1] = by-1;
+        //std::cout << "******************* FOUND BEST BIN " << bx-1 << " " << by-1 << " " << eff << " " << it2->second[1]->GetBinContent(bx,by) << std::endl;
+       }
+
+      }
+     }
+
+     std::cout << "RESULTS OF TBMPLLDELAY SCAN FOR MODULE " << it2->first << std::endl;
+     if( bestBins.size() == 0 ) std::cout << " --- NO OPTIMAL TBMPLLDELAY VALUE FOUND!" << std::endl;
+
+     int bestX = 0;
+     int bestY = 0;
+     for( std::map<int,int>::iterator binsIt = bestBins.begin(); binsIt != bestBins.end(); ++binsIt ){
+
+      //std::cout << "******************* FOUND BEST BIN first " << binsIt->first << " second " << binsIt->second << std::endl;
+
+      if( binsIt->first >= 1 && binsIt->first <= 6 && ( (binsIt->second >= 5 && binsIt->second <= 6) || binsIt->second == 1 ) ){
+       bestX = binsIt->first;
+       bestY = binsIt->second;
+       break;
+      }
+
+     }
+
+
+     if( bestBins.size() != 0 && bestX == 0 && bestY == 0 ){
+      bestX = (bestBins.begin())->first;
+      bestY = (bestBins.begin())->second;
+      std::cout << " --- WARNING: BEST TBMPLLDELAY VALUE IS AT THE EDGES! 160 MHZ PLL DELAY = " << bestY;
+      std::cout << " ; 400 MHZ PLL DELAY = " << bestX;
+      
+      bestX = (bestX<<2);
+      bestY = (bestY<<5);
+      std::cout << " --> NEW SETTINGS TBMPLLDelay: " << bestX+bestY << std::endl;
+     }
+     else if( bestX != 0 && bestY != 0 ){
+      std::cout << " --- FOUND BEST TBMPLLDELAY VALUE! 160 MHZ PLL DELAY = " << bestY;
+      std::cout << " 400 MHZ PLL DELAY = " << bestX;
+      
+      bestX = (bestX<<2);
+      bestY = (bestY<<5);
+      std::cout << " --> NEW SETTINGS TBMPLLDelay: " << bestX+bestY << std::endl;
+     }
+
+     bestTBMPLLSettings[it2->first] = bestX+bestY;
+
+    }
+   }      
 
   }
 
   CloseRootf();
+
+  if( dacsToScan.size() == 0 ) return;
+
+  std::vector<PixelModuleName>::const_iterator module_name = theDetectorConfiguration_->getModuleList().begin();
+  for (;module_name!=theDetectorConfiguration_->getModuleList().end();++module_name)
+  {
+    PixelTBMSettings *TBMSettingsForThisModule=0;
+    std::string moduleNameString=(module_name->modulename());
+    PixelConfigInterface::get(TBMSettingsForThisModule, "pixel/tbm/"+moduleNameString, *theGlobalKey_);
+    assert(TBMSettingsForThisModule!=0);
+
+    std::string moduleName = module_name->modulename();
+    if( bestTBMPLLSettings[moduleName] != 0 ) TBMSettingsForThisModule->setTBMPLLDelay(bestTBMPLLSettings[moduleName]);
+
+    TBMSettingsForThisModule->writeASCII(outputDir());
+    std::cout << "Wrote TBM settings for module:" << moduleName << endl;
+			
+    delete TBMSettingsForThisModule;
+  }
+
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -735,7 +504,7 @@ void PixelFEDTBMDelayCalibration::BookEm(const TString& path) {
 
   ntrigsTBM.clear();
   scansTBM.clear();
-  scansROCs.clear();
+  TBMsHistoSum.clear();
 
   TString root_fn;
   if (path == "")
@@ -755,6 +524,7 @@ void PixelFEDTBMDelayCalibration::BookEm(const TString& path) {
    TString FEDdir; FEDdir.Form("FED%i",fedsAndChannels[ifed].first);
    rootf->mkdir(FEDdir);
    rootf->cd(FEDdir);
+
    TDirectory* dir = rootf->GetDirectory(FEDdir);
    std::map<int,std::vector<TH1F*> > chTBMmap;
    std::map<int,std::vector<TH2F*> > chTBMmap2D;
@@ -777,7 +547,6 @@ void PixelFEDTBMDelayCalibration::BookEm(const TString& path) {
 
     if(dacsToScan.size() == 1){
 
-     if(tempCalibObject->scanName(0) == "TBMPLL"){
       TString hname; hname.Form("Ch%i",(fedsAndChannels[ifed].second)[ch]);
       std::vector<TH2F*> histosTBM;
       TH2F* h_TBM_nDecodes = new TH2F(hname+"_TBM_nDecodes", hname+"_TBM_nDecodes", 8, 0, 8, 8, 0, 8 );
@@ -785,100 +554,44 @@ void PixelFEDTBMDelayCalibration::BookEm(const TString& path) {
       TH2F* h_nROCHeaders = new TH2F(hname+"_nROCHeaders", hname+"_nROCHeaders", 8, 0, 8, 8, 0, 8 );
       histosTBM.push_back(h_nROCHeaders);     
       chTBMmap2D[(fedsAndChannels[ifed].second)[ch]] = histosTBM;
-     }
   
     }// end book histos for 1 dacsToScan case (TBMPLL scan)
-
-    if(dacsToScan.size() == 1){
-
-     if(tempCalibObject->scanName(0) == "TBMADelay"){
-
-      std::vector<TH2F*> histosROCs;
-      for( int r = 0; r < 8; ++r ){
-       TString hname; hname.Form("Ch%i_ROC%i",(fedsAndChannels[ifed].second)[ch],r);
-       TH2F* h_nROCHeaders = new TH2F(hname+"_nHeaders", hname+"_nHeaders", 8, 0, 8, 8, 0, 8 );
-       histosROCs.push_back(h_nROCHeaders);    
-      }
-      chTBMmap2D[(fedsAndChannels[ifed].second)[ch]] = histosROCs;
-     }
-  
-    }// end book histos for 2 dacsToScan case (TBMA/B delay scan)
-
-    if( ReadScopeFifo ) continue;
-    //add the consecutive channel until Danek fixes the name translation
-    dir->cd();
-    int addCh = (fedsAndChannels[ifed].second)[ch]+1;
-    chDir.Form("Channel%i",addCh);
-    dir->mkdir(chDir);
-    dir->cd(chDir);
-
-    if (dacsToScan.size() == 0){
-
-     TString hname; hname.Form("Ch%i",addCh);
-     std::vector<TH1F*> histosTBM;
-     TH1F* h_TBM_nDecodes = new TH1F(hname+"_TBM_nDecodes", hname+"_TBM_nDecodes", 2, 0, 2 );
-     histosTBM.push_back(h_TBM_nDecodes);
-     TH1F* h_nROCHeaders = new TH1F(hname+"_nROCHeaders", hname+"_nROCHeaders", 9, 0, 9 );
-     histosTBM.push_back(h_nROCHeaders);     
-     chTBMmap[addCh] = histosTBM;
-  
-    }// end book histos for zero dacsToScan case
-
-    if(dacsToScan.size() == 1 && tempCalibObject->scanName(0) == "TBMPLL" ){
-
-     TString hname; hname.Form("Ch%i",addCh);
-     std::vector<TH2F*> histosTBM;
-     TH2F* h_TBM_nDecodes = new TH2F(hname+"_TBM_nDecodes", hname+"_TBM_nDecodes", 8, 0, 8, 8, 0, 8 );
-     histosTBM.push_back(h_TBM_nDecodes);
-     TH2F* h_nROCHeaders = new TH2F(hname+"_nROCHeaders", hname+"_nROCHeaders", 8, 0, 8, 8, 0, 8 );
-     histosTBM.push_back(h_nROCHeaders);     
-     chTBMmap2D[addCh] = histosTBM;
-  
-    }// end book histos for 1 dacsToScan case
-
-    if(dacsToScan.size() == 1){
-
-     if(tempCalibObject->scanName(0) == "TBMADelay"){
-      std::vector<TH2F*> histosROCs;
-      for( int r = 0; r < 8; ++r ){
-       TString hname; hname.Form("Ch%i_ROC%i",addCh,r);
-       TH2F* h_nROCHeaders = new TH2F(hname+"_nHeaders", hname+"_nHeaders", 8, 0, 8, 8, 0, 8 );
-       histosROCs.push_back(h_nROCHeaders);    
-      } 
-      chTBMmap2D[addCh] = histosROCs;
-     }
-  
-    }// end book histos for 2 dacsToScan case (TBMA/B delay scan)
 
    }//close loop on channels
 
    if (dacsToScan.size() == 0) ntrigsTBM[fedsAndChannels[ifed].first] = chTBMmap;
-   if (dacsToScan.size() == 1 && tempCalibObject->scanName(0) == "TBMPLL") scansTBM[fedsAndChannels[ifed].first] = chTBMmap2D;
-   if (dacsToScan.size() == 1 && tempCalibObject->scanName(0) == "TBMADelay") scansROCs[fedsAndChannels[ifed].first] = chTBMmap2D;
+   if (dacsToScan.size() == 1) scansTBM[fedsAndChannels[ifed].first] = chTBMmap2D;
 
   }//close loop on feds
 
+  //book histos with sum of channels
+  if (dacsToScan.size() == 1){
+
+   for (unsigned ifed = 0; ifed < fedsAndChannels.size(); ++ifed) {
+
+    TString FEDdir; FEDdir.Form("FED%i",fedsAndChannels[ifed].first);
+    rootf->cd(FEDdir);
+
+    std::string moduleName = "";
+    for( unsigned int ch = 0; ch < fedsAndChannels[ifed].second.size(); ch++ ){
+
+     PixelChannel theChannel = theNameTranslation_->ChannelFromFEDChannel(fedsAndChannels[ifed].first, (fedsAndChannels[ifed].second)[ch]);
+     if( moduleName != theChannel.modulename() ){
+      moduleName = theChannel.modulename();
+      std::vector<TH2F*> histosTBM;
+      TString hname(moduleName);
+      TH2F* h_TBM_nDecodes = new TH2F(hname+"_nTBMDecodes", hname+"_nTBMDecodes", 8, 0, 8, 8, 0, 8 );
+      histosTBM.push_back(h_TBM_nDecodes);
+      TH2F* h_nROCHeaders = new TH2F(hname+"_nROCHeaders", hname+"_nROCHeaders", 8, 0, 8, 8, 0, 8 );
+      histosTBM.push_back(h_nROCHeaders);   
+      TBMsHistoSum[fedsAndChannels[ifed].first][moduleName] = histosTBM;
+     }
+
+    }//end loop on channels
+   }//end loop on feds
+  }//end booking sum histo
+
   rootf->cd(0);
-
-}
-
-///////////////////////////////////////////////////////////////////////////////////////////////
-void PixelFEDTBMDelayCalibration::FillEm(unsigned state, int fedid, int ch, int which, float c, int roc) {
-  PixelCalibConfiguration* tempCalibObject = dynamic_cast<PixelCalibConfiguration*>(theCalibObject_);
-  assert(tempCalibObject != 0);
-
-  if (event_==0) return;
-
-  if (dacsToScan.size() == 1 && tempCalibObject->scanName(0) == "TBMADelay"){
-
-   const std::string& iname = dacsToScan[0];
-   const double ival(tempCalibObject->scanValue(iname, state)); 
-   uint32_t tmp = ival; 
-   int delay1 = (tmp>>3)&0x7;
-   int delay2 = tmp&0x7;
-   scansROCs[fedid][ch][roc]->Fill(delay1,delay2,c);
-
-  }
 
 }
 
@@ -890,7 +603,7 @@ void PixelFEDTBMDelayCalibration::FillEm(unsigned state, int fedid, int ch, int 
   if (event_==0) return;
 
   if (dacsToScan.size() == 0 ) ntrigsTBM[fedid][ch][which]->Fill(c,1);
-  if (dacsToScan.size() == 1 && tempCalibObject->scanName(0) == "TBMPLL"){
+  if (dacsToScan.size() == 1){
 
    const std::string& iname = dacsToScan[0];
    const double ival(tempCalibObject->scanValue(iname, state)); 

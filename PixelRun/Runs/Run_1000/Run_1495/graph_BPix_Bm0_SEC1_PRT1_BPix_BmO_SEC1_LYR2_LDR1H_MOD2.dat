@@ -1,0 +1,9 @@
+Portcard: BPix_Bm0_SEC1_PRT1
+Module: BPix_BmO_SEC1_LYR2_LDR1H_MOD2
+SDaOrigin: 64
+RDaOrigin: 64
+SDaRange: 64
+RDaRange: 64
+GridSize: 2
+Tests: 10
+GridScan:

@@ -29,8 +29,10 @@ namespace pos{
 
     const PixelModuleName& module() const { return module_; }
     std::string modulename() const { return module_.modulename(); }
+
     const PixelTBMChannel& TBMChannel() const { return TBMChannel_; }
     std::string TBMChannelString() const { return TBMChannel_.string(); }
+    std::string TBMChannelStringFull() const { return TBMChannel_.stringFull(); }
 
     std::string channelname() const;
 

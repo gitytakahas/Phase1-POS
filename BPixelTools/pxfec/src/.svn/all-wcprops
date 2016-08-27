@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/reps/cmspxldaq/!svn/ver/4903/BPixelTools/trunk/pxfec/src
+END
+SysCommand.cc
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/reps/cmspxldaq/!svn/ver/4903/BPixelTools/trunk/pxfec/src/SysCommand.cc
+END
+TBM.cc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/reps/cmspxldaq/!svn/ver/5329/BPixelTools/trunk/pxfec/src/TBM.cc
+END
+pxfec.cxx
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/reps/cmspxldaq/!svn/ver/5329/BPixelTools/trunk/pxfec/src/pxfec.cxx
+END
+Roc.cc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/reps/cmspxldaq/!svn/ver/5048/BPixelTools/trunk/pxfec/src/Roc.cc
+END
+Module.cc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/reps/cmspxldaq/!svn/ver/4613/BPixelTools/trunk/pxfec/src/Module.cc
+END
+ControlNetwork.cc
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/reps/cmspxldaq/!svn/ver/4613/BPixelTools/trunk/pxfec/src/ControlNetwork.cc
+END

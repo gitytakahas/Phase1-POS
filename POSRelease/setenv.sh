@@ -3,8 +3,8 @@ export XDAQ_ROOT=/opt/xdaq
 export XDAQ_BASE=/opt/xdaq
 export XDAQ_OS=linux
 export XDAQ_PLATFORM=x86_64_slc6
-export ROOTSYS=~/root
-export BUILD_HOME=~/build/TriDAS
+export ROOTSYS=/home/cmspixel/root534
+export BUILD_HOME=/home/cmspixel/ph1_TriDAS
 
 # the part below should usually not be touched
 export XDAQ_DOCUMENT_ROOT=$XDAQ_ROOT/htdocs
@@ -24,7 +24,7 @@ export LD_LIBRARY_PATH=${ENV_CMS_TK_DIAG_ROOT}/tools/lib:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH=${BUILD_HOME}/pixel/lib:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH=/usr/lib64:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH=/usr/lib64/root:${LD_LIBRARY_PATH}
-export PIXELCONFIGURATIONBASE=$BUILD_HOME/pixel/PixelConfigDataExamples/
+export PIXELCONFIGURATIONBASE=$BUILD_HOME/pixel/config/
 
 cd $ROOTSYS
 source bin/thisroot.sh

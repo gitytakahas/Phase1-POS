@@ -255,7 +255,7 @@ NWrRdCntrReg            09     4   001a0000    ffffffff	   1	1
 NWrRdTestReg            09     4   001a8000    ffffffff	   1	1
 *NWrClockReg             09     4   001b0000    ffffffff	   1	1
 NWrGainReg              09     4   001b8000    ffffffff	   1	1
-NWrModeReg              09     4   001c0000    ffffffff	   1    1
+NWrModeReg              09     4   001c0000    ffffffff	   0    1
 NWrResetPls             09     4   001c8000    ffffffff	   1    1
 NWrBaseLAdj             09     4   001d0000    ffffffff	   0    1
 NRdBaseL321             09     4   001d0000    ffffffff	   1    0
@@ -275,7 +275,7 @@ NCWrRdCntrReg           09     4   003a0000    ffffffff    1	1
 NCWrRdTestReg           09     4   003a8000    ffffffff    1	1
 *NCWrClockReg            09     4   003b0000    ffffffff    1	1
 NCWrGainReg             09     4   003b8000    ffffffff    1	1
-NCWrModeReg             09     4   003c0000    ffffffff    1	1
+NCWrModeReg             09     4   003c0000    ffffffff    0	1
 NCWrResetPls            09     4   003c8000    ffffffff    1	1
 NCWrBaseLAdj            09     4   003d0000    ffffffff	   0    1
 NCRdBaseL321            09     4   003d0000    ffffffff	   1    0
@@ -298,7 +298,7 @@ SCWrRdCntrReg		09     4   005a0000    ffffffff    1    1
 SCWrRdTestReg		09     4   005a8000    ffffffff    1    1
 *SCWrClockReg		09     4   005b0000    ffffffff    1    1
 SCWrGainReg		09     4   005b8000    ffffffff    1    1
-SCWrModeReg		09     4   005c0000    ffffffff    1    1
+SCWrModeReg		09     4   005c0000    ffffffff    0    1
 SCWrResetPls		09     4   005c8000    ffffffff    1    1
 SCWrBaseLAdj            09     4   005d0000    ffffffff	   0    1
 SCRdBaseL321            09     4   005d0000    ffffffff	   1    0
@@ -318,7 +318,7 @@ SWrRdCntrReg            09     4   007a0000    ffffffff    1	1
 SWrRdTestReg            09     4   007a8000    ffffffff    1	1
 *SWrClockReg             09     4   007b0000    ffffffff   1	1
 SWrGainReg              09     4   007b8000    ffffffff   1	1
-SWrModeReg              09     4   007c0000    ffffffff    1	1
+SWrModeReg              09     4   007c0000    ffffffff    0	1
 SWrResetPls             09     4   007c8000    ffffffff    1	1
 SWrBaseLAdj             09     4   007d0000    ffffffff	   0    1
 SRdBaseL321             09     4   007d0000    ffffffff	   1    0

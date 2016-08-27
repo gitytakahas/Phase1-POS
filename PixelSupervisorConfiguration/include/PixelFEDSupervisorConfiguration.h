@@ -20,9 +20,19 @@
 
 #include "xdaq/NamespaceURI.h"
 
-#include <diagbag/DiagBagWizard.h>
-#include "DiagCompileOptions.h"
+//*LC
+#include "toolbox/task/WorkLoopFactory.h"
+#include "toolbox/task/WaitingWorkLoop.h"
+#include "toolbox/task/Action.h"
+#include "toolbox/lang/Class.h"
+#include "toolbox/net/URN.h"
+#include "toolbox/BSem.h"
+//*LC
 
+//*LC
+//#include <diagbag/DiagBagWizard.h>
+//#include "DiagCompileOptions.h"
+//*
 #include "CalibFormats/SiPixelObjects/interface/PixelConfigKey.h"
 #include "CalibFormats/SiPixelObjects/interface/PixelCalibBase.h"
 #include "CalibFormats/SiPixelObjects/interface/PixelNameTranslation.h"
@@ -71,7 +81,7 @@ class PixelFEDSupervisorConfiguration : public PixelSupervisorConfigurationBase,
   //         VME Base Address  FED Number              Channel
 
   unsigned long crate_;
-  DiagBagWizard * diagService_;
+  //DiagBagWizard * diagService_;
 
   std::stringstream* console_;
 

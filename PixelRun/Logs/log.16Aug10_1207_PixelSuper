@@ -1,0 +1,99 @@
+nohup: ignoring input
+Run xdaq with options: -p 1953 -e /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml -c ../XDAQConfiguration/XDAQ_ConfigurationUZHLabTest_TTC.xml -z pixel
+LD_LIBRARY_PATH is  /opt/xdaq/lib:/home/cmspixel/root534/lib/root:/usr/lib64/root:/usr/lib64:/home/cmspixel/ph1_TriDAS/pixel/lib:/home/cmspixel/ph1_TriDAS/DiagSystem/tools/lib:/home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/lib:/opt/xdaq/lib/
+10 Aug 2016 10:07:12.665 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59, 64bit
+10 Aug 2016 10:07:12.688 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Loaded profile: /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml
+10 Aug 2016 10:07:12.688 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - b2innub version: 02.01.00, compiled on Oct 18 2012 at 19:18:29
+10 Aug 2016 10:07:12.688 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - executive version: 03.15.04, compiled on Oct 18 2012 at 19:18:12
+10 Aug 2016 10:07:12.688 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - pthttp version: 03.15.01, compiled on Dec  4 2013 at 11:04:24
+10 Aug 2016 10:07:12.689 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - ptfifo version: 04.01.01, compiled on Oct 18 2012 at 19:17:58
+10 Aug 2016 10:07:12.689 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xrelay version: 03.09.00, compiled on Oct 18 2012 at 19:18:25
+10 Aug 2016 10:07:12.689 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - hyperdaq version: 04.01.02, compiled on Oct 18 2012 at 19:18:24
+10 Aug 2016 10:07:12.758 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - pttcp version: 02.13.03, compiled on Oct 18 2012 at 19:19:19
+10 Aug 2016 10:07:12.778 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+10 Aug 2016 10:07:12.778 [140412614465376] DEBUG pixel.ch.uzh.physik.cmspixel.p:1953 <> - Create application descriptor for class: executive::Application id: 0
+10 Aug 2016 10:07:12.779 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Log URL not set (was already console)
+10 Aug 2016 10:07:12.779 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Log URL not set (was already console)
+10 Aug 2016 10:07:12.780 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Changed Log level to INFO
+10 Aug 2016 10:07:12.780 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Changed Log level to INFO
+10 Aug 2016 10:07:12.790 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+10 Aug 2016 10:07:12.790 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+10 Aug 2016 10:07:12.791 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+10 Aug 2016 10:07:12.791 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+10 Aug 2016 10:07:12.792 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+10 Aug 2016 10:07:12.792 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+10 Aug 2016 10:07:12.840 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+10 Aug 2016 10:07:12.840 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - config version: 03.09.02, compiled on Oct 18 2012 at 19:14:13
+10 Aug 2016 10:07:12.840 [140412614465376] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/opt/xdaq/lib/liblog4cplus.so, version declaration missing.
+10 Aug 2016 10:07:12.840 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - toolbox version: 05.02.03, compiled on Oct 18 2012 at 19:14:55
+10 Aug 2016 10:07:13.002 [140412614465376] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/opt/xdaq/lib/libxalan-c.so, version declaration missing.
+10 Aug 2016 10:07:13.002 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59
+10 Aug 2016 10:07:13.003 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xdata version: 05.03.01, compiled on Oct 18 2012 at 19:16:07
+10 Aug 2016 10:07:13.003 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xgi version: 03.13.00, compiled on Oct 18 2012 at 19:16:48
+10 Aug 2016 10:07:13.003 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xoap version: 03.12.02, compiled on Oct 18 2012 at 19:15:32
+10 Aug 2016 10:07:13.012 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xoapfilter version: 03.09.02, compiled on Oct 18 2012 at 19:15:33
+10 Aug 2016 10:07:15.498 [140412614465376] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so, version declaration missing.
+10 Aug 2016 10:07:15.560 [140412614465376] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so, version declaration missing.
+10 Aug 2016 10:07:15.794 [140412614465376] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFEDSupervisor/lib/linux/x86_64_slc6/libPixelFEDSupervisor.so, version declaration missing.
+10 Aug 2016 10:07:15.921 [140412614465376] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelSupervisor/lib/linux/x86_64_slc6/libPixelSupervisor.so, version declaration missing.
+10 Aug 2016 10:07:15.929 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - ttcttcci version: 01.07.02, compiled on Dec  4 2013 at 17:45:41
+10 Aug 2016 10:07:15.929 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - ttcutils version: 01.08.01, compiled on Dec  4 2013 at 17:43:10
+Wed Aug 10 12:07:15 2016
+ DiagWrapper Level 2: The DiagSystem is installed --- this is a bogus error message
+useTCDS is 0 ttc::TTCciControl 
+10 Aug 2016 10:07:16.016 [140412614465376] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Ready.
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 3: Entered SOAP message callback method PixelSupervisor::Initialize
+Filling bad alias list with the following aliases:
+	CRAFT09_6
+	Physics_0ns_wbc155
+	test
+...done adding bad aliases.
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 3: 1 TTCSupervisor(s) of type ttc::TTCciControl found in the "daq" group in the Configuration XML file
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 0: PixelFECSupervisor instance 1 is in FSM state Initial
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 0: PixelFEDSupervisor instance 1 is in FSM state Initial
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 0: PixelTKFECSupervisor instance 1 is in FSM state Initial
+[PixelSupervisor::Initialize] PixelTKFECSupervisor 1 has FSM state = Initial
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 4: [PixelSupervisor::Initialize] PixelDCSFSMInterface not found in the XML file.
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 4: No psxServers(s) found in the "dcs" group.
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 4: No PixelDCStoTrkFECDpInterface(s) have been found in the "dcs" group.
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 0: 0 PixelSlinkMonitor(s) found in the "daq" group.
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 4: Failed to start Job Control monitoring. Exception: Group 'jc' not found
+10 Aug 2016 10:07:37.482 [140412246628096] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Did not find RCMS state listener. Classname:RCMSStateListener Instance:0
+10 Aug 2016 10:07:37.482 [140412246628096] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Did not find RCMS state listener. Classname:RCMSStateListener Instance:0
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 3: PixelSupervisor::stateHalted: aliases and keys reloaded
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 3: PixelSupervisor::stateHalted: workloop active: 0, workloop type: waiting
+10 Aug 2016 10:07:37.521 [140412246628096] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Halted
+10 Aug 2016 10:07:37.521 [140412246628096] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Halted
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 3: Exiting SOAP message callback method PixelSupervisor::Initialize
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFEDSupervisor Instance = 1 FSMState = Halted
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFEDSupervisor instance #1 state: Halted
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelTKFECSupervisor Instance = 1 FSMState = Halted
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelTKFECSupervisor instance #1 state: Halted
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFECSupervisor Instance = 1 FSMState = Halted
+Wed Aug 10 12:07:37 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFECSupervisor instance #1 state: Halted
+Terminating...

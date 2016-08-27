@@ -22,6 +22,7 @@
 #include "PixelUtilities/PixelFEDDataTools/include/ErrorFIFODecoder.h"
 #include "PixelConfigDBInterface/include/PixelConfigInterface.h"
 #include "CalibFormats/SiPixelObjects/interface/PixelCalibConfiguration.h"
+#include "PixelFEDInterface/include/PixelFEDFifoData.h"
 
 #include <toolbox/convertstring.h>
 
@@ -111,21 +112,96 @@ xoap::MessageReference PixelFEDThresholdCalDelayCalibrationFIFO1::execute(xoap::
       uint32_t buffer[pos::fifo1TranspDepth];
       unsigned int channel=fedsAndChannels[ifed].second[ichannel];
       
-      int status = FEDInterface_[vmeBaseAddress]->drain_transBuffer(channel, buffer);
+      int status = FEDInterface_[vmeBaseAddress]->drainFifo1(channel, buffer);//drain_transBuffer(channel, buffer);
 
-      if (status!=(int)pos::fifo1TranspDataLength) {
+      /*if (status!=(int)pos::fifo1TranspDataLength) {
         std::cout<<"PixelFEDThresholdCalDelayCalibrationFIFO1::execute status="
                  <<status<<std::endl;
         std::cout<<"PixelFEDThresholdCalDelayCalibrationFIFO1::execute -- Could not drain FIFO 1 of FED Channel "<<channel<<" in transparent mode!"<<std::endl;
         diagService_->reportError("PixelFEDThresholdCalDelayCalibrationFIFO1::execute -- Could not drain FIFO 1 in transparent mode!",DIAGWARN);
-      }		    
+      }*/		    
+
+       bool found_TBMA_H = false;
+       bool found_TBMA_T = false;
+       std::map<int,int> ch_decodedROCs;
+       bool ch_foundWrongHit = false;
+       bool ch_foundHit = false;
+       bool inject_ = true;
+
+       if (status > 0) {
+
+        for (int i = 0; i < status; ++i) {
+	      
+         uint32_t w = buffer[i];
+         uint32_t decodeCh = (w >> 26) & 0x3f;
+         //if( decodeCh != channel ) continue;
+         //if( found_TBMA_H && found_TBMA_T ) continue;
+
+         /*if( true ){
+	  std::cout << "Word " << std::setw(4) << std::setfill(' ') << i << " = 0x " << std::hex << std::setw(4) << std::setfill('0') << (buffer[i]>>16) << " " << std::setw(4) << std::setfill('0') << (buffer[i] & 0xFFFF) << std::dec << "  ";
+	  for (int j = 31; j >= 0; --j){
+	   if (w & (1 << j)) std::cout << "1";
+	   else std::cout << "0";
+	   if (j % 4 == 0) std::cout << " ";
+	  }
+	  std::cout << std::setfill(' ') << "  " << std::endl;
+	  }*/
+
+	 uint32_t mk = (w >> 21) & 0x1f;
+	 uint32_t az = (w >> 8) & 0x1fff;
+	 uint32_t dc = (w >> 16) & 0x1f;
+	 uint32_t px = (w >> 8) & 0xff;
+	 uint32_t f8 = w & 0xff;
+
+	 //if( DumpFIFOs ) std::cout << "  Decoded channel: " << decodeCh << std::endl;
+
+	 if (!found_TBMA_H && mk == 0x1f) {
+          //if( DumpFIFOs ) printf("  TBM_H_status:%4x event# %i\n",((w>>1)&0xff00)+(w&0xff),f8);
+          found_TBMA_H = true;
+	 }
+	 else if (!found_TBMA_T && mk == 0x1e) {
+           /*if( DumpFIFOs ){
+            printf("  TBM_T_status:%4x\n",((w>>4)&0xff00)+(w&0xff)); 
+            if( (w&0x00000080)== 0x00000080 ) std::cout << "  ROCs disabled " << std::endl; 
+            else if( (w&0x00000080)== 0 ) std::cout << "  ROCs enabled " << std::endl; 
+           }*/
+           found_TBMA_T = true;
+	 }
+	 else { 
+	   if (az == 0){
+            //if( DumpFIFOs && mk <= 8 ) std::cout << "  ROC #" << std::dec << mk << "  lastdac: " << std::hex << f8 << std::dec << std::endl;
+            if( mk <= 8 ) ch_decodedROCs[mk-1] = 0;
+           }
+           if( az!=0 ){
+            int column = dc*2 + px%2;
+            int row = 80 - (px/2);
+            //if( DumpFIFOs && inject_ && mk <= 8 && column < 53 && row < 81 ){
+            //  std::cout << "  FOUND HIT : ROC # " << std::dec << mk << " dcol " << dc << " pxl " << px;
+            //  std::cout << " col " << column << " row " << row << " pulse height " << f8 << std::endl;
+            //}
+            if( !inject_ ) ch_foundWrongHit = true;
+            else{
+             if( /*column == 25 && row == 25 &&*/ mk<=8 ){
+              ch_decodedROCs[mk-1] = 1;
+              //ch_foundHit = true;
+             }
+            }
+           }
+	 }
+         //if( DumpFIFOs ) std::cout << std::endl;
+        }//close loop on status lenght
+ 
+        }//close loop on status lenght
+
+
+
+      //PixelFEDFifoData::decodeNormalData(buffer);
+      //PixelDecodedFEDRawData rawdata(buffer);
       
-      PixelDecodedFEDRawData rawdata(buffer);
-      
-      unsigned int nROCs=rawdata.numROCs();
+      unsigned int nROCs=4;//rawdata.numROCs();
       
       for(unsigned int iROC=0;iROC<nROCs;iROC++){
-        unsigned int nHits=rawdata.ROCOutput(iROC).numHits();
+        unsigned int nHits=ch_decodedROCs[iROC];//rawdata.ROCOutput(iROC).numHits();
 
         PixelROCName roc=
           theNameTranslation_->ROCNameFromFEDChannelROC(fednumber,

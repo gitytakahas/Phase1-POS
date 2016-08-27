@@ -28,7 +28,7 @@
 #include "PixelUtilities/PixelSharedDataTools/include/SharedObjectOwner.h"
 #include "PixelUtilities/PixelSharedDataTools/include/PixelErrorCollection.h"
 #include "PixelUtilities/PixelTestStandUtilities/include/PixelTimer.h"
-
+#include "PixelUtilities/PixelFEDDataTools/include/DigFIFO1Decoder.h"
 #include "PixelCalibrations/include/PixelCalibrationFactory.h"
 
 #include "PixelFEDInterface/include/PixelFEDFifoData.h"
@@ -50,8 +50,10 @@
 #include "CalibFormats/SiPixelObjects/interface/PixelConfigurationVerifier.h"
 #include "PixelCalibrations/include/PixelEfficiency2D.h"
 
-#include "diagbag/DiagBagWizard.h"
-#include "DiagCompileOptions.h"
+//*LC
+//#include "diagbag/DiagBagWizard.h"
+//#include "DiagCompileOptions.h"
+//*LC
 #include "toolbox/convertstring.h" // for stringF(int) etc
 #include "toolbox/BSem.h"
 #include "iomanip"
@@ -88,7 +90,8 @@ PixelFEDSupervisor::PixelFEDSupervisor(xdaq::ApplicationStub * s)
 				,workloopContinue_(false)
 {
   //gio
-  diagService_ = new DiagBagWizard(
+  //*LC
+  /* diagService_ = new DiagBagWizard(
                                    ("ReconfigurationModule") ,
                                    this->getApplicationLogger(),
                                    getApplicationDescriptor()->getClassName(),
@@ -101,7 +104,8 @@ PixelFEDSupervisor::PixelFEDSupervisor(xdaq::ApplicationStub * s)
 
 
   DIAG_DECLARE_USER_APP
-
+  */
+  //*LC
   diagService_->reportError("The DiagSystem is installed --- this is a bogus error message",DIAGUSERINFO);
 
   //PixelFEDSpySupervisor
@@ -184,9 +188,11 @@ PixelFEDSupervisor::PixelFEDSupervisor(xdaq::ApplicationStub * s)
   xgi::bind(this, &PixelFEDSupervisor::LowLevelXgiHandler, "LowLevelXgiHandler");
 
   //DIAGNOSTIC REQUESTED CALLBACK
-  xgi::bind(this,&PixelFEDSupervisor::configureDiagSystem, "configureDiagSystem");
-  xgi::bind(this,&PixelFEDSupervisor::applyConfigureDiagSystem, "applyConfigureDiagSystem");
-  xgi::bind(this,&PixelFEDSupervisor::callDiagSystemPage, "callDiagSystemPage");
+  //*LC
+  // xgi::bind(this,&PixelFEDSupervisor::configureDiagSystem, "configureDiagSystem");
+  //xgi::bind(this,&PixelFEDSupervisor::applyConfigureDiagSystem, "applyConfigureDiagSystem");
+  //xgi::bind(this,&PixelFEDSupervisor::callDiagSystemPage, "callDiagSystemPage");
+  //*LC
 
   // Defining the states of the State Machine
   fsm_.addState('I', "Initial", this, &PixelFEDSupervisor::stateChanged);
@@ -342,16 +348,16 @@ PixelFEDSupervisor::PixelFEDSupervisor(xdaq::ApplicationStub * s)
 #ifdef RUBUILDER
   I2OEventDataBlockSender::CreateDefaultMemoryPool(this,400,30);
 #endif
-
-  std::stringstream timerName;
-  timerName << getApplicationDescriptor()->getContextDescriptor()->getURL() << ":";
-  timerName << getApplicationDescriptor()->getClassName() << ":" << getApplicationDescriptor()->getLocalId() << ":" << getApplicationDescriptor()->getInstance();
-  toolbox::task::Timer * timer = toolbox::task::getTimerFactory()->createTimer(timerName.str());
-  toolbox::TimeInterval interval(AUTO_UP_CONFIGURE_DELAY,0);
-  toolbox::TimeVal start;
-  start = toolbox::TimeVal::gettimeofday() + interval;
-  timer->schedule( this, start,  0, "" );
-
+  //*LC
+  // std::stringstream timerName;
+  // timerName << getApplicationDescriptor()->getContextDescriptor()->getURL() << ":";
+  // timerName << getApplicationDescriptor()->getClassName() << ":" << getApplicationDescriptor()->getLocalId() << ":" << getApplicationDescriptor()->getInstance();
+  // toolbox::task::Timer * timer = toolbox::task::getTimerFactory()->createTimer(timerName.str());
+  // toolbox::TimeInterval interval(AUTO_UP_CONFIGURE_DELAY,0);
+  // toolbox::TimeVal start;
+  // start = toolbox::TimeVal::gettimeofday() + interval;
+  // timer->schedule( this, start,  0, "" );
+  //*LC
 }
 
 PixelFEDSupervisor::~PixelFEDSupervisor()
@@ -826,14 +832,17 @@ void PixelFEDSupervisor::LowLevelCommands (xgi::Input *in, xgi::Output *out) thr
 //gio
 void PixelFEDSupervisor::timeExpired (toolbox::task::TimerEvent& e)
 {
-  DIAG_EXEC_FSM_INIT_TRANS
+//   //*LC
+//   //DIAG_EXEC_FSM_INIT_TRANS
+//   //*LC
 }
-
+//*LC
 // DiagSystem XGI Binding
-void PixelFEDSupervisor::callDiagSystemPage(xgi::Input * in, xgi::Output * out ) throw (xgi::exception::Exception)
-{
-  diagService_->getDiagSystemHtmlPage(in, out,getApplicationDescriptor()->getURN());
-}
+// void PixelFEDSupervisor::callDiagSystemPage(xgi::Input * in, xgi::Output * out ) throw (xgi::exception::Exception)
+// {
+//   diagService_->getDiagSystemHtmlPage(in, out,getApplicationDescriptor()->getURN());
+// }
+//*LC
 
 
 
@@ -2185,7 +2194,7 @@ bool PixelFEDSupervisor::job_Configure ()
 #else
   diagService_->reportError("I think I own the whole VME crate and will create a bus adapter.",DIAGTRACE);
 
-  busAdapter_ = new HAL::CAENLinuxBusAdapter(HAL::CAENLinuxBusAdapter::V2718,0,0,HAL::CAENLinuxBusAdapter::A3818) ;
+  busAdapter_ = new HAL::CAENLinuxBusAdapter(HAL::CAENLinuxBusAdapter::V2718,0,0,HAL::CAENLinuxBusAdapter::A2818) ;
 
 //  // The link has to depend on the crate number
 //  // crate =1, link=1
@@ -4374,6 +4383,9 @@ xoap::MessageReference PixelFEDSupervisor::ReadDigFEDOSDFifo(xoap::MessageRefere
 
   unsigned int VMEBaseAddress = atoi(parametersReceived[0].value_.c_str());
   unsigned int channel = atoi(parametersReceived[1].value_.c_str());
+  FEDInterface_[VMEBaseAddress]->InitDummy();
+  FEDInterface_[VMEBaseAddress]->SetFitelFiberSwitchTopDauCard(0);
+  FEDInterface_[VMEBaseAddress]->SetFitelFiberSwitchBottomDauCard(0);
   uint32_t data = FEDInterface_[VMEBaseAddress]->readDigFEDOSDFifo(channel);
   std::cout << "ReadDigFEDOSDFifo: RocHi: " << ((data & 0xFFFF0000) >> 16) << " RocLo: " << (data & 0xFFFF) << std::endl;
 
@@ -4417,7 +4429,7 @@ xoap::MessageReference PixelFEDSupervisor::FEDCalibrations(xoap::MessageReferenc
 xoap::MessageReference PixelFEDSupervisor::beginCalibration(xoap::MessageReference msg) throw (xoap::exception::Exception){
 
   if (theFEDCalibrationBase_!=0){
-
+    cout<<"  PixelFEDSUpervisor: beginCalibration "<<endl;
     return theFEDCalibrationBase_->beginCalibration(msg);
   }
 

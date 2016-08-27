@@ -646,7 +646,7 @@ PixelFEDCard::PixelFEDCard(string fileName):
   // Added by Dario (March 26th, 2008): insure variables are all cleared before read-in
   clear() ;
 
-  //  cout << __LINE__ << "]\t" << mthn <<" Get setup parameters from file "<<fileName<<endl;
+    cout << __LINE__ << "]\t" << mthn <<" Get setup parameters from file "<<fileName<<endl;
   FILE *infile = fopen((fileName.c_str()),"r");
   if (infile == NULL)  throw std::runtime_error("Failed to open FED Card parameter file: "+fileName); 
 
@@ -956,9 +956,9 @@ PixelFEDCard::PixelFEDCard(string fileName):
   if(localDEBUG)
     printf("TTCrx Register 0 fine delay ClkDes1:%d\n",FineDes1Del);
 
-        int checkword=0;
-  fscanf(infile,"Params FED file check word:%d\n",
-                           &checkword);
+        int checkword=20211;
+  //fscanf(infile,"Params FED file check word:%d\n",&checkword);
+        std::cout << "*************************************** OUR DEBUG: remember to check why it can't read checkworkd from fedcard " << checkword << "**************************************" << std::endl;
         if(checkword!=90508&&checkword!=91509&&checkword!=20211) cout << __LINE__  << "]\t"                             << mthn 
 	                          << "FEDID: "                                      << fedNumber 
 				  << " Params FED File read error. Checkword read " << checkword

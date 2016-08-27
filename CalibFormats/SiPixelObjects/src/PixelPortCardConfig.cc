@@ -304,7 +304,7 @@ PixelPortCardConfig::PixelPortCardConfig(vector < vector< string> >  &tableMat):
 	     (settingName.find("_BIAS") != std::string::npos) || 
 	     (settingName.find("PLL_CTR2") != std::string::npos) ||
 	     (settingName.find("PLL_CTR5") != std::string::npos)  ||
-	     ((settingName.find("DOH_SEU_GAIN") != std::string::npos) && type_=="bpix")) 
+	     ((settingName.find("DOH_SEU_GAIN") != std::string::npos) && (type_=="bpix" || type_=="ph1bpix") )) 
 	    //Note that DOH_SEU_GAIN will be *ignored* for fpix
 	    {
 	      map<string,string>::iterator iter = nameDBtoFileConversion_.find(settingName);
@@ -401,7 +401,7 @@ PixelPortCardConfig::PixelPortCardConfig(std::string filename):
   if ( dummy == "Type:" ) // read in the type, defaulting to "fpix" if not specified
   {
     in >> type_;
-    assert( type_ == "fpix" || type_ == "bpix" || type_ == "pilt" );
+    assert( type_ == "fpix" || type_ == "bpix" || type_ == "pilt" || type_ == "ph1bpix" );
     in >> dummy;
   }
   else
@@ -750,6 +750,75 @@ void PixelPortCardConfig::fillNameToAddress()
 		nameToAddress_[PortCardSettingNames::k_DOH_Ch1Bias_Data] = PortCardSettingNames::k_bpix_DOH_Ch1Bias_Data_address;
 		nameToAddress_[PortCardSettingNames::k_DOH_Gain_SEU]     = PortCardSettingNames::k_bpix_DOH_Gain_SEU_address;
 	}
+	else if ( type_ == "ph1bpix" )
+	{
+
+		nameToAddress_[PortCardSettingNames::k_POH1_Bias1] = PortCardSettingNames::k_ph1bpix_POH1_Bias1_address;
+		nameToAddress_[PortCardSettingNames::k_POH1_Bias2] = PortCardSettingNames::k_ph1bpix_POH1_Bias2_address;
+		nameToAddress_[PortCardSettingNames::k_POH1_Bias3] = PortCardSettingNames::k_ph1bpix_POH1_Bias3_address;
+		nameToAddress_[PortCardSettingNames::k_POH1_Bias4] = PortCardSettingNames::k_ph1bpix_POH1_Bias4_address;
+		nameToAddress_[PortCardSettingNames::k_POH1_Gain12] = PortCardSettingNames::k_ph1bpix_POH1_Gain12_address;
+		nameToAddress_[PortCardSettingNames::k_POH1_Gain34] = PortCardSettingNames::k_ph1bpix_POH1_Gain34_address;
+
+		nameToAddress_[PortCardSettingNames::k_POH2_Bias1] = PortCardSettingNames::k_ph1bpix_POH2_Bias1_address;
+		nameToAddress_[PortCardSettingNames::k_POH2_Bias2] = PortCardSettingNames::k_ph1bpix_POH2_Bias2_address;
+		nameToAddress_[PortCardSettingNames::k_POH2_Bias3] = PortCardSettingNames::k_ph1bpix_POH2_Bias3_address;
+		nameToAddress_[PortCardSettingNames::k_POH2_Bias4] = PortCardSettingNames::k_ph1bpix_POH2_Bias4_address;
+		nameToAddress_[PortCardSettingNames::k_POH2_Gain12] = PortCardSettingNames::k_ph1bpix_POH2_Gain12_address;
+		nameToAddress_[PortCardSettingNames::k_POH2_Gain34] = PortCardSettingNames::k_ph1bpix_POH2_Gain34_address;
+
+		nameToAddress_[PortCardSettingNames::k_POH3_Bias1] = PortCardSettingNames::k_ph1bpix_POH3_Bias1_address;
+		nameToAddress_[PortCardSettingNames::k_POH3_Bias2] = PortCardSettingNames::k_ph1bpix_POH3_Bias2_address;
+		nameToAddress_[PortCardSettingNames::k_POH3_Bias3] = PortCardSettingNames::k_ph1bpix_POH3_Bias3_address;
+		nameToAddress_[PortCardSettingNames::k_POH3_Bias4] = PortCardSettingNames::k_ph1bpix_POH3_Bias4_address;
+		nameToAddress_[PortCardSettingNames::k_POH3_Gain12] = PortCardSettingNames::k_ph1bpix_POH3_Gain12_address;
+		nameToAddress_[PortCardSettingNames::k_POH3_Gain34] = PortCardSettingNames::k_ph1bpix_POH3_Gain34_address;
+
+		nameToAddress_[PortCardSettingNames::k_POH4_Bias1] = PortCardSettingNames::k_ph1bpix_POH4_Bias1_address;
+		nameToAddress_[PortCardSettingNames::k_POH4_Bias2] = PortCardSettingNames::k_ph1bpix_POH4_Bias2_address;
+		nameToAddress_[PortCardSettingNames::k_POH4_Bias3] = PortCardSettingNames::k_ph1bpix_POH4_Bias3_address;
+		nameToAddress_[PortCardSettingNames::k_POH4_Bias4] = PortCardSettingNames::k_ph1bpix_POH4_Bias4_address;
+		nameToAddress_[PortCardSettingNames::k_POH4_Gain12] = PortCardSettingNames::k_ph1bpix_POH4_Gain12_address;
+		nameToAddress_[PortCardSettingNames::k_POH4_Gain34] = PortCardSettingNames::k_ph1bpix_POH4_Gain34_address;
+
+		nameToAddress_[PortCardSettingNames::k_POH5_Bias1] = PortCardSettingNames::k_ph1bpix_POH5_Bias1_address;
+		nameToAddress_[PortCardSettingNames::k_POH5_Bias2] = PortCardSettingNames::k_ph1bpix_POH5_Bias2_address;
+		nameToAddress_[PortCardSettingNames::k_POH5_Bias3] = PortCardSettingNames::k_ph1bpix_POH5_Bias3_address;
+		nameToAddress_[PortCardSettingNames::k_POH5_Bias4] = PortCardSettingNames::k_ph1bpix_POH5_Bias4_address;
+		nameToAddress_[PortCardSettingNames::k_POH5_Gain12] = PortCardSettingNames::k_ph1bpix_POH5_Gain12_address;
+		nameToAddress_[PortCardSettingNames::k_POH5_Gain34] = PortCardSettingNames::k_ph1bpix_POH5_Gain34_address;
+
+		nameToAddress_[PortCardSettingNames::k_POH6_Bias1] = PortCardSettingNames::k_ph1bpix_POH6_Bias1_address;
+		nameToAddress_[PortCardSettingNames::k_POH6_Bias2] = PortCardSettingNames::k_ph1bpix_POH6_Bias2_address;
+		nameToAddress_[PortCardSettingNames::k_POH6_Bias3] = PortCardSettingNames::k_ph1bpix_POH6_Bias3_address;
+		nameToAddress_[PortCardSettingNames::k_POH6_Bias4] = PortCardSettingNames::k_ph1bpix_POH6_Bias4_address;
+		nameToAddress_[PortCardSettingNames::k_POH6_Gain12] = PortCardSettingNames::k_ph1bpix_POH6_Gain12_address;
+		nameToAddress_[PortCardSettingNames::k_POH6_Gain34] = PortCardSettingNames::k_ph1bpix_POH6_Gain34_address;
+
+		nameToAddress_[PortCardSettingNames::k_POH7_Bias1] = PortCardSettingNames::k_ph1bpix_POH7_Bias1_address;
+		nameToAddress_[PortCardSettingNames::k_POH7_Bias2] = PortCardSettingNames::k_ph1bpix_POH7_Bias2_address;
+		nameToAddress_[PortCardSettingNames::k_POH7_Bias3] = PortCardSettingNames::k_ph1bpix_POH7_Bias3_address;
+		nameToAddress_[PortCardSettingNames::k_POH7_Bias4] = PortCardSettingNames::k_ph1bpix_POH7_Bias4_address;
+		nameToAddress_[PortCardSettingNames::k_POH7_Gain12] = PortCardSettingNames::k_ph1bpix_POH7_Gain12_address;
+		nameToAddress_[PortCardSettingNames::k_POH7_Gain34] = PortCardSettingNames::k_ph1bpix_POH7_Gain34_address;
+		
+		nameToAddress_[PortCardSettingNames::k_PLL_CTR1] = PortCardSettingNames::k_bpix_PLL_CTR1_address;
+		nameToAddress_[PortCardSettingNames::k_PLL_CTR2] = PortCardSettingNames::k_bpix_PLL_CTR2_address;
+		nameToAddress_[PortCardSettingNames::k_PLL_CTR3] = PortCardSettingNames::k_bpix_PLL_CTR3_address;
+		nameToAddress_[PortCardSettingNames::k_PLL_CTR4or5] = PortCardSettingNames::k_bpix_PLL_CTR4or5_address;
+		
+		nameToAddress_[PortCardSettingNames::k_Delay25_RDA] = PortCardSettingNames::k_ph1bpix_Delay25_RDA_address;
+		nameToAddress_[PortCardSettingNames::k_Delay25_RCL] = PortCardSettingNames::k_ph1bpix_Delay25_RCL_address;
+		nameToAddress_[PortCardSettingNames::k_Delay25_SDA] = PortCardSettingNames::k_ph1bpix_Delay25_SDA_address;
+		nameToAddress_[PortCardSettingNames::k_Delay25_TRG] = PortCardSettingNames::k_ph1bpix_Delay25_TRG_address;
+		nameToAddress_[PortCardSettingNames::k_Delay25_SCL] = PortCardSettingNames::k_ph1bpix_Delay25_SCL_address;
+		nameToAddress_[PortCardSettingNames::k_Delay25_GCR] = PortCardSettingNames::k_ph1bpix_Delay25_GCR_address;
+		
+		nameToAddress_[PortCardSettingNames::k_DOH_Ch0Bias_CLK]  = PortCardSettingNames::k_bpix_DOH_Ch0Bias_CLK_address;
+		nameToAddress_[PortCardSettingNames::k_DOH_Dummy]        = PortCardSettingNames::k_bpix_DOH_Dummy_address;
+		nameToAddress_[PortCardSettingNames::k_DOH_Ch1Bias_Data] = PortCardSettingNames::k_bpix_DOH_Ch1Bias_Data_address;
+		nameToAddress_[PortCardSettingNames::k_DOH_Gain_SEU]     = PortCardSettingNames::k_bpix_DOH_Gain_SEU_address;
+	}
 	else assert(0);
 	
 	return;
@@ -996,9 +1065,169 @@ void PixelPortCardConfig::fillDBToFileAddress()
       //   nameDBtoFileConversion_["PLL3_CTR2"             ] = ;
       //   nameDBtoFileConversion_["PLL3_CTR3"             ] = ;
       //   nameDBtoFileConversion_["PLL3_CTR4_5"           ] = ;
-    }
-    
-    
+    }   
+  else if(type_ == "bpix")
+    {
+      //   nameDBtoFileConversion_["CONFIG_KEY_ID"         ] = ;
+      //   nameDBtoFileConversion_["CONFIG_KEY"            ] = ;
+      //   nameDBtoFileConversion_["VERSION"               ] = ;
+      //   nameDBtoFileConversion_["CONDITION_DATA_SET_ID" ] = ;
+      //   nameDBtoFileConversion_["KIND_OF_CONDITION_ID"  ] = ;
+      //   nameDBtoFileConversion_["KIND_OF_COND"          ] = ;
+      //   nameDBtoFileConversion_["SERIAL_NUMBER"         ] = ;
+      //   nameDBtoFileConversion_["PORT_CARD_ID"          ] = ;
+      //   nameDBtoFileConversion_["PORT_CARD"             ] = ;
+      //   nameDBtoFileConversion_["TRKFEC_NAME"           ] = ;
+      //   nameDBtoFileConversion_["RINGADDRESS"           ] = ;
+      //   nameDBtoFileConversion_["CHANNELADDRESS"        ] = ;
+      //   nameDBtoFileConversion_["CCUADDRESS"            ] = ;
+      //   nameDBtoFileConversion_["I2C_CNTRL"             ] = ;
+      //   nameDBtoFileConversion_["I2CSPEED"              ] = ;
+      nameDBtoFileConversion_["AOH1_BIAS1"                ] = k_AOH1_Bias1 ;
+      nameDBtoFileConversion_["AOH1_BIAS2"		  ] = k_AOH1_Bias2 ;
+      nameDBtoFileConversion_["AOH1_BIAS3"		  ] = k_AOH1_Bias3 ;
+      nameDBtoFileConversion_["AOH1_BIAS4"		  ] = k_AOH1_Bias4 ;
+      nameDBtoFileConversion_["AOH1_BIAS5"		  ] = k_AOH1_Bias5 ;
+      nameDBtoFileConversion_["AOH1_BIAS6"		  ] = k_AOH1_Bias6 ;
+      //   nameDBtoFileConversion_["AOH1_GAIN1"            ] = ;
+      //   nameDBtoFileConversion_["AOH1_GAIN2"            ] = ;
+      //   nameDBtoFileConversion_["AOH1_GAIN3"            ] = ;
+      //   nameDBtoFileConversion_["AOH1_GAIN4"            ] = ;
+      //   nameDBtoFileConversion_["AOH1_GAIN5"            ] = ;
+      //   nameDBtoFileConversion_["AOH1_GAIN6"            ] = ;
+      nameDBtoFileConversion_["AOH2_BIAS1"                ] = k_AOH2_Bias1 ;
+      nameDBtoFileConversion_["AOH2_BIAS2"		  ] = k_AOH2_Bias2 ;
+      nameDBtoFileConversion_["AOH2_BIAS3"		  ] = k_AOH2_Bias3 ;
+      nameDBtoFileConversion_["AOH2_BIAS4"		  ] = k_AOH2_Bias4 ;
+      nameDBtoFileConversion_["AOH2_BIAS5"		  ] = k_AOH2_Bias5 ;
+      nameDBtoFileConversion_["AOH2_BIAS6"		  ] = k_AOH2_Bias6 ;
+      //   nameDBtoFileConversion_["AOH2_GAIN1"            ] = ;
+      //   nameDBtoFileConversion_["AOH2_GAIN2"            ] = ;
+      //   nameDBtoFileConversion_["AOH2_GAIN3"            ] = ;
+      //   nameDBtoFileConversion_["AOH2_GAIN4"            ] = ;
+      //   nameDBtoFileConversion_["AOH2_GAIN5"            ] = ;
+      //   nameDBtoFileConversion_["AOH2_GAIN6"            ] = ;
+      nameDBtoFileConversion_["AOH3_BIAS1"                ] = k_AOH3_Bias1 ;
+      nameDBtoFileConversion_["AOH3_BIAS2"		  ] = k_AOH3_Bias2 ;
+      nameDBtoFileConversion_["AOH3_BIAS3"		  ] = k_AOH3_Bias3 ;
+      nameDBtoFileConversion_["AOH3_BIAS4"		  ] = k_AOH3_Bias4 ;
+      nameDBtoFileConversion_["AOH3_BIAS5"		  ] = k_AOH3_Bias5 ;
+      nameDBtoFileConversion_["AOH3_BIAS6"		  ] = k_AOH3_Bias6 ;
+      //   nameDBtoFileConversion_["AOH3_GAIN1"            ] = ;
+      //   nameDBtoFileConversion_["AOH3_GAIN2"            ] = ;
+      //   nameDBtoFileConversion_["AOH3_GAIN3"            ] = ;
+      //   nameDBtoFileConversion_["AOH3_GAIN4"            ] = ;
+      //   nameDBtoFileConversion_["AOH3_GAIN5"            ] = ;
+      //   nameDBtoFileConversion_["AOH3_GAIN6"            ] = ;
+      nameDBtoFileConversion_["AOH4_BIAS1"                ] = k_AOH4_Bias1 ;
+      nameDBtoFileConversion_["AOH4_BIAS2"		  ] = k_AOH4_Bias2 ;
+      nameDBtoFileConversion_["AOH4_BIAS3"		  ] = k_AOH4_Bias3 ;
+      nameDBtoFileConversion_["AOH4_BIAS4"		  ] = k_AOH4_Bias4 ;
+      nameDBtoFileConversion_["AOH4_BIAS5"		  ] = k_AOH4_Bias5 ;
+      nameDBtoFileConversion_["AOH4_BIAS6"		  ] = k_AOH4_Bias6 ;
+      //   nameDBtoFileConversion_["AOH4_GAIN1"            ] = ;
+      //   nameDBtoFileConversion_["AOH4_GAIN2"            ] = ;
+      //   nameDBtoFileConversion_["AOH4_GAIN3"            ] = ;
+      //   nameDBtoFileConversion_["AOH4_GAIN4"            ] = ;
+      //   nameDBtoFileConversion_["AOH4_GAIN5"            ] = ;
+      //   nameDBtoFileConversion_["AOH4_GAIN6"            ] = ;
+      //   nameDBtoFileConversion_["AOH5_BIAS1"            ] = ;
+      //   nameDBtoFileConversion_["AOH5_BIAS2"            ] = ;
+      //   nameDBtoFileConversion_["AOH5_BIAS3"            ] = ;
+      //   nameDBtoFileConversion_["AOH5_BIAS4"            ] = ;
+      //   nameDBtoFileConversion_["AOH5_BIAS5"            ] = ;
+      //   nameDBtoFileConversion_["AOH5_BIAS6"            ] = ;
+      //   nameDBtoFileConversion_["AOH5_GAIN1"            ] = ;
+      //   nameDBtoFileConversion_["AOH5_GAIN2"            ] = ;
+      //   nameDBtoFileConversion_["AOH5_GAIN3"            ] = ;
+      //   nameDBtoFileConversion_["AOH5_GAIN4"            ] = ;
+      //   nameDBtoFileConversion_["AOH5_GAIN5"            ] = ;
+      //   nameDBtoFileConversion_["AOH5_GAIN6"            ] = ;
+      //   nameDBtoFileConversion_["AOH6_BIAS1"            ] = ;
+      //   nameDBtoFileConversion_["AOH6_BIAS2"            ] = ;
+      //   nameDBtoFileConversion_["AOH6_BIAS3"            ] = ;
+      //   nameDBtoFileConversion_["AOH6_BIAS4"            ] = ;
+      //   nameDBtoFileConversion_["AOH6_BIAS5"            ] = ;
+      //   nameDBtoFileConversion_["AOH6_BIAS6"            ] = ;
+      //   nameDBtoFileConversion_["AOH6_GAIN1"            ] = ;
+      //   nameDBtoFileConversion_["AOH6_GAIN2"            ] = ;
+      //   nameDBtoFileConversion_["AOH6_GAIN3"            ] = ;
+      //   nameDBtoFileConversion_["AOH6_GAIN4"            ] = ;
+      //   nameDBtoFileConversion_["AOH6_GAIN5"            ] = ;
+      //   nameDBtoFileConversion_["AOH6_GAIN6"            ] = ;
+      nameDBtoFileConversion_["DELAY25_GCR"              ] = k_Delay25_GCR ;
+      nameDBtoFileConversion_["DELAY25_SCL"              ] = k_Delay25_SCL ;
+      nameDBtoFileConversion_["DELAY25_TRG"              ] = k_Delay25_TRG ;
+      nameDBtoFileConversion_["DELAY25_SDA"              ] = k_Delay25_SDA ;
+      nameDBtoFileConversion_["DELAY25_RCL"              ] = k_Delay25_RCL ;
+      nameDBtoFileConversion_["DELAY25_RDA"              ] = k_Delay25_RDA ;
+      //   nameDBtoFileConversion_["DEL3_GCR"              ] = ;
+      //   nameDBtoFileConversion_["DEL3_SCL"              ] = ;
+      //   nameDBtoFileConversion_["DEL3_TRG"              ] = ;
+      //   nameDBtoFileConversion_["DEL3_SDA"              ] = ;
+      //   nameDBtoFileConversion_["DEL3_RCL"              ] = ;
+      //   nameDBtoFileConversion_["DEL3_RDA"              ] = ;
+      nameDBtoFileConversion_["DOH_BIAS0"            ] = k_DOH_Ch0Bias_CLK  ;
+      nameDBtoFileConversion_["DOH_BIAS1"            ] = k_DOH_Ch1Bias_Data ;
+      nameDBtoFileConversion_["DOH_SEU_GAIN"         ] = k_DOH_Gain_SEU     ;
+      //   nameDBtoFileConversion_["DOH3_BIAS0"            ] =  ;
+      //   nameDBtoFileConversion_["DOH3_BIAS1"            ] =  ;
+      //   nameDBtoFileConversion_["DOH3_SEU_GAIN"         ] =  ;
+      nameDBtoFileConversion_["PLL_CTR1"             ] = k_PLL_CTR1 ;
+      nameDBtoFileConversion_["PLL_CTR2"             ] = k_PLL_CTR2 ;
+      nameDBtoFileConversion_["PLL_CTR3"             ] = k_PLL_CTR3 ;
+      nameDBtoFileConversion_["PLL_CTR4"             ] = k_PLL_CTR4 ;
+      nameDBtoFileConversion_["PLL_CTR5"             ] = k_PLL_CTR5 ;
+      //   nameDBtoFileConversion_["PLL3_CTR1"             ] = ;
+      //   nameDBtoFileConversion_["PLL3_CTR2"             ] = ;
+      //   nameDBtoFileConversion_["PLL3_CTR3"             ] = ;
+      //   nameDBtoFileConversion_["PLL3_CTR4_5"           ] = ;
+    }    
+  else if(type_ == "ph1bpix")
+    {
+      nameDBtoFileConversion_["POH1_BIAS1"                ] = k_POH1_Bias1 ;
+      nameDBtoFileConversion_["POH1_BIAS2"		  ] = k_POH1_Bias2 ;
+      nameDBtoFileConversion_["POH1_BIAS3"		  ] = k_POH1_Bias3 ;
+      nameDBtoFileConversion_["POH1_BIAS4"		  ] = k_POH1_Bias4 ;
+      nameDBtoFileConversion_["POH2_BIAS1"                ] = k_POH2_Bias1 ;
+      nameDBtoFileConversion_["POH2_BIAS2"		  ] = k_POH2_Bias2 ;
+      nameDBtoFileConversion_["POH2_BIAS3"		  ] = k_POH2_Bias3 ;
+      nameDBtoFileConversion_["POH2_BIAS4"		  ] = k_POH2_Bias4 ;
+      nameDBtoFileConversion_["POH3_BIAS1"                ] = k_POH3_Bias1 ;
+      nameDBtoFileConversion_["POH3_BIAS2"		  ] = k_POH3_Bias2 ;
+      nameDBtoFileConversion_["POH3_BIAS3"		  ] = k_POH3_Bias3 ;
+      nameDBtoFileConversion_["POH3_BIAS4"		  ] = k_POH3_Bias4 ;
+      nameDBtoFileConversion_["POH4_BIAS1"                ] = k_POH4_Bias1 ;
+      nameDBtoFileConversion_["POH4_BIAS2"		  ] = k_POH4_Bias2 ;
+      nameDBtoFileConversion_["POH4_BIAS3"		  ] = k_POH4_Bias3 ;
+      nameDBtoFileConversion_["POH4_BIAS4"		  ] = k_POH4_Bias4 ;
+      nameDBtoFileConversion_["POH5_BIAS1"                ] = k_POH5_Bias1 ;
+      nameDBtoFileConversion_["POH5_BIAS2"		  ] = k_POH5_Bias2 ;
+      nameDBtoFileConversion_["POH5_BIAS3"		  ] = k_POH5_Bias3 ;
+      nameDBtoFileConversion_["POH5_BIAS4"		  ] = k_POH5_Bias4 ;
+      nameDBtoFileConversion_["POH6_BIAS1"                ] = k_POH6_Bias1 ;
+      nameDBtoFileConversion_["POH6_BIAS2"		  ] = k_POH6_Bias2 ;
+      nameDBtoFileConversion_["POH6_BIAS3"		  ] = k_POH6_Bias3 ;
+      nameDBtoFileConversion_["POH6_BIAS4"		  ] = k_POH6_Bias4 ;
+      nameDBtoFileConversion_["POH7_BIAS1"                ] = k_POH7_Bias1 ;
+      nameDBtoFileConversion_["POH7_BIAS2"		  ] = k_POH7_Bias2 ;
+      nameDBtoFileConversion_["POH7_BIAS3"		  ] = k_POH7_Bias3 ;
+      nameDBtoFileConversion_["POH7_BIAS4"		  ] = k_POH7_Bias4 ;
+      nameDBtoFileConversion_["DELAY25_GCR"              ] = k_Delay25_GCR ;
+      nameDBtoFileConversion_["DELAY25_SCL"              ] = k_Delay25_SCL ;
+      nameDBtoFileConversion_["DELAY25_TRG"              ] = k_Delay25_TRG ;
+      nameDBtoFileConversion_["DELAY25_SDA"              ] = k_Delay25_SDA ;
+      nameDBtoFileConversion_["DELAY25_RCL"              ] = k_Delay25_RCL ;
+      nameDBtoFileConversion_["DELAY25_RDA"              ] = k_Delay25_RDA ;
+      nameDBtoFileConversion_["DOH_BIAS0"            ] = k_DOH_Ch0Bias_CLK  ;
+      nameDBtoFileConversion_["DOH_BIAS1"            ] = k_DOH_Ch1Bias_Data ;
+      nameDBtoFileConversion_["DOH_SEU_GAIN"         ] = k_DOH_Gain_SEU     ;
+      nameDBtoFileConversion_["PLL_CTR1"             ] = k_PLL_CTR1 ;
+      nameDBtoFileConversion_["PLL_CTR2"             ] = k_PLL_CTR2 ;
+      nameDBtoFileConversion_["PLL_CTR3"             ] = k_PLL_CTR3 ;
+      nameDBtoFileConversion_["PLL_CTR4"             ] = k_PLL_CTR4 ;
+      nameDBtoFileConversion_["PLL_CTR5"             ] = k_PLL_CTR5 ;
+    }   
 }
 
 

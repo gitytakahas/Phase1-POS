@@ -45,8 +45,9 @@
 #include "cgicc/HTMLClasses.h"
 
 // gio
-#include <diagbag/DiagBagWizard.h>
-#include "DiagCompileOptions.h"
+//#include <diagbag/DiagBagWizard.h>
+//#include "DiagCompileOptions.h"
+#include "PixelTKFECSupervisor/include/DiagWrapper.h"
 
 #include "toolbox/fsm/AsynchronousFiniteStateMachine.h"
 #include "toolbox/fsm/FailedEvent.h"
@@ -90,7 +91,7 @@ public:
 
   // gio
   toolbox::BSem executeReconfMethodMutex;
-  DiagBagWizard * diagService_;
+  //DiagBagWizard * diagService_;
   //
   
   XDAQ_INSTANTIATOR();
@@ -216,11 +217,11 @@ private:
 		      tscType8 piaChannelAddress,
 		      bool turnOn,
 		      unsigned int portNumber);
-  void DIAG_CONFIGURE_CALLBACK();
-  void DIAG_APPLY_CALLBACK();
+  // void DIAG_CONFIGURE_CALLBACK();
+  // void DIAG_APPLY_CALLBACK();
 
   /* xgi method called when the link <display_diagsystem> is clicked */
-  void callDiagSystemPage(xgi::Input * in, xgi::Output * out ) throw (xgi::exception::Exception);
+  // void callDiagSystemPage(xgi::Input * in, xgi::Output * out ) throw (xgi::exception::Exception);
 
   PixelTimer GlobalTimer_;
   PixelTimer fsmStateNotificationTimer_;
@@ -231,6 +232,15 @@ private:
   bool workloopContinue_;
   bool workloopContinueRC_;
   bool suppressHardwareError_;
+
+  DiagWrapper* diagService_;
+  static const int DIAGDEBUG = 0;
+  static const int DIAGTRACE = 1;
+  static const int DIAGUSERINFO = 2;
+  static const int DIAGINFO = 3;
+  static const int DIAGWARN = 4;
+  static const int DIAGERROR = 5;
+  static const int DIAGFATAL = 6;
 
 };
 #endif

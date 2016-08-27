@@ -1,3 +1,4 @@
+// Modified by Yuta Takahashi 2016
 // Modified by Jennifer Vaughan 2007/06/01
 // $Id: PixelCalibrationBase.cc,v 1.1 
 
@@ -97,12 +98,28 @@ void PixelFEDCalibrationBase::setFEDModeAndControlRegister(unsigned int mode,
   for (FEDInterfaceMap::iterator iFED=FEDInterface_.begin();iFED!=FEDInterface_.end();++iFED) { 
     iFED->second->setModeRegister(mode);
     iFED->second->setControlRegister(control);
+     //lea and jen
+    iFED->second->InitDummy();
+    iFED->second->SetFitelFiberSwitchTopDauCard(0);
+    iFED->second->SetFitelFiberSwitchBottomDauCard(0);
+  }
+}
+
+//jen
+void PixelFEDCalibrationBase::setFIFO1Mode(){
+
+  for (FEDInterfaceMap::iterator iFED=FEDInterface_.begin();iFED!=FEDInterface_.end();++iFED) { 
+    iFED->second->SetFIFO1Mode();
   }
 }
 
 void PixelFEDCalibrationBase::sendResets() {
-  for (FEDInterfaceMap::iterator iFED=FEDInterface_.begin();iFED!=FEDInterface_.end();++iFED)
+  for (FEDInterfaceMap::iterator iFED=FEDInterface_.begin();iFED!=FEDInterface_.end();++iFED) {
     iFED->second->sendResets();
+    //## lea and jen
+    //iFED->second->InitDummy();
+    //iFED->second->InitDummy2();
+  }
 }
 
 

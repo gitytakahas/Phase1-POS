@@ -119,7 +119,7 @@ PixelTBMSettings::PixelTBMSettings(std::string filename):
 	    throw std::runtime_error("Failed to open file "+filename);
 	}
 	else {
-	  // std::cout << "Opened:"<<filename<<std::endl;
+	   std::cout << "Opened:"<<filename<<std::endl;
 	}
 	
        	std::string tag;
@@ -131,79 +131,79 @@ PixelTBMSettings::PixelTBMSettings(std::string filename):
         unsigned int tmpint;	
 
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMABase0:");
 	in >> tmpint;
 	TBMABase0_=tmpint;
 
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMBBase0:");
 	in >> tmpint;
 	TBMBBase0_=tmpint;
 
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMAAutoReset:");
 	in >> tmpint;
 	TBMAAutoReset_=tmpint;
 
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMBAutoReset:");
 	in >> tmpint;
 	TBMBAutoReset_=tmpint;
 
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMANoTokenPass:");
 	in >> tmpint;
 	TBMANoTokenPass_=tmpint;
 
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMBNoTokenPass:");
 	in >> tmpint;
 	TBMBNoTokenPass_=tmpint;
 
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMADisablePKAMCounter:");
 	in >> tmpint;
 	TBMADisablePKAMCounter_=tmpint;
 
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMBDisablePKAMCounter:");
 	in >> tmpint;
 	TBMBDisablePKAMCounter_=tmpint;
 
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMAPKAMCount:");
 	in >> tmpint;
 	TBMAPKAMCount_=tmpint;
 
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMBPKAMCount:");
 	in >> tmpint;
 	TBMBPKAMCount_=tmpint;
 	
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMPLLDelay:");
 	in >> tmpint;
 	TBMPLLDelay_=tmpint;
 	
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMADelay:");
 	in >> tmpint;
 	TBMADelay_=tmpint;
 
 	in >> tag;
-	//std::cout << "Tag="<<tag<<std::endl;
+	std::cout << "Tag="<<tag<<std::endl;
 	assert(tag=="TBMBDelay:");
 	in >> tmpint;
 	TBMBDelay_=tmpint;
@@ -367,19 +367,31 @@ void PixelTBMSettings::generateConfiguration(PixelFECConfigInterface* pixelFEC,
     if (TBMADisablePKAMCounter_) base0_A |= 0x1;
     if (TBMBDisablePKAMCounter_) base0_B |= 0x1;
     
+    /*std::cout << "****************** JENDEBUG: " << std::endl;
+    std::cout << " doResets " << doResets << " base0_A " << base0_A << " base0_B " << base0_B << " TBMAAutoReset " << unsigned(TBMAAutoReset_);
+    std::cout << " TBMBAutoReset " << unsigned(TBMBAutoReset_) << " TBMANoTokenPass " << unsigned(TBMANoTokenPass_) << " TBMBNoTokenPass " << unsigned(TBMBNoTokenPass_);
+    std::cout << " TBMADisablePKAMCounter " << unsigned(TBMADisablePKAMCounter_) << " TBMBDisablePKAMCounter " << unsigned(TBMBDisablePKAMCounter_);
+    std::cout << " TBMPLLDelay " << unsigned(TBMPLLDelay_) << " TBMAPKAMCount " << unsigned(TBMAPKAMCount_) << " TBMBPKAMCount " << unsigned(TBMBPKAMCount_);
+    std::cout << " tbmchannel " << tbmchannel << " tbmchannelB " << tbmchannelB << " TBMADelay " << unsigned(TBMADelay_);
+    std::cout << " TBMBDelay " << unsigned(TBMBDelay_) << " hubaddress " << hubaddress << std::endl;*/
+
+    usleep(1000000);
     if (doResets) pixelFEC->tbmcmd(mfec, mfecchannel, tbmchannel, hubaddress, 4, 2, 0x14, 0);
     pixelFEC->tbmcmd(mfec, mfecchannel, tbmchannel,  hubaddress, 4, 0, base0_A, 0);
+    usleep(1000000);
     pixelFEC->tbmcmd(mfec, mfecchannel, tbmchannel, hubaddress, 4, 4, TBMAPKAMCount_, 0);
     pixelFEC->tbmcmd(mfec, mfecchannel, tbmchannel, hubaddress, 4, 1, 0xC0, 0); // setting the mode, we should always stay in the CAL = 0xC0 mode since the EventNumberClear Mode = 0x80 does not work correctly
     pixelFEC->tbmcmd(mfec, mfecchannel, tbmchannel, hubaddress, 4, 5, TBMADelay_, 0);
-
     pixelFEC->tbmcmd(mfec, mfecchannel, tbmchannel, hubaddress, 4, 7, TBMPLLDelay_, 0);
 
+    usleep(1000000);
     if (doResets) pixelFEC->tbmcmd(mfec, mfecchannel, tbmchannelB, hubaddress, 4, 2, 0x14, 0);
     pixelFEC->tbmcmd(mfec, mfecchannel, tbmchannelB,  hubaddress, 4, 0, base0_B, 0);
+    usleep(1000000);
     pixelFEC->tbmcmd(mfec, mfecchannel, tbmchannelB, hubaddress, 4, 4, TBMBPKAMCount_, 0);
     pixelFEC->tbmcmd(mfec, mfecchannel, tbmchannelB, hubaddress, 4, 1, 0xC0, 0); // setting the mode, we should always stay in the CAL = 0xC0 mode since the EventNumberClear Mode = 0x80 does not work correctly
     pixelFEC->tbmcmd(mfec, mfecchannel, tbmchannelB, hubaddress, 4, 5, TBMBDelay_, 0);
+
 } 
 
 

@@ -1,0 +1,20 @@
+Mode: Iana
+Parameters:
+IanaRes        100
+ManualReads        yes
+MixVanas        yes
+NPoints        15
+SleepTime        8
+SleepTimeAtZero        8
+TurnOffVsf        no
+Rows:
+10 
+Cols:
+10 
+VcalHigh
+Set: Vcal 200
+Repeat:
+1
+Rocs:
+all
+

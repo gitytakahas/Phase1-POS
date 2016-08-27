@@ -1,41 +1,41 @@
-FED Base address                         :0x3c000000
+FED Base address                         :0x5c000000
 FEDID Number                             :0x28
-Number of ROCs Chnl 1:8
-Number of ROCs Chnl 2:8
-Number of ROCs Chnl 3:8
-Number of ROCs Chnl 4:8
-Number of ROCs Chnl 5:8
-Number of ROCs Chnl 6:8
-Number of ROCs Chnl 7:8
-Number of ROCs Chnl 8:8
-Number of ROCs Chnl 9:8
-Number of ROCs Chnl 10:8
-Number of ROCs Chnl 11:8
-Number of ROCs Chnl 12:8
-Number of ROCs Chnl 13:8
-Number of ROCs Chnl 14:8
-Number of ROCs Chnl 15:8
-Number of ROCs Chnl 16:8
-Number of ROCs Chnl 17:8
-Number of ROCs Chnl 18:8
-Number of ROCs Chnl 19:8
-Number of ROCs Chnl 20:8
-Number of ROCs Chnl 21:8
-Number of ROCs Chnl 22:8
-Number of ROCs Chnl 23:8
-Number of ROCs Chnl 24:8
-Number of ROCs Chnl 25:8
-Number of ROCs Chnl 26:8
-Number of ROCs Chnl 27:8
-Number of ROCs Chnl 28:8
-Number of ROCs Chnl 29:8
-Number of ROCs Chnl 30:8
-Number of ROCs Chnl 31:8
-Number of ROCs Chnl 32:8
-Number of ROCs Chnl 33:8
-Number of ROCs Chnl 34:8
-Number of ROCs Chnl 35:8
-Number of ROCs Chnl 36:8
+Number of ROCs Chnl 1:4
+Number of ROCs Chnl 2:4
+Number of ROCs Chnl 3:4
+Number of ROCs Chnl 4:4
+Number of ROCs Chnl 5:4
+Number of ROCs Chnl 6:4
+Number of ROCs Chnl 7:4
+Number of ROCs Chnl 8:4
+Number of ROCs Chnl 9:4
+Number of ROCs Chnl 10:4
+Number of ROCs Chnl 11:4
+Number of ROCs Chnl 12:4
+Number of ROCs Chnl 13:4
+Number of ROCs Chnl 14:4
+Number of ROCs Chnl 15:4
+Number of ROCs Chnl 16:4
+Number of ROCs Chnl 17:4
+Number of ROCs Chnl 18:4
+Number of ROCs Chnl 19:4
+Number of ROCs Chnl 20:4
+Number of ROCs Chnl 21:4
+Number of ROCs Chnl 22:4
+Number of ROCs Chnl 23:4
+Number of ROCs Chnl 24:4
+Number of ROCs Chnl 25:4
+Number of ROCs Chnl 26:4
+Number of ROCs Chnl 27:4
+Number of ROCs Chnl 28:4
+Number of ROCs Chnl 29:4
+Number of ROCs Chnl 30:4
+Number of ROCs Chnl 31:4
+Number of ROCs Chnl 32:4
+Number of ROCs Chnl 33:4
+Number of ROCs Chnl 34:4
+Number of ROCs Chnl 35:4
+Number of ROCs Chnl 36:4
 Optical reciever 1  Capacitor Adjust(0-3):0
 Optical reciever 2  Capacitor Adjust(0-3):0
 Optical reciever 3  Capacitor Adjust(0-3):0
@@ -2029,14 +2029,14 @@ TRLR level 1 Channel 36:400
 TRLR level 2 Channel 36:500
 TRLR level 3 Channel 36:600
 TRLR level 4 Channel 36:700
-Channel Enbable bits chnls 1-9  (on = 0):0x030
-Channel Enbable bits chnls 10-18(on = 0):0x1fe
-Channel Enbable bits chnls 19-27(on = 0):0x03f
-Channel Enbable bits chnls 28-36(on = 0):0x186
+Channel Enbable bits chnls 1-9  (on = 0):0x1ff
+Channel Enbable bits chnls 10-18(on = 0):0x1ff
+Channel Enbable bits chnls 19-27(on = 0):0x1fe
+Channel Enbable bits chnls 28-36(on = 0):0x03f
 TTCrx Coarse Delay Register 2:0
 TTCrc      ClkDes2 Register 3:0x13
 TTCrc Fine Dlay ClkDes2 Reg 1:5
-Center Chip Control Reg:0x0
+Center Chip Control Reg:0x1
 Initial Slink DAQ mode:0
 Channel ADC Gain bits chnls  1-12(1Vpp = 0):0x0
 Channel ADC Gain bits chnls 13-20(1Vpp = 0):0x0
@@ -2054,10 +2054,10 @@ Private 8 bit word chnls 1-9  :0xb1
 Private 8 bit word chnls 10-18:0xb2
 Private 8 bit word chnls 19-27:0xb3
 Private 8 bit word chnls 28-36:0xb4
-N  Scope channel(0-8):0
-NC Scope channel(0-8):0
-SC Scope channel(0-8):0
-S  Scope channel(0-8):0
+N  Spy Fifo-2 channel(0-8):8
+NC Spy Fifo-2 channel(0-8):0
+SC Spy Fifo-2 channel(0-8):0
+S  Spy Fifo-2 channel(0-8):5
 Special Random testDAC mode (on = 0x1, off=0x0):0x0
 Number of Consecutive (max 1023) Out of Syncs till TTs OOS set:64
 Number of Consecutive (max 1023) Empty events till TTs ERR set:64
@@ -2073,10 +2073,14 @@ N fifo-1 hit limit (max 1023 (hard) 900 (soft):192
 NC fifo-1 hit limit (max 1023 (hard) 900 (soft):192
 SC fifo-1 hit limit (max 1023 (hard) 900 (soft):192
 S fifo-1 hit limit (max 1023 (hard) 900 (soft):192
-N  testreg:0x0
+N  testreg:0x00002304
 NC testreg:0x80000000
 SC testreg:0x0
-S  testreg:0x80000000
+S  testreg:0x80002304
+Skip a ROC in ch 1-9, bits 10-5 chnl, bits 0-4 ROC-1:0
+Skip a ROC in ch 10-18, bits 10-5 chnl, bits 0-4 ROC-1:0
+Skip a ROC in ch 19-27, bits 10-5 chnl, bits 0-4 ROC-1:0
+Skip a ROC in ch 28-36, bits 10-5 chnl, bits 0-4 ROC-1:0
 Set BUSYWHENBEHIND by this many triggers with timeouts:8
 D[0]=1 enable fed-stuck reset D[1]=1 disable ev# protect(dont):0x1
 Limit for fifo-2 almost full (point for the TTS flag):0x1c00

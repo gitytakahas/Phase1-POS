@@ -19,8 +19,8 @@
 #include "xercesc/dom/DOMNode.hpp"
 
 #include "xdaq/exception/Exception.h"
-
-#include <diagbag/DiagBagWizard.h>
+//*LC
+//#include <diagbag/DiagBagWizard.h>
 
 #include "CalibFormats/SiPixelObjects/interface/PixelROCName.h"
 #include "CalibFormats/SiPixelObjects/interface/PixelModuleName.h"

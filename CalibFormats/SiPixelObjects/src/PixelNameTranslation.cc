@@ -156,7 +156,7 @@ PixelNameTranslation::PixelNameTranslation(std::vector< std::vector<std::string>
 	     cout << "Hdw1:"<<endl<<channelTranslationTable_itr->second<<endl;
 	     cout << "Hdw2:"<<endl<<hdwAdd<<endl;
 	   }
-     assert( channelTranslationTable_itr->second |= hdwAdd );
+     //assert( channelTranslationTable_itr->second |= hdwAdd );  commented out for phase1 jld 25/2/16
      foundChannel = true;
    }
    else if ( channelTranslationTable_itr->first.module() == aModule ) 
@@ -264,7 +264,15 @@ PixelNameTranslation::PixelNameTranslation(std::string filename):
 
     in >> rocname;
     in >> TBMChannel;
-    if ( TBMChannel != "A" && TBMChannel != "B" ) // no TBM channel was specified, so default to A and set fecnumber to the value of this string
+
+    // no TBM channel was specified, so default to A and set fecnumber to the value of this string
+    // Add the phase1 layer2 and layer1 scheme
+    //if ( TBMChannel != "A" && TBMChannel != "B" ) 
+    if ( (TBMChannel != "A") && (TBMChannel != "B") &&
+	 (TBMChannel != "A1") && (TBMChannel != "A2") &&
+	 (TBMChannel != "B1") && (TBMChannel != "B2") &&
+	 (TBMChannel != "C1") && (TBMChannel != "C2") &&
+	 (TBMChannel != "D1") && (TBMChannel != "D2") ) 
       {
 	fecnumber = atoi(TBMChannel.c_str());
 	TBMChannel = "A";
@@ -330,6 +338,7 @@ PixelNameTranslation::PixelNameTranslation(std::string filename):
 //     << " H " << fedchannel   
 //     << " I " << fedrocnumber << endl ;    
 
+      cout<<"Tr 1 "<<TBMChannel<<endl;
 
       translationtable_[aROC]=hdwAdd;
       fedlookup_[hdwAdd]=aROC;
@@ -339,36 +348,37 @@ PixelNameTranslation::PixelNameTranslation(std::string filename):
 
       hdwTranslationTable_[hdwAdd] = aChannel;
 
+      cout<<"Tr2 "<<rocname<<" "<<aModule<<" "<<TBMChannel<<" "<<aChannel<<endl;
+
       // Look for this channel in channelTransaltionTable.  If it is found, 
       // check that the hardware address agrees.  If not, add it to the table.
       // Also, if another channel on that module is found, check that the FEC 
       // part agrees, and the FED part doesn't.
       bool foundChannel = false;
 
+      std::map<PixelChannel, PixelHdwAddress >::const_iterator channelTranslationTable_itr = 
+	channelTranslationTable_.find(aChannel);
 
-      std::map<PixelChannel, PixelHdwAddress >::const_iterator channelTranslationTable_itr = channelTranslationTable_.find(aChannel);
-
-      if ( channelTranslationTable_itr != channelTranslationTable_.end()) {
+      if ( channelTranslationTable_itr != channelTranslationTable_.end() ) {
 	if (!(channelTranslationTable_itr->second |= hdwAdd)){
 		
-	  cout << __LINE__ << "]\t" << mthn << "Found two ROCs on the same channe, but not same hdw" << endl;
+	  cout << __LINE__ << "]\t" << mthn << "Found two ROCs on the same channe, but not same hdw?" << endl;
 	  cout << __LINE__ << "]\t" << mthn << "Hdw1: " << endl << channelTranslationTable_itr->second << endl;
 	  cout << __LINE__ << "]\t" << mthn << "Hdw2: " << endl << hdwAdd << endl;
 	}
-	assert( channelTranslationTable_itr->second |= hdwAdd );
+	assert( channelTranslationTable_itr->second |= hdwAdd ); // commented out for phase1 jld 25/2/16
+	cout<<" foundChannel: channel "<<aChannel<<endl;
 	foundChannel = true;
-      }
-      else if ( channelTranslationTable_itr->first.module() == aModule ) {
+      } else if ( channelTranslationTable_itr->first.module() == aModule ) {
 	assert( channelTranslationTable_itr->second.fecnumber() == hdwAdd.fecnumber() );
 	assert( channelTranslationTable_itr->second.mfec() == hdwAdd.mfec() );
 	assert( channelTranslationTable_itr->second.mfecchannel() == hdwAdd.mfecchannel() );
 	//assert( channelTranslationTable_itr->second.portaddress() == hdwAdd.portaddress() );
 	assert( channelTranslationTable_itr->second.hubaddress() == hdwAdd.hubaddress() );
 	assert( channelTranslationTable_itr->second.fednumber() != hdwAdd.fednumber() || channelTranslationTable_itr->second.fedchannel() != hdwAdd.fedchannel() );
+	cout<<" same Channel: channel "<<aChannel<<endl;
       }
     
-    
-     
       if ( foundChannel == false ){
 	channelTranslationTable_[aChannel] = hdwAdd;
       }
@@ -378,9 +388,7 @@ PixelNameTranslation::PixelNameTranslation(std::string filename):
   while (!in.eof());
   in.close();
 
-
   const std::map<unsigned int, std::set<unsigned int> > fedsAndChannels=getFEDsAndChannels();
-
 
   std::vector<PixelROCName> tmp(24);
 
@@ -427,6 +435,9 @@ PixelNameTranslation::PixelNameTranslation(std::string filename):
     tmp.resize(counter[fednumber][fedchannel]);
 
   }
+
+  cout<<"PixelNameTranslation::  summarize tables size "<<translationtable_.size()<<" "
+      <<hdwTranslationTable_.size()<<" "<<channelTranslationTable_.size()<<endl;
 
 
 }
@@ -527,6 +538,8 @@ const bool PixelNameTranslation::checkFor(const PixelROCName& aROC) const{
 
 const PixelHdwAddress& PixelNameTranslation::getHdwAddress(const PixelChannel& aChannel) const
 {
+  std::cout<<aChannel<<std::endl;
+
   std::map<PixelChannel, PixelHdwAddress >::const_iterator channelHdwAddress_itr = channelTranslationTable_.find(aChannel);
   assert( channelHdwAddress_itr != channelTranslationTable_.end() );
   return channelHdwAddress_itr->second;
@@ -560,7 +573,10 @@ std::set< PixelChannel > PixelNameTranslation::getChannelsOnModule(const PixelMo
     {
       if ( channelTranslationTable_itr->first.module() == aModule ) returnThis.insert(channelTranslationTable_itr->first);
     }
-  assert( returnThis.size() <= 2 );
+  //cout<<" PixelNameTranslation::getChannelsOnModule "<<returnThis.size()<<endl;
+  //assert( returnThis.size() <= 2 );
+  if(returnThis.size() > 2 ) cout<<" skip assert "<<endl;
+
   return returnThis;
 }
 
@@ -662,8 +678,12 @@ PixelChannel PixelNameTranslation::ChannelFromFEDChannel(unsigned int fednumber,
 	bool foundOne = false;
 	for(std::map<PixelChannel,PixelHdwAddress>::const_iterator it=channelTranslationTable_.begin(); it!=channelTranslationTable_.end();it++)
 	{
-		if (it->second.fednumber()==fednumber && it->second.fedchannel()==fedchannel)
-		{
+	  std::cout<<it->second.fednumber()<<" "<<fednumber<<" "<<it->second.fedchannel()<<" "
+		   <<fedchannel<<" "<<it->first.modulename()<<" "<<it->first.TBMChannelString()<<" "
+		   << it->first.channelname()<<std::endl;
+
+		if (it->second.fednumber()==fednumber && it->second.fedchannel()==fedchannel) {
+		  std::cout<<" same "<<std::endl;
 			if ( foundOne )
 			{
 				std::cout << __LINE__ << "]\t" << mthn 

@@ -23,7 +23,7 @@ include $(XDAQ_ROOT)/config/mfDefs.$(XDAQ_OS)
 Project=pixel
 Package=PixelFECSupervisor
 
-Sources=PixelFECSupervisor.cc
+Sources=PixelFECSupervisor.cc DiagWrapper.cc
 
 IncludeDirs = \
         $(BUILD_HOME)/$(Project) \

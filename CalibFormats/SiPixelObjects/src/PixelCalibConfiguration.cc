@@ -494,7 +494,6 @@ PixelCalibConfiguration::PixelCalibConfiguration(std::string filename):
     assert(tmp=="Repeat:");
 
     in >> ntrigger_;
-
     in >> tmp;
 
     usesROCList_=false;
@@ -505,30 +504,24 @@ PixelCalibConfiguration::PixelCalibConfiguration(std::string filename):
     }
     else { assert(tmp=="ToCalibrate:"); buildROCListNow = false; }
 
+    cout<<" next 0 "<<endl;
     while (!in.eof())
     {
        tmp = "";
        in >> tmp;
-
-       // added by F.Blekman to be able to deal with POS245 style calib.dat files in CMSSW
-       // these files use the syntax: 
-       // Rocs:
-       // all
-
        if( tmp=="all" || tmp=="+" || tmp=="-" ){
 	 buildROCListNow=false;
        }
-       // end of addition by F.B.
-	 
        if ( tmp=="" ) continue;
        rocListInstructions_.push_back(tmp);
     }
 
     in.close();
     
+    cout<<" next 1 "<<endl;
+
     rocAndModuleListsBuilt_ = false;
-    if ( buildROCListNow )
-    {
+    if ( buildROCListNow ) {
        std::set<PixelROCName> rocSet;
        for(std::vector<std::string>::iterator rocListInstructions_itr = rocListInstructions_.begin(); rocListInstructions_itr != rocListInstructions_.end(); rocListInstructions_itr++)
        {
@@ -538,13 +531,16 @@ PixelCalibConfiguration::PixelCalibConfiguration(std::string filename):
        buildROCAndModuleListsFromROCSet(rocSet);
     }
     
+    cout<<" next 2 "<<endl;
+
     objectsDependingOnTheNameTranslationBuilt_ = false;
     
     // Added by Dario as a temporary patch for Debbie (this will disappear in the future)
+    cout<<" next 3 "<<endl;
+
     std::ifstream inTmp(filename.c_str());
     calibFileContent_ = "" ;
-    while(!inTmp.eof())
-    {
+    while(!inTmp.eof()) {
      std::string tmpString ;
      getline (inTmp, tmpString);
      calibFileContent_ += tmpString + "\n";
@@ -553,6 +549,9 @@ PixelCalibConfiguration::PixelCalibConfiguration(std::string filename):
     inTmp.close() ;
     // End of temporary patch
     
+    cout<<" next 4 "<<endl;
+
+
     return;
 
 }
@@ -934,7 +933,7 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
   if (modeName=="useAllPixel"||modeName=="")  mode=1;
   if (modeName=="default")  mode=2;
 
-//  cout << "SCANMODE IS " << modeName << " = " << mode << endl;
+  //cout << " ************ DANEK: SCANMODE IS " << modeName << " = " << mode << endl;
 
   static bool first=true;
 
@@ -976,7 +975,7 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
 #ifdef BPIX      
       const PixelChannel channel = trans->getChannelForROC(rocs_[i]);
       string tbmChannel = channel.TBMChannelString();
-      //cout<<" tbm channel "<<tbmChannel<<endl; 
+      cout<<" PixelClaibConfiguration::nextFECState - tbm channel "<<tbmChannel<<endl; 
       rocInfo.tbmChannel_ = tbmChannel;
       assert(tbmChannel == "A" || tbmChannel == "B");
 #else
@@ -1116,8 +1115,11 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
 						rocInfo_[i].defaultDACs_[j].first,
 						rocInfo_[i].defaultDACs_[j].second,
 						0);
-	}
-	else {
+	  cout<<" tbm command "<<theROC.mfec()<<" "<<theROC.mfecchannel()<<" "
+	      <<dacs_[j].tbmchannel()<<" "<<theROC.hubaddress()<<" "<<4<<" "
+	      <<rocInfo_[i].defaultDACs_[j].first<<" "<<rocInfo_[i].defaultDACs_[j].second
+	      <<endl;
+	} else {
 	  pixelFECs[theROC.fecnumber()]->progdac(theROC.mfec(),
 					       theROC.mfecchannel(),
 					       theROC.hubaddress(),
@@ -1126,6 +1128,10 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
 					       rocInfo_[i].defaultDACs_[j].first,
 					       rocInfo_[i].defaultDACs_[j].second,
 					       _bufferData);	
+	  cout<<" roc command "<<theROC.mfec()<<" "<<theROC.mfecchannel()<<" "
+	      <<theROC.hubaddress()<<" "<<theROC.portaddress()<<" "<<theROC.rocid()<<" "
+	      <<rocInfo_[i].defaultDACs_[j].first<<" "<<rocInfo_[i].defaultDACs_[j].second
+	      <<endl;
 	}
 
 	if (dacs_[j].dacchannel()==k_DACAddress_WBC) {
@@ -1196,6 +1202,7 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
       }
 
       if (dacs_[ii].isTBM()) {
+          //std::cout << "********************** HERE WE GO : " << dacs_[ii].tbmchannel() << " " << dacvalue << " " << theROC.hubaddress() << " " << dacs_[ii].dacchannel() << std::endl;;
 	pixelFECs[theROC.fecnumber()]->tbmcmd(theROC.mfec(),
 					      theROC.mfecchannel(),
 					      dacs_[ii].tbmchannel(),
@@ -1204,7 +1211,24 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
 					      dacs_[ii].dacchannel(),
 					      dacvalue,
 					      0);
-      }
+	cout<<" tbm command "<<theROC.mfec()<<" "<<theROC.mfecchannel()<<" "
+	    <<dacs_[ii].tbmchannel()<<" "<<theROC.hubaddress()<<" "<<4<<" "
+	    <<dacs_[ii].dacchannel()<<" "<<dacvalue
+	    <<endl;
+	pixelFECs[theROC.fecnumber()]->tbmcmd(theROC.mfec(),
+					      theROC.mfecchannel(),
+					      dacs_[ii].tbmchannel()+1,
+					      theROC.hubaddress(),
+					      4,
+					      dacs_[ii].dacchannel(),
+					      dacvalue,
+					      0); 
+	cout<<" tbm command "<<theROC.mfec()<<" "<<theROC.mfecchannel()<<" "
+	    <<dacs_[ii].tbmchannel()+1<<" "<<theROC.hubaddress()<<" "<<4<<" "
+	    <<dacs_[ii].dacchannel()<<" "<<dacvalue
+	    <<endl;
+
+     }
       else {
 	pixelFECs[theROC.fecnumber()]->progdac(theROC.mfec(),
 					     theROC.mfecchannel(),
@@ -1213,6 +1237,10 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
 					     theROC.rocid(),
 					     rocInfo_[i].defaultDACs_[ii].first,
 					     dacvalue,_bufferData);
+	cout<<" roc command "<<theROC.mfec()<<" "<<theROC.mfecchannel()<<" "
+	    <<theROC.hubaddress()<<" "<<theROC.portaddress()<<" "<<theROC.rocid()<<" "
+	    <<rocInfo_[i].defaultDACs_[ii].first<<" "<<dacvalue
+	    <<endl;
       }
 
       if (dacs_[ii].dacchannel()==k_DACAddress_WBC) {
@@ -1235,7 +1263,7 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
 
         if (mode==1) rocMasks=0;
 
-        //std::cout << "Will enable pixels!" <<std::endl;
+        //std::cout << " ************ DANEK: Will enable pixels!" <<std::endl;
         enablePixels(pixelFECs[theROC.fecnumber()], 
 		     i_row, 
 		     i_col, 
@@ -1266,7 +1294,11 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
 					       theROC.rocid(),
 					       0xfd,
 					       roccontrolword,_bufferData);
-	
+	cout<<" roc command "<<theROC.mfec()<<" "<<theROC.mfecchannel()<<" "
+	    <<theROC.hubaddress()<<" "<<theROC.portaddress()<<" "<<theROC.rocid()<<" "
+	    <<0xfd<<" "<<roccontrolword
+	    <<endl;
+
 
       }      
 
@@ -1276,6 +1308,8 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
 					    theROC.hubaddress(),
 					    theROC.portaddress(),
 					    theROC.rocid(),_bufferData);
+      cout<<" clrcal "<<theROC.mfec()<<" "<<theROC.mfecchannel()<<" "
+	  <<theROC.hubaddress()<<" "<<theROC.portaddress()<<" "<<theROC.rocid()<<endl;
 
       // Program the pixel pattern.
       unsigned int nrow=rows_[i_row].size();
@@ -1290,6 +1324,8 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
         unsigned int row=rows_[i_row][irow];
         unsigned int col=cols_[i_col][icol];
 
+        //std::cout << "****************** DANEK calpix: roc id " << theROC.rocid() << " col " << col << " row " << row << " hub address ";
+        //std::cout << theROC.hubaddress() << " port " << theROC.portaddress() << std::endl;
         pixelFECs[theROC.fecnumber()]->calpix(theROC.mfec(),
 					      theROC.mfecchannel(),
 					      theROC.hubaddress(),
@@ -1304,8 +1340,10 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
   } // end of loop over ROCs
 
   if (_bufferData) {
+	//cout<<" qbuf send "<<pixelFECs.size()<<endl; 
     std::map<unsigned int, PixelFECConfigInterface*>::iterator iPixelFEC=pixelFECs.begin();
     for(;iPixelFEC!=pixelFECs.end();++iPixelFEC){
+	//cout<<iPixelFEC->first<<endl;
       iPixelFEC->second->qbufsend();
     }
   }
@@ -1321,6 +1359,7 @@ void PixelCalibConfiguration::nextFECState(std::map<unsigned int, PixelFECConfig
 #ifdef BPIX
       string tbmChannel = rocInfo_[i].tbmChannel_; // get TBM channel
       if( tbmChannel=="B") tbmRegister = 15;  // for TBM=B
+      cout<<" in next "<<tbmChannel<<" "<<endl;
 #endif     
 
       pixelFECs[theROC.fecnumber()]->rocreset(theROC.mfec(),
@@ -1533,10 +1572,10 @@ void PixelCalibConfiguration::enablePixels(PixelFECConfigInterface* pixelFEC,
 
   for (unsigned int irow=0;irow<rows_[irows].size();irow++){
     for (unsigned int icol=0;icol<cols_[icols].size();icol++){
-      /*	    std::cout << "Will turn on pixel col="
+      	    std::cout << "Will turn on pixel col="
 		    <<cols_[icols][icol]
-		    <<" row="<<rows_[irows][irow]<<std::endl;
-      */
+		    <<" row="<<rows_[irows][irow]<<" roc id " << theROC.rocid() << " port address " << theROC.portaddress() << std::endl;
+      
       unsigned int bits=trims->trim(cols_[icols][icol],rows_[irows][irow]);
 
       //if masks==0 always enable pixel

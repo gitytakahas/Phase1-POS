@@ -15,6 +15,7 @@
 #include "PixelSupervisorConfiguration/include/PixelSupervisorConfiguration.h"
 
 #include "PixelUtilities/PixelTestStandUtilities/include/PixelTimer.h"
+#include "PixelCalibrations/include/DiagWrapper.h"
 
 class PixelCalibrationBase : public PixelSupervisorConfiguration, public SOAPCommander
 {
@@ -48,6 +49,16 @@ class PixelCalibrationBase : public PixelSupervisorConfiguration, public SOAPCom
   double getPercentageOfJob(){return percentageOfJob_;}
   void setPercentageOfJob(double percentageOfJob){percentageOfJob_=percentageOfJob;}
 
+  //*LC
+  DiagWrapper* diagService_;
+  static const int DIAGDEBUG = 0;
+  static const int DIAGTRACE = 1;
+  static const int DIAGUSERINFO = 2;
+  static const int DIAGINFO = 3;
+  static const int DIAGWARN = 4;
+  static const int DIAGERROR = 5;
+  static const int DIAGFATAL = 6;
+  //*LC
 
 
  protected:

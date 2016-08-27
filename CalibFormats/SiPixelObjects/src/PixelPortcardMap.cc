@@ -151,11 +151,16 @@ PixelPortcardMap::PixelPortcardMap(std::string filename):
     unsigned int aoh;
 
     in >> portcardname >> modulename >> aoh_string ;
-    if (aoh_string == "A" || aoh_string == "B") // Optionally, the TBM channel may be specified after the module name.  Check for this.
-      {
-	TBMChannel = aoh_string;
-	in >> aoh_string;
-      }
+    // Optionally, the TBM channel may be specified after the module name.  Check for this.
+    if ( (aoh_string == "A" || aoh_string == "B") || 
+         (aoh_string == "A1" || aoh_string == "A2") || 
+         (aoh_string == "B1" || aoh_string == "B2") || 
+         (aoh_string == "C1" || aoh_string == "C2") || 
+         (aoh_string == "D1" || aoh_string == "D2") ) {
+      TBMChannel = aoh_string;
+      in >> aoh_string;
+    }
+
     aoh = atoi(aoh_string.c_str());
     
     if (!in.eof() ){

@@ -12,28 +12,28 @@
 #include "CalibFormats/SiPixelObjects/interface/PixelFECConfig.h"
 #include "PixelConfigDBInterface/include/PixelConfigInterface.h"
 #include "CalibFormats/SiPixelObjects/interface/PixelDACNames.h"
-
+#include <sstream>
 //gio
-#include <diagbag/DiagBagWizard.h>
-#include "DiagCompileOptions.h"
+//#include <diagbag/DiagBagWizard.h>
+//#include "DiagCompileOptions.h"
 #include <toolbox/convertstring.h>
 
 using namespace pos;
 
 //#define USE_SEU_DETECT
+#define SETUP_TIF
 
 XDAQ_INSTANTIATOR_IMPL(PixelFECSupervisor)
 
 enum  { kProg_DACs_set, kProg_DACs_increase, kProg_DACs_decrease };
 
-PixelFECSupervisor::PixelFECSupervisor(xdaq::ApplicationStub * s) throw (xdaq::exception::Exception) : xdaq::Application(s), SOAPCommander(this), Pixelb2inCommander(this), executeReconfMethodMutex(toolbox::BSem::FULL),fsm_("urn:toolbox-task-workloop:PixelFECSupervisor")
-,phlock_(new toolbox::BSem(toolbox::BSem::FULL,true))
+PixelFECSupervisor::PixelFECSupervisor(xdaq::ApplicationStub * s) throw (xdaq::exception::Exception) : xdaq::Application(s), SOAPCommander(this), Pixelb2inCommander(this), executeReconfMethodMutex(toolbox::BSem::FULL),fsm_("urn:toolbox-task-workloop:PixelFECSupervisor"),phlock_(new toolbox::BSem(toolbox::BSem::FULL,true))
 ,workloopContinue_(false)
 {
 
   //gio
 
-  diagService_ = new DiagBagWizard(
+/*  diagService_ = new DiagBagWizard(
                                    ("ReconfigurationModule") ,
                                    this->getApplicationLogger(),
                                    getApplicationDescriptor()->getClassName(),
@@ -43,7 +43,7 @@ PixelFECSupervisor::PixelFECSupervisor(xdaq::ApplicationStub * s) throw (xdaq::e
                                    "Pixel",
                                    "FECSupervisor"
                                    );
-
+*/
   diagService_->reportError("The DiagSystem is installed --- this is a bogus error message",DIAGUSERINFO);
 
 
@@ -101,14 +101,14 @@ PixelFECSupervisor::PixelFECSupervisor(xdaq::ApplicationStub * s) throw (xdaq::e
   xgi::bind(this, &PixelFECSupervisor::ROC_XgiHandler, "ROC_XgiHandler");
 
   //DIAGNOSTIC REQUESTED CALLBACK
-  xgi::bind(this,&PixelFECSupervisor::configureDiagSystem, "configureDiagSystem");
-  xgi::bind(this,&PixelFECSupervisor::applyConfigureDiagSystem, "applyConfigureDiagSystem");
-  xgi::bind(this,&PixelFECSupervisor::callDiagSystemPage, "callDiagSystemPage");
+//  xgi::bind(this,&PixelFECSupervisor::configureDiagSystem, "configureDiagSystem");
+//  xgi::bind(this,&PixelFECSupervisor::applyConfigureDiagSystem, "applyConfigureDiagSystem");
+//  xgi::bind(this,&PixelFECSupervisor::callDiagSystemPage, "callDiagSystemPage");
 
   b2in::nub::bind(this, &PixelFECSupervisor::b2inEvent);
 
 //DIAGNOSTIC REQUESTED DECLARATION
-  DIAG_DECLARE_USER_APP
+//  DIAG_DECLARE_USER_APP
 
   // Defining the state of the State Machine
   fsm_.addState('I', "Initial", this, &PixelFECSupervisor::stateChanged);
@@ -226,7 +226,7 @@ PixelFECSupervisor::PixelFECSupervisor(xdaq::ApplicationStub * s) throw (xdaq::e
 
 //DIAGNOSTIC REQUESTED AUTOCONF TIMER
 
-  std::stringstream timerName;
+/*  std::stringstream timerName;
   timerName << getApplicationDescriptor()->getContextDescriptor()->getURL() << ":";
   timerName << getApplicationDescriptor()->getClassName() << ":" << getApplicationDescriptor()->getLocalId() << ":" << getApplicationDescriptor()->getInstance();
   toolbox::task::Timer * timer = toolbox::task::getTimerFactory()->createTimer(timerName.str());
@@ -234,7 +234,7 @@ PixelFECSupervisor::PixelFECSupervisor(xdaq::ApplicationStub * s) throw (xdaq::e
   toolbox::TimeVal start;
   start = toolbox::TimeVal::gettimeofday() + interval;
   timer->schedule( this, start,  0, "" );
-
+*/
 }
 
 PixelFECSupervisor::~PixelFECSupervisor()
@@ -249,15 +249,15 @@ PixelFECSupervisor::~PixelFECSupervisor()
 //gio
 void PixelFECSupervisor::timeExpired (toolbox::task::TimerEvent& e)
 {
-  DIAG_EXEC_FSM_INIT_TRANS
+  //DIAG_EXEC_FSM_INIT_TRANS
 }
-
+/*
 //DIAG ADDED
 void PixelFECSupervisor::callDiagSystemPage(xgi::Input * in, xgi::Output * out ) throw (xgi::exception::Exception)
 {
   diagService_->getDiagSystemHtmlPage(in, out,getApplicationDescriptor()->getURN());
 }
-
+*/
 void PixelFECSupervisor::Default (xgi::Input *in, xgi::Output *out) throw (xgi::exception::Exception)
 {
 
@@ -2557,7 +2557,7 @@ void PixelFECSupervisor::transitionHaltedToConfiguring (toolbox::Event::Referenc
     //busAdapter_ = new HAL::CAENLinuxBusAdapter(HAL::CAENLinuxBusAdapter::V2718); //optical
     cout << " busAdapter before   " << endl;
     busAdapter_  = new HAL::CAENLinuxBusAdapter(HAL::CAENLinuxBusAdapter::V2718,
-						0,0, HAL::CAENLinuxBusAdapter::A3818);
+						0,0, HAL::CAENLinuxBusAdapter::A2818);
     cout << " busAdapter after   " << endl;
     //busAdapter_ = new HAL::CAENLinuxBusAdapter(HAL::CAENLinuxBusAdapter::V1718); //usb d.k. 3/07
     diagService_->reportError("Got a CAEN Linux Bus Adapter for the FEC",DIAGTRACE);
@@ -2757,21 +2757,24 @@ xoap::MessageReference PixelFECSupervisor::Delay25Test (xoap::MessageReference m
 	parametersReceived.at(7).name_="Commands";
         Receive(msg, parametersReceived);
 
-  // turn off debug mode (we know there will be returned data errors and we do not want to print them!
-        FECInterface[atoi(parametersReceived.at(0).value_.c_str())]->fecDebug(0);
+        std::istringstream ss(parametersReceived.at(0).value_);
+        unsigned int VMEBaseAddress;
+        ss >> VMEBaseAddress;
 
+        // turn off debug mode (we know there will be returned data errors and we do not want to print them!
+        //FECInterface[atoi(parametersReceived.at(0).value_.c_str())]->fecDebug(0);
+        FECInterface[VMEBaseAddress]->fecDebug(0);
 	//int successes = 0;
 	int repeat = atoi(parametersReceived.at(6).value_.c_str());
 	int commands = atoi(parametersReceived.at(7).value_.c_str());
-
         int nSuccess0=0;
         int nSuccess1=0;
         int nSuccess2=0;
         int nSuccess3=0;
 	int nSuccess4=0;
 
-
-        FECInterface[atoi(parametersReceived.at(0).value_.c_str())]->delay25Test(atoi(parametersReceived.at(1).value_.c_str()),
+        //FECInterface[atoi(parametersReceived.at(0).value_.c_str())]->delay25Test(atoi(parametersReceived.at(1).value_.c_str()),
+        FECInterface[VMEBaseAddress]->delay25Test(atoi(parametersReceived.at(1).value_.c_str()),
                                                                                                       atoi(parametersReceived.at(2).value_.c_str()),
                                                                                                       atoi(parametersReceived.at(4).value_.c_str()),
                                                                                                       atoi(parametersReceived.at(3).value_.c_str()),
@@ -2812,9 +2815,11 @@ xoap::MessageReference PixelFECSupervisor::Prog_DAC (xoap::MessageReference msg)
         parametersReceived.at(6).name_="DACValue";
 	parametersReceived.at(7).name_="VMEBaseAddress";
 
-        Receive(msg, parametersReceived);
-
-        FECInterface[atoi(parametersReceived.at(7).value_.c_str())]->progdac(atoi(parametersReceived.at(0).value_.c_str()),
+        Receive(msg, parametersReceived);      
+        
+        //atoi does not work at UZH!
+        //FECInterface[ atoi( parametersReceived.at(7).value_.c_str() ) ]->progdac(atoi(parametersReceived.at(0).value_.c_str()),
+        FECInterface[2550136832]->progdac(atoi(parametersReceived.at(0).value_.c_str()),
 								atoi(parametersReceived.at(1).value_.c_str()),
 								atoi(parametersReceived.at(2).value_.c_str()),
 								atoi(parametersReceived.at(3).value_.c_str()),

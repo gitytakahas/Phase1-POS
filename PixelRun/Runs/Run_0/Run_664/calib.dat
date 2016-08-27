@@ -1,0 +1,25 @@
+Mode: TBMDelay
+Parameters:
+CycleFIFO2Channels        no
+DumpFIFOs        yes
+NoScanOK        yes
+ReadFifo1        no
+ReadFifo3        no
+ReadScopeFifo        no
+ReadTmpFifo        no
+ReadTransFifo        yes
+Rows:
+10 
+Cols:
+10 
+VcalHigh
+Set: Vcal 0
+Repeat:
+10
+Rocs:
+BPix_BmO_SEC1_LYR2_LDR1H_MOD1_ROC0
+
+BPix_BmO_SEC1_LYR2_LDR1H_MOD2_ROC0
+
+BPix_BmO_SEC1_LYR2_LDR1H_MOD2_ROC8
+

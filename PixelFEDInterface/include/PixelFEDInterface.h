@@ -178,6 +178,7 @@ class PixelFEDInterface {
    
   // Read fifos for each channel
   void drainDigTransFifo(const int chip, uint32_t* data);
+  void drainDigTransFifoByChannel(const int channel, uint32_t* data);
   int drainFifo1(int chan,uint32_t *data); 
   int drain_transBuffer(int chan, uint32_t *data); 
   int drainFifo1(int chnl, uint32_t *data, 
@@ -278,6 +279,22 @@ void resetEnbableBits();
 bool checkSEUCounters(int);
 bool runDegraded;
 void storeEnbableBits();
+
+//**added LC for BPIX PH1
+ void InitFitelPiggyS();
+ void InitFitelPiggyN();
+ void SetFitelFiberSwitchTopDauCard(int select_fibers);
+ void SetFitelFiberSwitchBottomDauCard(int select_fibers);
+ void SelectTransparnetChannel(int ch);
+ void SelectScopeChannel(int ch);
+ void InitDummy(); 
+ void InitDummy2();
+ void SetFIFO1Mode();
+ int drainDataChannelFifo2(int ch,uint32_t *data);
+ //void ReadTemp(uint32_t* data);
+ void ReadTemp(uint32_t* data, int channel);
+//**
+
 
  private:
 

@@ -1,0 +1,364 @@
+nohup: ignoring input
+Run xdaq with options: -p 1955 -e /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml -c ../XDAQConfiguration/XDAQ_ConfigurationUZHLabTest_TTC.xml -z pixel
+LD_LIBRARY_PATH is  /opt/xdaq/lib:/home/cmspixel/root534/lib/root:/usr/lib64/root:/usr/lib64:/home/cmspixel/ph1_TriDAS/pixel/lib:/home/cmspixel/ph1_TriDAS/DiagSystem/tools/lib:/home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/lib:/opt/xdaq/lib/
+26 Aug 2016 15:20:02.289 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59, 64bit
+26 Aug 2016 15:20:02.292 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Loaded profile: /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml
+26 Aug 2016 15:20:02.292 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - b2innub version: 02.01.00, compiled on Oct 18 2012 at 19:18:29
+26 Aug 2016 15:20:02.293 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - executive version: 03.15.04, compiled on Oct 18 2012 at 19:18:12
+26 Aug 2016 15:20:02.293 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - pthttp version: 03.15.01, compiled on Dec  4 2013 at 11:04:24
+26 Aug 2016 15:20:02.294 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - ptfifo version: 04.01.01, compiled on Oct 18 2012 at 19:17:58
+26 Aug 2016 15:20:02.294 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xrelay version: 03.09.00, compiled on Oct 18 2012 at 19:18:25
+26 Aug 2016 15:20:02.295 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - hyperdaq version: 04.01.02, compiled on Oct 18 2012 at 19:18:24
+26 Aug 2016 15:20:02.297 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - pttcp version: 02.13.03, compiled on Oct 18 2012 at 19:19:19
+26 Aug 2016 15:20:02.298 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+26 Aug 2016 15:20:02.299 [140362348996448] DEBUG pixel.ch.uzh.physik.cmspixel.p:1955 <> - Create application descriptor for class: executive::Application id: 0
+26 Aug 2016 15:20:02.300 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.executive::Application.lid(0) <> - Log URL not set (was already console)
+26 Aug 2016 15:20:02.300 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.executive::Application.lid(0) <> - Log URL not set (was already console)
+26 Aug 2016 15:20:02.302 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.executive::Application.lid(0) <> - Changed Log level to INFO
+26 Aug 2016 15:20:02.302 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.executive::Application.lid(0) <> - Changed Log level to INFO
+26 Aug 2016 15:20:02.305 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+26 Aug 2016 15:20:02.305 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+26 Aug 2016 15:20:02.305 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+26 Aug 2016 15:20:02.305 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+26 Aug 2016 15:20:02.307 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+26 Aug 2016 15:20:02.307 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+26 Aug 2016 15:20:02.340 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+26 Aug 2016 15:20:02.341 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - config version: 03.09.02, compiled on Oct 18 2012 at 19:14:13
+26 Aug 2016 15:20:02.342 [140362348996448] WARN  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/opt/xdaq/lib/liblog4cplus.so, version declaration missing.
+26 Aug 2016 15:20:02.343 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - toolbox version: 05.02.03, compiled on Oct 18 2012 at 19:14:55
+26 Aug 2016 15:20:02.353 [140362348996448] WARN  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/opt/xdaq/lib/libxalan-c.so, version declaration missing.
+26 Aug 2016 15:20:02.353 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59
+26 Aug 2016 15:20:02.353 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xdata version: 05.03.01, compiled on Oct 18 2012 at 19:16:07
+26 Aug 2016 15:20:02.354 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xgi version: 03.13.00, compiled on Oct 18 2012 at 19:16:48
+26 Aug 2016 15:20:02.354 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xoap version: 03.12.02, compiled on Oct 18 2012 at 19:15:32
+26 Aug 2016 15:20:02.354 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - xoapfilter version: 03.09.02, compiled on Oct 18 2012 at 19:15:33
+26 Aug 2016 15:20:02.607 [140362348996448] WARN  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so, version declaration missing.
+26 Aug 2016 15:20:02.609 [140362348996448] WARN  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so, version declaration missing.
+26 Aug 2016 15:20:02.613 [140362348996448] WARN  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFEDSupervisor/lib/linux/x86_64_slc6/libPixelFEDSupervisor.so, version declaration missing.
+26 Aug 2016 15:20:02.616 [140362348996448] WARN  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelSupervisor/lib/linux/x86_64_slc6/libPixelSupervisor.so, version declaration missing.
+26 Aug 2016 15:20:02.622 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - ttcttcci version: 01.07.02, compiled on Dec  4 2013 at 17:45:41
+26 Aug 2016 15:20:02.622 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - ttcutils version: 01.08.01, compiled on Dec  4 2013 at 17:43:10
+Fri Aug 26 17:20:02 2016
+ DiagWrapper Level 2: The DiagSystem is installed --- this is a bogus error message
+26 Aug 2016 15:20:02.672 [140362348996448] INFO  pixel.ch.uzh.physik.cmspixel.p:1955 <> - Ready.
+Fri Aug 26 17:22:19 2016
+ DiagWrapper Level 3: --- INITIALIZE ---
+Fri Aug 26 17:22:19 2016
+ DiagWrapper Level 3: PixelFECSupervisor::Initialize - Instance 0 of PixelSupervisor found.
+Fri Aug 26 17:22:19 2016
+ DiagWrapper Level 4: PixelFECSupervisor::Initialize - Instance 0 of PixelDCSFSMInterface not found. Automatic Detector Startup procedure will not be followed. The detector must be powered on manually.
+Fri Aug 26 17:22:19 2016
+ DiagWrapper Level 4: PixelFECSupervisor::Initialize - Instance 0 of PSX server not found. Automatic Detector Startup procedure will not check for changing currents due to ROC configuration
+Fri Aug 26 17:22:19 2016
+ DiagWrapper Level 3: PixelFECSupervisor::Intitialize -- Exiting function
+Fri Aug 26 17:22:19 2016
+ DiagWrapper Level 3: --- INITIALIZATION DONE ---
+Fri Aug 26 17:22:19 2016
+ DiagWrapper Level 1: New state is:Halted
+Fri Aug 26 17:23:59 2016
+ DiagWrapper Level 3: --- Enter preConfigure ---
+Fri Aug 26 17:23:59 2016
+ DiagWrapper Level 0: The global key is 3
+Fri Aug 26 17:23:59 2016
+ DiagWrapper Level 3: PixelFECSupervisor::preConfigure - The Global Key was received as 3
+Fri Aug 26 17:23:59 2016
+ DiagWrapper Level 3: --- Exit preConfigure ---
+242]	[PixelNameTranslation::PixelNameTranslation()]		    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//nametranslation/0/translation.dat
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+PixelNameTranslation::  summarize tables size 16 16 4
+108]	[[PixelFECConfig::PixelFECConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//fecconfig/0/fecconfig.dat
+112]	[PixelDetectorConfig::PixelDetectorConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//detconfig/0/detectconfig.dat
+129]	[PixelDetectorConfig::PixelDetectorConfig()]		    New format of detconfig
+314]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    Opened:/home/cmspixel/ph1_TriDAS/pixel/config//calib/3/calib.dat
+323]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    PixelCalibConfiguration mode=TBMDelay
+PixelCalibConfiguration: dacs to scan (1 of them):
+0: name: Vcal dacchannel: 25 isTBM: 0 values: [200 ]
+ next 0 
+ next 1 
+ next 2 
+ next 3 
+ next 4 
+ skip assert 
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ skip assert 
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Opened:/home/cmspixel/ph1_TriDAS/pixel/config//tbm/0/TBM_module_BPix_BmO_SEC1_LYR2_LDR1H_MOD4.dat
+Tag=TBMABase0:
+Tag=TBMBBase0:
+Tag=TBMAAutoReset:
+Tag=TBMBAutoReset:
+Tag=TBMANoTokenPass:
+Tag=TBMBNoTokenPass:
+Tag=TBMADisablePKAMCounter:
+Tag=TBMBDisablePKAMCounter:
+Tag=TBMAPKAMCount:
+Tag=TBMBPKAMCount:
+Tag=TBMPLLDelay:
+Tag=TBMADelay:
+Tag=TBMBDelay:
+Fri Aug 26 17:23:59 2016
+ DiagWrapper Level 0: FEC get Trims total calls: 1 total time: 0.000947  avg time: 0.000947
+Fri Aug 26 17:23:59 2016
+ DiagWrapper Level 0: FEC get Masks total calls: 1 total time: 0.000714  avg time: 0.000714
+Fri Aug 26 17:23:59 2016
+ DiagWrapper Level 0: FEC get DACs total calls : 1 total time: 0.000316  avg time: 0.000316
+Fri Aug 26 17:23:59 2016
+ DiagWrapper Level 0: FEC get TBMs total calls : 1 total time: 0.000211  avg time: 0.000211
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 3: --- CONFIGURE ---
+ transitionHaltedToConfiguring  
+ busAdapter before   
+ busAdapter after   
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 1: Got a CAEN Linux Bus Adapter for the FEC
+ skip assert 
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+FEC Crate=1 VMEAdd=0x98000000
+after read 17
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 3: [PixelFECSupervisor::transitionHaltedToConfiguring] FEC Crate=1 VMEAdd=0x98000000 read mFEC firmware version=17
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 3: Preconfiguration is finished. Starting stateConfiguring.
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 1: New state is:Configuring
+Fri Aug 26 17:24:00 2016
+ DiagWrapper Level 0: [PixelFECSupervisor::stateConfiguring] Finally we program all the TBMs, DACs, Masks and Trims.
+ skip assert 
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+PixelDACSettings::generateConfiguration HVon=1 for 16 rocs including BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+****************************************************************************
+JMT needs to fix the hardcoded magic numbers in PixelFECInterface::setAllDAC
+                           (this is the only warning)
+****************************************************************************
+JMT needs to prevent the code from trying to program dac address 5; no more warnings for this address.
+JMT needs to prevent the code from trying to program dac address 6; no more warnings for this address.
+JMT needs to prevent the code from trying to program dac address 8; no more warnings for this address.
+JMT needs to prevent the code from trying to program dac address 14; no more warnings for this address.
+JMT needs to prevent the code from trying to program dac address 15; no more warnings for this address.
+JMT needs to prevent the code from trying to program dac address 16; no more warnings for this address.
+JMT needs to prevent the code from trying to program dac address 18; no more warnings for this address.
+JMT needs to prevent the code from trying to program dac address 21; no more warnings for this address.
+JMT needs to prevent the code from trying to program dac address 23; no more warnings for this address.
+JMT needs to prevent the code from trying to program dac address 24; no more warnings for this address.
+JMT needs to prevent the code from trying to program dac address 27; no more warnings for this address.
+Fri Aug 26 17:24:04 2016
+ DiagWrapper Level 3: Total FEC time (preconfigure + configure) =4.05911
+Fri Aug 26 17:24:04 2016
+ DiagWrapper Level 0: PixelFECSupervisor::stateConfiguring: FEC config Trim+Mask total calls :1 total time:0.052132  avg time:0.052132
+Fri Aug 26 17:24:04 2016
+ DiagWrapper Level 0: PixelFECSupervisor::stateConfiguring: FEC config DAC total calls       :1 total time:0.002474  avg time:0.002474
+Fri Aug 26 17:24:04 2016
+ DiagWrapper Level 0: PixelFECSupervisor::stateConfiguring: FEC config TBM total calls       :1 total time:4.00201  avg time:4.00201
+Fri Aug 26 17:24:04 2016
+ DiagWrapper Level 1: New state is:Configured
+Fri Aug 26 17:24:23 2016
+ DiagWrapper Level 3: --- START ---
+Fri Aug 26 17:24:23 2016
+ DiagWrapper Level 3: Start Run 1690
+[PixelFECSupervisor::startupHVCheck]  total DCSFSM time = 1e-06
+Fri Aug 26 17:24:23 2016
+ DiagWrapper Level 1: New state is:Running
+941]	[PixelCalibConfiguration::nextFECState()]		    mode=1
+first time, these rocs in the scan:
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+ PixelClaibConfiguration::nextFECState - tbm channel A
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+ PixelClaibConfiguration::nextFECState - tbm channel A
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+ PixelClaibConfiguration::nextFECState - tbm channel A
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+ PixelClaibConfiguration::nextFECState - tbm channel A
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+ PixelClaibConfiguration::nextFECState - tbm channel A
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+ PixelClaibConfiguration::nextFECState - tbm channel A
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+ PixelClaibConfiguration::nextFECState - tbm channel A
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+ PixelClaibConfiguration::nextFECState - tbm channel A
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+ PixelClaibConfiguration::nextFECState - tbm channel B
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+ PixelClaibConfiguration::nextFECState - tbm channel B
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+ PixelClaibConfiguration::nextFECState - tbm channel B
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+ PixelClaibConfiguration::nextFECState - tbm channel B
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+ PixelClaibConfiguration::nextFECState - tbm channel B
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+ PixelClaibConfiguration::nextFECState - tbm channel B
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+ PixelClaibConfiguration::nextFECState - tbm channel B
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+ PixelClaibConfiguration::nextFECState - tbm channel B
+ roc command 8 1 28 0 0 25 200
+Will turn on pixel col=10 row=10 roc id 0 port address 0
+ roc command 8 1 28 0 0 253 4
+ clrcal 8 1 28 0 0
+ roc command 8 1 28 0 1 25 200
+Will turn on pixel col=10 row=10 roc id 1 port address 0
+ roc command 8 1 28 0 1 253 4
+ clrcal 8 1 28 0 1
+ roc command 8 1 28 0 2 25 200
+Will turn on pixel col=10 row=10 roc id 2 port address 0
+ roc command 8 1 28 0 2 253 4
+ clrcal 8 1 28 0 2
+ roc command 8 1 28 0 3 25 200
+Will turn on pixel col=10 row=10 roc id 3 port address 0
+ roc command 8 1 28 0 3 253 4
+ clrcal 8 1 28 0 3
+ roc command 8 1 28 1 4 25 200
+Will turn on pixel col=10 row=10 roc id 4 port address 1
+ roc command 8 1 28 1 4 253 4
+ clrcal 8 1 28 1 4
+ roc command 8 1 28 1 5 25 200
+Will turn on pixel col=10 row=10 roc id 5 port address 1
+ roc command 8 1 28 1 5 253 4
+ clrcal 8 1 28 1 5
+ roc command 8 1 28 1 6 25 200
+Will turn on pixel col=10 row=10 roc id 6 port address 1
+ roc command 8 1 28 1 6 253 4
+ clrcal 8 1 28 1 6
+ roc command 8 1 28 1 7 25 200
+Will turn on pixel col=10 row=10 roc id 7 port address 1
+ roc command 8 1 28 1 7 253 4
+ clrcal 8 1 28 1 7
+ roc command 8 1 28 2 8 25 200
+Will turn on pixel col=10 row=10 roc id 8 port address 2
+ roc command 8 1 28 2 8 253 4
+ clrcal 8 1 28 2 8
+ roc command 8 1 28 2 9 25 200
+Will turn on pixel col=10 row=10 roc id 9 port address 2
+ roc command 8 1 28 2 9 253 4
+ clrcal 8 1 28 2 9
+ roc command 8 1 28 2 10 25 200
+Will turn on pixel col=10 row=10 roc id 10 port address 2
+ roc command 8 1 28 2 10 253 4
+ clrcal 8 1 28 2 10
+ roc command 8 1 28 2 11 25 200
+Will turn on pixel col=10 row=10 roc id 11 port address 2
+ roc command 8 1 28 2 11 253 4
+ clrcal 8 1 28 2 11
+ roc command 8 1 28 3 12 25 200
+Will turn on pixel col=10 row=10 roc id 12 port address 3
+ roc command 8 1 28 3 12 253 4
+ clrcal 8 1 28 3 12
+ roc command 8 1 28 3 13 25 200
+Will turn on pixel col=10 row=10 roc id 13 port address 3
+ roc command 8 1 28 3 13 253 4
+ clrcal 8 1 28 3 13
+ roc command 8 1 28 3 14 25 200
+Will turn on pixel col=10 row=10 roc id 14 port address 3
+ roc command 8 1 28 3 14 253 4
+ clrcal 8 1 28 3 14
+ roc command 8 1 28 3 15 25 200
+Will turn on pixel col=10 row=10 roc id 15 port address 3
+ roc command 8 1 28 3 15 253 4
+ clrcal 8 1 28 3 15
+Fri Aug 26 17:30:36 2016
+ DiagWrapper Level 3: --- Enter HALT ---
+[PixelFECSupervisor::startupHVCheck]  total DCSFSM time = 2e-06
+Fri Aug 26 17:30:36 2016
+ DiagWrapper Level 3: --- Exit HALT ---
+Fri Aug 26 17:30:36 2016
+ DiagWrapper Level 1: New state is:Halted
+Terminating...

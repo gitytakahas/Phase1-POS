@@ -1,0 +1,2273 @@
+nohup: ignoring input
+Run xdaq with options: -p 1954 -e /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml -c ../XDAQConfiguration/XDAQ_ConfigurationUZHLabTest_TTC.xml -z pixel
+LD_LIBRARY_PATH is  /opt/xdaq/lib:/home/cmspixel/root534/lib/root:/usr/lib64/root:/usr/lib64:/home/cmspixel/ph1_TriDAS/pixel/lib:/home/cmspixel/ph1_TriDAS/DiagSystem/tools/lib:/home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/lib:/opt/xdaq/lib/
+25 Aug 2016 13:37:43.845 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59, 64bit
+25 Aug 2016 13:37:43.847 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - Loaded profile: /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml
+25 Aug 2016 13:37:43.847 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - b2innub version: 02.01.00, compiled on Oct 18 2012 at 19:18:29
+25 Aug 2016 13:37:43.848 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - executive version: 03.15.04, compiled on Oct 18 2012 at 19:18:12
+25 Aug 2016 13:37:43.848 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - pthttp version: 03.15.01, compiled on Dec  4 2013 at 11:04:24
+25 Aug 2016 13:37:43.848 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - ptfifo version: 04.01.01, compiled on Oct 18 2012 at 19:17:58
+25 Aug 2016 13:37:43.849 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - xrelay version: 03.09.00, compiled on Oct 18 2012 at 19:18:25
+25 Aug 2016 13:37:43.849 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - hyperdaq version: 04.01.02, compiled on Oct 18 2012 at 19:18:24
+25 Aug 2016 13:37:43.850 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - pttcp version: 02.13.03, compiled on Oct 18 2012 at 19:19:19
+25 Aug 2016 13:37:43.850 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+25 Aug 2016 13:37:43.850 [140244302636896] DEBUG pixel.ch.uzh.physik.cmspixel.p:1954 <> - Create application descriptor for class: executive::Application id: 0
+25 Aug 2016 13:37:43.852 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954.executive::Application.lid(0) <> - Log URL not set (was already console)
+25 Aug 2016 13:37:43.852 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954.executive::Application.lid(0) <> - Log URL not set (was already console)
+25 Aug 2016 13:37:43.852 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954.executive::Application.lid(0) <> - Changed Log level to INFO
+25 Aug 2016 13:37:43.852 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954.executive::Application.lid(0) <> - Changed Log level to INFO
+25 Aug 2016 13:37:43.860 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+25 Aug 2016 13:37:43.860 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+25 Aug 2016 13:37:43.860 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+25 Aug 2016 13:37:43.860 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+25 Aug 2016 13:37:43.862 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+25 Aug 2016 13:37:43.862 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+25 Aug 2016 13:37:43.893 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+25 Aug 2016 13:37:43.893 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - config version: 03.09.02, compiled on Oct 18 2012 at 19:14:13
+25 Aug 2016 13:37:43.894 [140244302636896] WARN  pixel.ch.uzh.physik.cmspixel.p:1954 <> - Could not perform version checking on module file:/opt/xdaq/lib/liblog4cplus.so, version declaration missing.
+25 Aug 2016 13:37:43.894 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - toolbox version: 05.02.03, compiled on Oct 18 2012 at 19:14:55
+25 Aug 2016 13:37:43.906 [140244302636896] WARN  pixel.ch.uzh.physik.cmspixel.p:1954 <> - Could not perform version checking on module file:/opt/xdaq/lib/libxalan-c.so, version declaration missing.
+25 Aug 2016 13:37:43.906 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59
+25 Aug 2016 13:37:43.906 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - xdata version: 05.03.01, compiled on Oct 18 2012 at 19:16:07
+25 Aug 2016 13:37:43.906 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - xgi version: 03.13.00, compiled on Oct 18 2012 at 19:16:48
+25 Aug 2016 13:37:43.906 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - xoap version: 03.12.02, compiled on Oct 18 2012 at 19:15:32
+25 Aug 2016 13:37:43.907 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - xoapfilter version: 03.09.02, compiled on Oct 18 2012 at 19:15:33
+25 Aug 2016 13:37:44.341 [140244302636896] WARN  pixel.ch.uzh.physik.cmspixel.p:1954 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so, version declaration missing.
+25 Aug 2016 13:37:44.351 [140244302636896] WARN  pixel.ch.uzh.physik.cmspixel.p:1954 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so, version declaration missing.
+25 Aug 2016 13:37:44.424 [140244302636896] WARN  pixel.ch.uzh.physik.cmspixel.p:1954 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFEDSupervisor/lib/linux/x86_64_slc6/libPixelFEDSupervisor.so, version declaration missing.
+25 Aug 2016 13:37:44.456 [140244302636896] WARN  pixel.ch.uzh.physik.cmspixel.p:1954 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelSupervisor/lib/linux/x86_64_slc6/libPixelSupervisor.so, version declaration missing.
+25 Aug 2016 13:37:44.520 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - ttcttcci version: 01.07.02, compiled on Dec  4 2013 at 17:45:41
+25 Aug 2016 13:37:44.520 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - ttcutils version: 01.08.01, compiled on Dec  4 2013 at 17:43:10
+Thu Aug 25 15:37:44 2016
+ DiagWrapper Level 2: The DiagSystem is installed --- this is a bogus error message
+25 Aug 2016 13:37:44.574 [140244302636896] INFO  pixel.ch.uzh.physik.cmspixel.p:1954 <> - Ready.
+PixelTKFECSupervisor::Initialize - Entering function
+Thu Aug 25 15:37:48 2016
+ DiagWrapper Level 3: --- INITIALIZE ---
+PixelTKFECSupervisor::Initialize - Instance 0 of PixelSupervisor found.
+PixelTKFECSupervisor::Initialize - Instance 0 of PixelDCStoTKFECInterface not found!
+PixelTKFECSupervisor::Initialize - Instance 0 of PixelDCSFSMInterface not found.Automatic Detector Startup procedure will not be followed. The detector must be powered on manually.
+Thu Aug 25 15:37:48 2016
+ DiagWrapper Level 3: --- INITIALIZATION DONE ---
+Thu Aug 25 15:37:48 2016
+ DiagWrapper Level 1: New state is:Halted
+[PixelTKFECSupervisor: entering Configure] 13:37:53 307516
+[PixelTKFECSupervisor::Configure] The Global Key was received as 3
+[PixelTKFECSupervisor: Configure -- Exit] 13:37:53 307606
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- Enter] 13:37:53 307613
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- get calib] 13:37:53 307617
+314]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    Opened:/home/cmspixel/ph1_TriDAS/pixel/config//calib/3/calib.dat
+323]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    PixelCalibConfiguration mode=TBMDelay
+PixelCalibConfiguration: dacs to scan (2 of them):
+0: name: TBMPLL dacchannel: 7 isTBM: 1 values: [0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 244 248 252 ]
+1: name: Vcal dacchannel: 25 isTBM: 0 values: [0 ]
+ next 0 
+ next 1 
+ next 2 
+ next 3 
+ next 4 
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- build ROC and module lists] 13:37:53 308201
+242]	[PixelNameTranslation::PixelNameTranslation()]		    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//nametranslation/0/translation.dat
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+PixelNameTranslation::  summarize tables size 16 16 4
+112]	[PixelDetectorConfig::PixelDetectorConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//detconfig/0/detectconfig.dat
+129]	[PixelDetectorConfig::PixelDetectorConfig()]		    New format of detconfig
+ skip assert 
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- read other files] 13:37:53 309011
+108]	[[PixelFECConfig::PixelFECConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//fecconfig/0/fecconfig.dat
+104]	[PixelTKFECConfig::PixelTKFECConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//tkfecconfig/0/tkfecconfig.dat
+134]	[PixelPortcardMap::PixelPortcardMap()]			    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//portcardmap/0/portcardmap.dat
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+[PixelConfigFile.h::get] error loading config list. 3 globaldelay25 0
+Global delay in Delay25 is not specified. Using only the default Delay25 settings.
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- done!] 13:37:53 309200
+[PixelTKFECSupervisor: stateConfiguring -- Enter] 13:37:53 309206
+Thu Aug 25 15:37:53 2016
+ DiagWrapper Level 1: New state is:Configuring
+112]	[PixelDetectorConfig::PixelDetectorConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//detconfig/0/detectconfig.dat
+129]	[PixelDetectorConfig::PixelDetectorConfig()]		    New format of detconfig
+Thu Aug 25 15:37:53 2016
+ DiagWrapper Level 1: stateConfiguring -- configure portcards
+[PixelTKFECSupervisor: stateConfiguring -- Power check finished] 13:37:53 312007
+config portcrad BPix_Bm0_SEC1_PRT1
+390]	[PixelPortCardConfig::PixelPortCardConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//portcard/0/portcard_BPix_Bm0_SEC1_PRT1.dat
+[PixelTKFECSupervisor: stateConfiguring -- after get] 13:37:53 312202
+[PixelTKFECSupervisor::stateConfiguring] Will initialize slot:21
+[PixelTKFECSupervisor: stateConfiguring -- Will create FEC access] 13:37:53 312238
+First device, will create Fec Access
+[PixelTKFECSupervisor: stateConfiguring -- After addressTable] 13:37:53 312246
+[PixelTKFECSupervisor: *********** ADDITIONAL DEBUG: Before crateFecAccess!! ***********] 13:37:53 312256
+VME FEC will be used with the file /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/config/FecAddressTable.dat
+FecVmeRingDevice::configureHardBaseAddress (after mutex): returned from createBusAdapter and busAdapter_ is 0x7f8ce800d4a0 (should not be null)
+[PixelTKFECSupervisor: *********** ADDITIONAL DEBUG: After crateFecAccess!! ***********] 13:37:53 321745
+[PixelTKFECSupervisor: stateConfiguring -- After createFecAccess] 13:37:53 321786
+[PixelTKFECSupervisor: stateConfiguring -- After carteReset] 13:37:53 321797
+[PixelTKFECSupervisor: stateConfiguring -- After speed and ack programming] 13:37:53 321818
+ Reset slot/mfec 21/8
+[PixelTKFECSupervisor: stateConfiguring -- After resetPlxFec] 13:37:53 321840
+[PixelTKFECSupervisor: stateConfiguring -- After ccuRingMap] 13:37:53 321867
+[PixelTKFECSupervisor: stateConfiguring -- Finish FecAccess part] 13:37:53 321878
+[PixelTKFECSupervisor: stateConfiguring -- Fec access done] 13:37:53 321887
+Number of portcards to configure:1
+Number of portcards to configure:1
+ Reset slot/mfec 21/8
+Will now configure portcard:
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x20
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 20
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x20
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 20 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 20
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x20, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x22
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 22
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x22
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 22 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 22
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x22, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x24
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 24
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x24
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 24 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 24
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x24, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x26
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 26
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x26
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 26 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 26
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x26, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x23
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 23
+value = 33
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x23
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 23 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 23
+value = 51
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x23, value = 0x33
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x27
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 27
+value = 33
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x27
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 27 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 27
+value = 51
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x27, value = 0x33
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x28
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 28
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x28
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 28 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 28
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x28, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2a
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2a
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2a
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2a -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2a
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2a, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2c
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2c
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2c
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2c -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2c
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2c, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2e
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2e
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2e
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2e -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2e
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2e, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2b
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2b
+value = 33
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2b
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2b -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2b
+value = 51
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2b, value = 0x33
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2f
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2f
+value = 33
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:37:53 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2f
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2f -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2f
+value = 51
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2f, value = 0x33
+read back = 0x 0
+[PixelTKFECSupervisor: stateConfiguring -- portcard done] 13:37:53 350396
+ Error in portcard config 1
+[PixelTKFECSupervisor: stateConfiguring -- configure portcards done!] 13:37:53 350410
+[PixelTKFECSupervisor: stateConfigured -- Enter] 13:37:53 350443
+Thu Aug 25 15:37:53 2016
+ DiagWrapper Level 1: New state is:Configured
+[PixelTKFECSupervisor: In Configured: done with Configure] 13:37:53 358779
+TKFEC configuration took 0.051263
+Thu Aug 25 15:38:04 2016
+ DiagWrapper Level 3: --- START
+Thu Aug 25 15:38:04 2016
+ DiagWrapper Level 3: Start Run 1677
+Thu Aug 25 15:38:04 2016
+ DiagWrapper Level 1: New state is:Running
+Thu Aug 25 15:55:02 2016
+ DiagWrapper Level 0: -- HALT --
+Thu Aug 25 15:55:02 2016
+ DiagWrapper Level 1: New state is:Halted
+[PixelTKFECSupervisor: entering Configure] 13:55:06 46009
+[PixelTKFECSupervisor::Configure] The Global Key was received as 3
+[PixelTKFECSupervisor: Configure -- Exit] 13:55:06 46071
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- Enter] 13:55:06 46078
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- get calib] 13:55:06 46082
+314]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    Opened:/home/cmspixel/ph1_TriDAS/pixel/config//calib/3/calib.dat
+323]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    PixelCalibConfiguration mode=TBMDelay
+PixelCalibConfiguration: dacs to scan (2 of them):
+0: name: TBMPLL dacchannel: 7 isTBM: 1 values: [0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 244 248 252 ]
+1: name: Vcal dacchannel: 25 isTBM: 0 values: [0 ]
+ next 0 
+ next 1 
+ next 2 
+ next 3 
+ next 4 
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- build ROC and module lists] 13:55:06 46202
+242]	[PixelNameTranslation::PixelNameTranslation()]		    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//nametranslation/0/translation.dat
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+PixelNameTranslation::  summarize tables size 16 16 4
+112]	[PixelDetectorConfig::PixelDetectorConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//detconfig/0/detectconfig.dat
+129]	[PixelDetectorConfig::PixelDetectorConfig()]		    New format of detconfig
+ skip assert 
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- read other files] 13:55:06 46740
+108]	[[PixelFECConfig::PixelFECConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//fecconfig/0/fecconfig.dat
+104]	[PixelTKFECConfig::PixelTKFECConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//tkfecconfig/0/tkfecconfig.dat
+134]	[PixelPortcardMap::PixelPortcardMap()]			    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//portcardmap/0/portcardmap.dat
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+[PixelConfigFile.h::get] error loading config list. 3 globaldelay25 0
+Global delay in Delay25 is not specified. Using only the default Delay25 settings.
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- done!] 13:55:06 46849
+[PixelTKFECSupervisor: stateConfiguring -- Enter] 13:55:06 46853
+Thu Aug 25 15:55:06 2016
+ DiagWrapper Level 1: New state is:Configuring
+112]	[PixelDetectorConfig::PixelDetectorConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//detconfig/0/detectconfig.dat
+129]	[PixelDetectorConfig::PixelDetectorConfig()]		    New format of detconfig
+Thu Aug 25 15:55:06 2016
+ DiagWrapper Level 1: stateConfiguring -- configure portcards
+[PixelTKFECSupervisor: stateConfiguring -- Power check finished] 13:55:06 49278
+config portcrad BPix_Bm0_SEC1_PRT1
+390]	[PixelPortCardConfig::PixelPortCardConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//portcard/0/portcard_BPix_Bm0_SEC1_PRT1.dat
+[PixelTKFECSupervisor: stateConfiguring -- after get] 13:55:06 49377
+[PixelTKFECSupervisor::stateConfiguring] Will initialize slot:21
+First device, Fec Access already exists
+[PixelTKFECSupervisor: stateConfiguring -- After speed and ack programming] 13:55:06 49387
+NOT RESETTING slot/mfec 21/8 since it was already done
+[PixelTKFECSupervisor: stateConfiguring -- After resetPlxFec] 13:55:06 49391
+[PixelTKFECSupervisor: stateConfiguring -- After ccuRingMap] 13:55:06 49395
+[PixelTKFECSupervisor: stateConfiguring -- Finish FecAccess part] 13:55:06 49397
+[PixelTKFECSupervisor: stateConfiguring -- Fec access done] 13:55:06 49399
+Number of portcards to configure:1
+Number of portcards to configure:1
+Will now configure portcard:
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x20
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 20
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x20
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 20 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 20
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x20, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x22
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 22
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x22
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 22 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 22
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x22, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x24
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 24
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x24
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 24 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 24
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x24, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x26
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 26
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x26
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 26 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 26
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x26, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x23
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 23
+value = 33
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x23
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 23 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 23
+value = 51
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x23, value = 0x33
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x27
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 27
+value = 33
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x27
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 27 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 27
+value = 51
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x27, value = 0x33
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x28
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 28
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x28
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 28 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 28
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x28, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2a
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2a
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2a
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2a -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2a
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2a, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2c
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2c
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2c
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2c -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2c
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2c, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2e
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2e
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2e
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2e -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2e
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2e, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2b
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2b
+value = 33
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2b
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2b -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2b
+value = 51
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2b, value = 0x33
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2f
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2f
+value = 33
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 15:55:06 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2f
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2f -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2f
+value = 51
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2f, value = 0x33
+read back = 0x 0
+[PixelTKFECSupervisor: stateConfiguring -- portcard done] 13:55:06 75786
+ Error in portcard config 1
+[PixelTKFECSupervisor: stateConfiguring -- configure portcards done!] 13:55:06 75792
+[PixelTKFECSupervisor: stateConfigured -- Enter] 13:55:06 75809
+Thu Aug 25 15:55:06 2016
+ DiagWrapper Level 1: New state is:Configured
+[PixelTKFECSupervisor: In Configured: done with Configure] 13:55:06 83439
+TKFEC configuration took 0.088693
+Thu Aug 25 15:55:33 2016
+ DiagWrapper Level 3: --- START
+Thu Aug 25 15:55:33 2016
+ DiagWrapper Level 3: Start Run 1678
+Thu Aug 25 15:55:33 2016
+ DiagWrapper Level 1: New state is:Running
+Thu Aug 25 16:24:42 2016
+ DiagWrapper Level 0: -- HALT --
+Thu Aug 25 16:24:42 2016
+ DiagWrapper Level 1: New state is:Halted
+[PixelTKFECSupervisor: entering Configure] 14:26:59 297554
+[PixelTKFECSupervisor::Configure] The Global Key was received as 22
+[PixelTKFECSupervisor: Configure -- Exit] 14:26:59 297612
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- Enter] 14:26:59 297618
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- get calib] 14:26:59 297623
+314]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    Opened:/home/cmspixel/ph1_TriDAS/pixel/config//calib/22/calib.dat
+323]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    PixelCalibConfiguration mode=ROCDelay
+PixelCalibConfiguration: dacs to scan (2 of them):
+0: name: TBMADelay dacchannel: 5 isTBM: 1 values: [63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 ]
+1: name: Vcal dacchannel: 25 isTBM: 0 values: [0 ]
+ next 0 
+ next 1 
+ next 2 
+ next 3 
+ next 4 
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- build ROC and module lists] 14:26:59 297736
+242]	[PixelNameTranslation::PixelNameTranslation()]		    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//nametranslation/0/translation.dat
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 A2
+A2
+Ch1 A2 11 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+Tr 1 B2
+B2
+Ch1 B2 13 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+PixelNameTranslation::  summarize tables size 16 16 4
+112]	[PixelDetectorConfig::PixelDetectorConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//detconfig/0/detectconfig.dat
+129]	[PixelDetectorConfig::PixelDetectorConfig()]		    New format of detconfig
+ skip assert 
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA2
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB2
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- read other files] 14:26:59 298278
+108]	[[PixelFECConfig::PixelFECConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//fecconfig/0/fecconfig.dat
+104]	[PixelTKFECConfig::PixelTKFECConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//tkfecconfig/0/tkfecconfig.dat
+134]	[PixelPortcardMap::PixelPortcardMap()]			    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//portcardmap/0/portcardmap.dat
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+[PixelConfigFile.h::get] error loading config list. 22 globaldelay25 0
+Global delay in Delay25 is not specified. Using only the default Delay25 settings.
+[PixelTKFECSupervisor: transitionHaltedToConfiguring -- done!] 14:26:59 298386
+[PixelTKFECSupervisor: stateConfiguring -- Enter] 14:26:59 298390
+Thu Aug 25 16:26:59 2016
+ DiagWrapper Level 1: New state is:Configuring
+112]	[PixelDetectorConfig::PixelDetectorConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//detconfig/0/detectconfig.dat
+129]	[PixelDetectorConfig::PixelDetectorConfig()]		    New format of detconfig
+Thu Aug 25 16:26:59 2016
+ DiagWrapper Level 1: stateConfiguring -- configure portcards
+[PixelTKFECSupervisor: stateConfiguring -- Power check finished] 14:26:59 300991
+config portcrad BPix_Bm0_SEC1_PRT1
+390]	[PixelPortCardConfig::PixelPortCardConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//portcard/0/portcard_BPix_Bm0_SEC1_PRT1.dat
+[PixelTKFECSupervisor: stateConfiguring -- after get] 14:26:59 301085
+[PixelTKFECSupervisor::stateConfiguring] Will initialize slot:21
+First device, Fec Access already exists
+[PixelTKFECSupervisor: stateConfiguring -- After speed and ack programming] 14:26:59 301095
+NOT RESETTING slot/mfec 21/8 since it was already done
+[PixelTKFECSupervisor: stateConfiguring -- After resetPlxFec] 14:26:59 301098
+[PixelTKFECSupervisor: stateConfiguring -- After ccuRingMap] 14:26:59 301102
+[PixelTKFECSupervisor: stateConfiguring -- Finish FecAccess part] 14:26:59 301104
+[PixelTKFECSupervisor: stateConfiguring -- Fec access done] 14:26:59 301105
+Number of portcards to configure:1
+Number of portcards to configure:1
+Will now configure portcard:
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x20
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 20
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x20
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 20 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 20
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x20, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x22
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 22
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x22
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 22 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 22
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x22, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x24
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 24
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x24
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 24 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 24
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x24, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x26
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 26
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x26
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 26 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 26
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x26, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x23
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 23
+value = 33
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x23
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 23 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 23
+value = 51
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x23, value = 0x33
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x27
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 27
+value = 33
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x27
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 27 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 27
+value = 51
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x27, value = 0x33
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x28
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 28
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x28
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 28 -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 28
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x28, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2a
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2a
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2a
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2a -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2a
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2a, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2c
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2c
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2c
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2c -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2c
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2c, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2e
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2e
+value = 28
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2e
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2e -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2e
+value = 40
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2e, value = 0x28
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2b
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2b
+value = 33
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2b
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2b -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2b
+value = 51
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2b, value = 0x33
+read back = 0x 0
+--------- Exception --------- write 
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2f
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDevice() --
+ring address = 8
+CCU address  = 7c
+Channel address = 11
+device address  = 2f
+value = 33
+--------- Exception ---------
+FecExceptionHandler: 
+	What: The status at the end of the frame is not correct
+	File: /home/cmspixel/ph1_TriDAS/FecSoftwareV3_0//generic/src/common/FecRingDevice.cc line: 2566
+	Method: virtual void FecRingDevice::readFrame(tscType8, tscType8*, tscType8)
+	When: Thu Aug 25 16:26:59 2016
+	Error code: 252
+	Error from the FEC high level layers
+		FEC 0x15 ring 0x8 CCU 0x7c channel 0x11 I2C address 0x2f
+		Answer status acknowledge = 0x40
+-----------------------------
+Frame empty
+Frame empty
+Frame empty
+ERROR IN: fecAddress, ringAddress, ccuAddress, channelAddress, deviceAddress, value:21 8 7c 11 2f -1
+ --------------------------------------------------
+ -- Exception caught during portcardI2CDeviceRead() --
+ring address = 8
+ CCU address = 7c
+Channel address = 11
+device address = 2f
+value = 51
+[PixelTKFECSupervisor::Configure]
+ Programming ERROR! Data read back != desired value.
+ring address=0x8 ccu address=0x7c chan=0x11 deviceAddress = 0x2f, value = 0x33
+read back = 0x 0
+[PixelTKFECSupervisor: stateConfiguring -- portcard done] 14:26:59 328169
+ Error in portcard config 1
+[PixelTKFECSupervisor: stateConfiguring -- configure portcards done!] 14:26:59 328175
+[PixelTKFECSupervisor: stateConfigured -- Enter] 14:26:59 328192
+Thu Aug 25 16:26:59 2016
+ DiagWrapper Level 1: New state is:Configured
+[PixelTKFECSupervisor: In Configured: done with Configure] 14:26:59 335918
+TKFEC configuration took 0.127057
+Thu Aug 25 16:27:10 2016
+ DiagWrapper Level 3: --- START
+Thu Aug 25 16:27:10 2016
+ DiagWrapper Level 3: Start Run 1679
+Thu Aug 25 16:27:10 2016
+ DiagWrapper Level 1: New state is:Running
+Terminating...

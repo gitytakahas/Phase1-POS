@@ -1,0 +1,25 @@
+echo this is d.ini
+sys
+fec  19
+#mfec 11 8 -6P
+mfec 19 8 +6P 
+
+#cn -6PL12
+cn +6PL12
+cn hello
+module 23
+
+# FOR MODULE N_CL_906, M_CL_913, M_LL_902, M_TT_902
+echo configuring module N_CL_906, M_CL_913, M_LL_902, M_TT_902
+
+echo tbm reset
+tbm
+#reset tbm
+disableauto
+#tbmpkamcount 5
+mode cal
+#tbmplldelay 43
+#tbmadelay 100
+#tbmbdelay 246
+
+echo done with d.ini

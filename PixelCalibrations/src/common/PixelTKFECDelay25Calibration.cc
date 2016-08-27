@@ -124,7 +124,7 @@ xoap::MessageReference PixelTKFECDelay25Calibration::execute(xoap::MessageRefere
   
   unsigned int fecnumber=module_firstHdwAddress.fecnumber();
   unsigned int feccrate=theFECConfiguration_->crateFromFECNumber(fecnumber);
-  unsigned long vmeBaseAddress=theFECConfiguration_->VMEBaseAddressFromFECNumber(fecnumber);
+  unsigned int vmeBaseAddress=theFECConfiguration_->VMEBaseAddressFromFECNumber(fecnumber);
   unsigned int mfec=module_firstHdwAddress.mfec();
   unsigned int mfecchannel=module_firstHdwAddress.mfecchannel();
   unsigned int tbmchannel=module_firstHdwAddress.fedchannel();
@@ -133,7 +133,9 @@ xoap::MessageReference PixelTKFECDelay25Calibration::execute(xoap::MessageRefere
   //printf("JMT fecnum %u feccrate %u vmeaddr %lx mfec %u mfecch %u tbmch %u hubaddr %u portaddr %u\n", fecnumber, feccrate, vmeBaseAddress, mfec, mfecchannel, tbmchannel, hubaddress, portaddress);
   //unsigned int portaddress=module_hdwaddress->portaddress();
   
-  parametersToFEC.at(0).value_=itoa(vmeBaseAddress);
+  std::stringstream ss; ss.str(""); ss << vmeBaseAddress;
+  parametersToFEC.at(0).value_= ss.str();
+  //parametersToFEC.at(0).value_= itoa(vmeBaseAddress);
   parametersToFEC.at(1).value_=itoa(mfec);
   parametersToFEC.at(2).value_=itoa(mfecchannel);
   parametersToFEC.at(3).value_=itoa(tbmchannel);
@@ -159,7 +161,7 @@ xoap::MessageReference PixelTKFECDelay25Calibration::execute(xoap::MessageRefere
       cout<<"There was a problem setting "<<"RDATA"<<endl;
       //diagService_->reportError("There was a problem setting " + parametersToTKFEC[1].value_,DIAGWARN);
     }
-    
+
     //Test communication with the FEC     
     xoap::MessageReference Delay25TestResults = SendWithSOAPReply(PixelFECSupervisors_[feccrate], "Delay25Test", parametersToFEC);
     

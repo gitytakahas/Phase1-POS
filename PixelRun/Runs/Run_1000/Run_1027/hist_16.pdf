@@ -1,0 +1,27 @@
+{
+//========= Macro generated from object: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15/BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+//========= by ROOT version5.34/18
+   
+   TH2F *BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15 = new TH2F("BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15","BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15",32,-4,252,32,-4,252);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->SetMinimum(0);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->SetMaximum(1);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->SetEntries(1024);
+
+   ci = TColor::GetColor("#000099");
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->SetLineColor(ci);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetXaxis()->SetTitle("CalDel");
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetXaxis()->SetLabelFont(42);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetXaxis()->SetLabelSize(0.035);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetXaxis()->SetTitleSize(0.035);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetXaxis()->SetTitleFont(42);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetYaxis()->SetTitle("VcThr");
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetYaxis()->SetLabelFont(42);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetYaxis()->SetLabelSize(0.035);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetYaxis()->SetTitleSize(0.035);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetYaxis()->SetTitleFont(42);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetZaxis()->SetLabelFont(42);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetZaxis()->SetLabelSize(0.035);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetZaxis()->SetTitleSize(0.035);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->GetZaxis()->SetTitleFont(42);
+   BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15->Draw("");
+}

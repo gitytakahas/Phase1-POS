@@ -24,7 +24,8 @@ PixelFEDSupervisorConfiguration::PixelFEDSupervisorConfiguration(std::string* ru
   theCalibObject_=0;
   theGlobalDelay25_=0;
   crate_=0;
-  diagService_=0;
+  //*LC
+  //diagService_=0;
   console_=0;
   workloop_=0;
   tempTransmitter_=0;
@@ -56,7 +57,8 @@ PixelFEDSupervisorConfiguration::PixelFEDSupervisorConfiguration(const PixelFEDS
   vmeBaseAddressAndFEDNumberAndChannels_ = tempConfiguration.vmeBaseAddressAndFEDNumberAndChannels_;
   
   crate_ = tempConfiguration.crate_;
-  diagService_ = tempConfiguration.diagService_;
+  //*LC
+  //diagService_ = tempConfiguration.diagService_;
 
   console_=tempConfiguration.console_;
 

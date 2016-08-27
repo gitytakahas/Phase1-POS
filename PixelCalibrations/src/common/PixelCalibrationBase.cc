@@ -87,11 +87,11 @@ void PixelCalibrationBase::runBeginCalibration(){
 	 << "will not reset ROC." << endl;
     resetROC_=false;
   }
-  //std::cout << "[PixelCalibrationBase::runBeginCalibration]: will call sendBeginCalibrationToFEDs"<<std::endl;
+  std::cout << "[PixelCalibrationBase::runBeginCalibration]: will call sendBeginCalibrationToFEDs"<<std::endl;
   sendBeginCalibrationToFEDs();  
-  //std::cout << "[PixelCalibrationBase::runBeginCalibration]: done calling sendBeginCalibrationToFEDs"<<std::endl;
+  std::cout << "[PixelCalibrationBase::runBeginCalibration]: done calling sendBeginCalibrationToFEDs"<<std::endl;
   beginCalibration();
-  //std::cout << "[PixelCalibrationBase::runBeginCalibration]: done calling beginCalibration"<<std::endl;
+  std::cout << "[PixelCalibrationBase::runBeginCalibration]: done calling beginCalibration"<<std::endl;
   
   sendTTCTBMReset();
   
@@ -349,7 +349,8 @@ void PixelCalibrationBase::enableFIFO3(){
       
       Attribute_Vector fedparameters(1);
       fedparameters[0].name_="VMEBaseAddress";
-      fedparameters[0].value_=itoa(vmeBaseAddress); //FIXME should be
+      std::stringstream ss; ss.str(""); ss << vmeBaseAddress;
+      fedparameters[0].value_=ss.str();//itoa(vmeBaseAddress); //FIXME should be
       // able to send one message to do all FEDs
       
       std::string reply;
@@ -420,7 +421,8 @@ void PixelCalibrationBase::commandToAllFEDChannels( std::string command )
 	      const unsigned int fedcrate=theFEDConfiguration_->crateFromFEDNumber(fednumber);
 	      const unsigned int fedVMEBaseAddress=theFEDConfiguration_->VMEBaseAddressFromFEDNumber(fednumber);
 	      const unsigned int fedchannel=channelHdwAddress.fedchannel();
-	      parametersToFED_command[0].value_=itoa(fedVMEBaseAddress);
+              std::stringstream ss; ss.str(""); ss << fedVMEBaseAddress;
+	      parametersToFED_command[0].value_=ss.str();//itoa(fedVMEBaseAddress);
 	      parametersToFED_command[1].value_=itoa(fedchannel);
 	     
 	      int messageID=send(PixelFEDSupervisors_[fedcrate], command, flag, parametersToFED_command);
@@ -439,7 +441,8 @@ void PixelCalibrationBase::commandToAllFEDChannels( std::string command )
 	      const unsigned int fedcrate=theFEDConfiguration_->crateFromFEDNumber(fednumber);
 	      const unsigned int fedVMEBaseAddress=theFEDConfiguration_->VMEBaseAddressFromFEDNumber(fednumber);
 	      const unsigned int fedchannel=channelHdwAddress.fedchannel();
-	      parametersToFED_command[0].value_=itoa(fedVMEBaseAddress);
+              std::stringstream ss; ss.str(""); ss << fedVMEBaseAddress;
+	      parametersToFED_command[0].value_=ss.str();//itoa(fedVMEBaseAddress);
 	      parametersToFED_command[1].value_=itoa(fedchannel);
 	  
    
@@ -468,7 +471,8 @@ void PixelCalibrationBase::setDAC(PixelROCName aROC,
   parsToFEC[5].name_="DACAddress";      parsToFEC[5].value_=itoa(dacAddress);
   parsToFEC[6].name_="DACValue";        parsToFEC[6].value_=itoa(dac);
   unsigned int vmebaseaddress=theFECConfiguration_->VMEBaseAddressFromFECNumber(hdw->fecnumber());
-  parsToFEC[7].name_="VMEBaseAddress";  parsToFEC[7].value_=itoa(vmebaseaddress);
+  std::stringstream ss; ss.str(""); ss << vmebaseaddress;
+  parsToFEC[7].name_="VMEBaseAddress";  parsToFEC[7].value_= ss.str();//itoa(vmebaseaddress);
 
   unsigned int crate=theFECConfiguration_->crateFromFECNumber(hdw->fecnumber());
 
@@ -574,7 +578,7 @@ void PixelCalibrationBase::sendToFED(std::string& action, Attribute_Vector param
 
     for(std::set<unsigned int>::iterator itr=fedcrates.begin(), itr_end=fedcrates.end(); itr!=itr_end; ++itr){
 
-      //std::cout << "[PixelCalibrationBase::sendToFED]: sending to FED "<<std::endl;      
+      //std::cout << "[PixelCalibrationBase::sendToFED]: sending to FED "<<std::endl;   
       int messageID=send(PixelFEDSupervisors_[(*itr)], action, flag, parametersToFED);
       //std::cout << "[PixelCalibrationBase::sendToFED]: done sending to FED messageID="<<messageID<<std::endl;      
       

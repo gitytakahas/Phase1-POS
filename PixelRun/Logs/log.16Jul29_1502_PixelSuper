@@ -1,0 +1,2438 @@
+nohup: ignoring input
+Run xdaq with options: -p 1953 -e /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml -c ../XDAQConfiguration/XDAQ_ConfigurationUZHLabTest_TTC.xml -z pixel
+LD_LIBRARY_PATH is  /opt/xdaq/lib:/home/cmspixel/root534/lib/root:/usr/lib64/root:/usr/lib64:/home/cmspixel/ph1_TriDAS/pixel/lib:/home/cmspixel/ph1_TriDAS/DiagSystem/tools/lib:/home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/lib:/opt/xdaq/lib/
+29 Jul 2016 13:02:46.230 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59, 64bit
+29 Jul 2016 13:02:46.233 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Loaded profile: /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml
+29 Jul 2016 13:02:46.233 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - b2innub version: 02.01.00, compiled on Oct 18 2012 at 19:18:29
+29 Jul 2016 13:02:46.234 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - executive version: 03.15.04, compiled on Oct 18 2012 at 19:18:12
+29 Jul 2016 13:02:46.234 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - pthttp version: 03.15.01, compiled on Dec  4 2013 at 11:04:24
+29 Jul 2016 13:02:46.235 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - ptfifo version: 04.01.01, compiled on Oct 18 2012 at 19:17:58
+29 Jul 2016 13:02:46.235 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xrelay version: 03.09.00, compiled on Oct 18 2012 at 19:18:25
+29 Jul 2016 13:02:46.236 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - hyperdaq version: 04.01.02, compiled on Oct 18 2012 at 19:18:24
+29 Jul 2016 13:02:46.237 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - pttcp version: 02.13.03, compiled on Oct 18 2012 at 19:19:19
+29 Jul 2016 13:02:46.237 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+29 Jul 2016 13:02:46.237 [139857898624864] DEBUG pixel.ch.uzh.physik.cmspixel.p:1953 <> - Create application descriptor for class: executive::Application id: 0
+29 Jul 2016 13:02:46.238 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Log URL not set (was already console)
+29 Jul 2016 13:02:46.238 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Log URL not set (was already console)
+29 Jul 2016 13:02:46.239 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Changed Log level to INFO
+29 Jul 2016 13:02:46.239 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Changed Log level to INFO
+29 Jul 2016 13:02:46.249 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+29 Jul 2016 13:02:46.249 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+29 Jul 2016 13:02:46.249 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+29 Jul 2016 13:02:46.249 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+29 Jul 2016 13:02:46.251 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+29 Jul 2016 13:02:46.251 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+29 Jul 2016 13:02:46.276 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+29 Jul 2016 13:02:46.276 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - config version: 03.09.02, compiled on Oct 18 2012 at 19:14:13
+29 Jul 2016 13:02:46.277 [139857898624864] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/opt/xdaq/lib/liblog4cplus.so, version declaration missing.
+29 Jul 2016 13:02:46.277 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - toolbox version: 05.02.03, compiled on Oct 18 2012 at 19:14:55
+29 Jul 2016 13:02:46.282 [139857898624864] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/opt/xdaq/lib/libxalan-c.so, version declaration missing.
+29 Jul 2016 13:02:46.283 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59
+29 Jul 2016 13:02:46.283 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xdata version: 05.03.01, compiled on Oct 18 2012 at 19:16:07
+29 Jul 2016 13:02:46.283 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xgi version: 03.13.00, compiled on Oct 18 2012 at 19:16:48
+29 Jul 2016 13:02:46.283 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xoap version: 03.12.02, compiled on Oct 18 2012 at 19:15:32
+29 Jul 2016 13:02:46.283 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xoapfilter version: 03.09.02, compiled on Oct 18 2012 at 19:15:33
+29 Jul 2016 13:02:46.446 [139857898624864] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so, version declaration missing.
+29 Jul 2016 13:02:46.447 [139857898624864] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so, version declaration missing.
+29 Jul 2016 13:02:46.449 [139857898624864] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFEDSupervisor/lib/linux/x86_64_slc6/libPixelFEDSupervisor.so, version declaration missing.
+29 Jul 2016 13:02:46.451 [139857898624864] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelSupervisor/lib/linux/x86_64_slc6/libPixelSupervisor.so, version declaration missing.
+29 Jul 2016 13:02:46.455 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - ttcttcci version: 01.07.02, compiled on Dec  4 2013 at 17:45:41
+29 Jul 2016 13:02:46.455 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - ttcutils version: 01.08.01, compiled on Dec  4 2013 at 17:43:10
+Fri Jul 29 15:02:46 2016
+ DiagWrapper Level 2: The DiagSystem is installed --- this is a bogus error message
+useTCDS is 0 ttc::TTCciControl 
+29 Jul 2016 13:02:46.507 [139857898624864] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Ready.
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 3: Entered SOAP message callback method PixelSupervisor::Initialize
+Filling bad alias list with the following aliases:
+	CRAFT09_6
+	Physics_0ns_wbc155
+	test
+...done adding bad aliases.
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 3: 1 TTCSupervisor(s) of type ttc::TTCciControl found in the "daq" group in the Configuration XML file
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 0: PixelFECSupervisor instance 1 is in FSM state Initial
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 0: PixelFEDSupervisor instance 1 is in FSM state Initial
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 0: PixelTKFECSupervisor instance 1 is in FSM state Initial
+[PixelSupervisor::Initialize] PixelTKFECSupervisor 1 has FSM state = Initial
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 4: [PixelSupervisor::Initialize] PixelDCSFSMInterface not found in the XML file.
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 4: No psxServers(s) found in the "dcs" group.
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 4: No PixelDCStoTrkFECDpInterface(s) have been found in the "dcs" group.
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 0: 0 PixelSlinkMonitor(s) found in the "daq" group.
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 4: Failed to start Job Control monitoring. Exception: Group 'jc' not found
+29 Jul 2016 13:02:50.931 [139857652020992] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Did not find RCMS state listener. Classname:RCMSStateListener Instance:0
+29 Jul 2016 13:02:50.931 [139857652020992] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Did not find RCMS state listener. Classname:RCMSStateListener Instance:0
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 3: PixelSupervisor::stateHalted: aliases and keys reloaded
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 3: PixelSupervisor::stateHalted: workloop active: 0, workloop type: waiting
+29 Jul 2016 13:02:50.932 [139857652020992] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Halted
+29 Jul 2016 13:02:50.932 [139857652020992] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Halted
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 3: Exiting SOAP message callback method PixelSupervisor::Initialize
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFEDSupervisor Instance = 1 FSMState = Halted
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFEDSupervisor instance #1 state: Halted
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelTKFECSupervisor Instance = 1 FSMState = Halted
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelTKFECSupervisor instance #1 state: Halted
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFECSupervisor Instance = 1 FSMState = Halted
+Fri Jul 29 15:02:50 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFECSupervisor instance #1 state: Halted
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 3: Entering SOAP callback for Configure.
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 3: PixelSupervisor:: Run Type = Iana
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 3: Configuration key=21
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: detconfig 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: nametranslation 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: fedconfig 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: fecconfig 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: fedcard 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: dac 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: maxvsf 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: mask 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: trim 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: calib 21
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: tbm 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: portcard 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: portcardmap 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: ttcciconfig 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: ltcconfig 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: tkfecconfig 0
+
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 0: lowvoltagemap 0
+
+112]	[PixelDetectorConfig::PixelDetectorConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//detconfig/0/detectconfig.dat
+129]	[PixelDetectorConfig::PixelDetectorConfig()]		    New format of detconfig
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 1: Retrieving Name Translation table from database... 
+242]	[PixelNameTranslation::PixelNameTranslation()]		    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//nametranslation/0/translation.dat
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB
+ channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 1: ... Name Translation table retrieved.
+314]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    Opened:/home/cmspixel/ph1_TriDAS/pixel/config//calib/21/calib.dat
+323]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    PixelCalibConfiguration mode=Iana
+PixelCalibConfiguration: dacs to scan (2 of them):
+0: name: Vana dacchannel: 2 isTBM: 0 values: [80 81 ]
+1: name: Vcal dacchannel: 25 isTBM: 0 values: [200 ]
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 1: Retrieving TKFEC Configuration Table... 
+104]	[PixelTKFECConfig::PixelTKFECConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//tkfecconfig/0/tkfecconfig.dat
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 1: ... TKFEC Configuration Table retrieved.
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 1: Retrieving PortCard Map... 
+134]	[PixelPortcardMap::PixelPortcardMap()]			    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//portcardmap/0/portcardmap.dat
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 1: ... PortCard Map retrieved.
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 1: Retrieving FEC Configuration Table... 
+108]	[[PixelFECConfig::PixelFECConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//fecconfig/0/fecconfig.dat
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 1: ... FEC Configuration Table retrieved.
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 1: Retrieving FED configuration... 
+148]	[PixelFEDConfig::PixelFEDConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//fedconfig/0/fedconfig.dat
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 1: ... FED Configuration Table retrieved.
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Entering
+ Load ttci configuration file
+74]	[PixelTKFECConfig::PixelTKFECConfig()]			    Opened : /home/cmspixel/ph1_TriDAS/pixel/config//ttcciconfig/0/TTCciConfiguration.txt
+
+THIS IS THE REPLY: TTCciControlFSMReset
+The reply, just out of curiosity, was ParameterSetResponse
+Fri Jul 29 15:02:59 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Sending SOAP messages to PixelTTCSupervisors
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs exist...
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs instance 1 has state Halted
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Sending SOAP messages to PixelTKFECSupervisor 1
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFEC not configured yet
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: Exiting SOAP callback for Configure.
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelTKFECSupervisor Instance = 1 FSMState = Configuring
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelTKFECSupervisor instance #1 state: Configuring
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelTKFECSupervisor Instance = 1 FSMState = Configured
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Entering
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs exist...
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs instance 1 has state Configured
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FECs exist...
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FEC instance 1 has state Halted
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: ixelSupervisor::stateConfiguring: Sending SOAP messages to PixelFECSupervisor 
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] Cannot proceed to Configured because PixelFECSupervisor instance 1 is not Configured yet.
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FEDs exist...
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FED instance 1 has state Halted
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Sending SOAP messages to PixelFEDSupervisor 1
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Received SOAP reply from PixelFEDSupervisors
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] Cannot proceed to Configured because PixelFEDSupervisor instance 1 is not Configured yet.
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Exiting
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelTKFECSupervisor instance #1 state: Configured
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFECSupervisor Instance = 1 FSMState = Configuring
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFECSupervisor instance #1 state: Configuring
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFEDSupervisor Instance = 1 FSMState = Configuring
+Fri Jul 29 15:03:00 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFEDSupervisor instance #1 state: Configuring
+Fri Jul 29 15:03:04 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Fri Jul 29 15:03:04 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFECSupervisor Instance = 1 FSMState = Configured
+Fri Jul 29 15:03:04 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Entering
+Fri Jul 29 15:03:04 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs exist...
+Fri Jul 29 15:03:04 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs instance 1 has state Configured
+Fri Jul 29 15:03:04 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FECs exist...
+Fri Jul 29 15:03:04 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FEC instance 1 has state Configured
+Fri Jul 29 15:03:04 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FEDs exist...
+Fri Jul 29 15:03:04 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FED instance 1 has state Configuring
+Fri Jul 29 15:03:04 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] Cannot proceed to Configured because PixelFEDSupervisor instance 1 is not Configured yet.
+Fri Jul 29 15:03:04 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Exiting
+Fri Jul 29 15:03:04 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFECSupervisor instance #1 state: Configured
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFEDSupervisor Instance = 1 FSMState = Configured
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Entering
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs exist...
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs instance 1 has state Configured
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FECs exist...
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FEC instance 1 has state Configured
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FEDs exist...
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FED instance 1 has state Configured
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguration: TTC configuration time  :0
+29 Jul 2016 13:03:07.087 [139857652020992] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Configured
+29 Jul 2016 13:03:07.087 [139857652020992] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Configured
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 2: Total configuration time [files] = 7.69486
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 0: PixelSupervisor::stateConfigured: workloop active: 0, workloop type: waiting
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Exiting
+Fri Jul 29 15:03:07 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFEDSupervisor instance #1 state: Configured
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 3: Entering transition START
+[PixelSupervisorConfiguration::setupOutputDir] outputDir_=/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1608 does not exist. Will create
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 3: Start Run 1608
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 5: We are about to send Start to PixelSlinkMonitor
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 6: PixelSupervisor::stateRunning psxServers_.size()=0
+Expect to have exactly one psxServer in configuration.
+Greetings from the PixelCalibrationBase copy constructor.
+Greetings from the PixelIanaCalibration copy constructor.
+[PixelConfigDataUpdates::print()] npaths=0
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 3: [PixelSupervisor::Start]: Calib job submitted to the workloop.
+[PixelCalibrationBase::runBeginCalibration] theCalibObject_ = 0x7f32fc023190
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 3: PixelSupervisor::Start: Calib workloop activated.
+[PixelCalibrationBase::runBeginCalibration]: will call sendBeginCalibrationToFEDs
+29 Jul 2016 13:03:10.738 [139857652020992] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Running
+29 Jul 2016 13:03:10.738 [139857652020992] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Running
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 3: PixelSupervisor::stateRunning: workloop active: 1, workloop type: waiting
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 3: Exiting transition START
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFECSupervisor Instance = 1 FSMState = Running
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFECSupervisor instance #1 state: Running
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelTKFECSupervisor Instance = 1 FSMState = Running
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelTKFECSupervisor instance #1 state: Running
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFEDSupervisor Instance = 1 FSMState = Running
+Fri Jul 29 15:03:10 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFEDSupervisor instance #1 state: Running
+[PixelCalibrationBase::runBeginCalibration]: done calling sendBeginCalibrationToFEDs
+[PixelCalibrationBase::runBeginCalibration]: done calling beginCalibration
+Iana: 0% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 6.2% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 12% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 19% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 25% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 31% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 38% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 44% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 50% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 56% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 62% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 69% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 75% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 81% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 88% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Iana: 94% complete
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14
+Will set Vana = 80
+Selected ROC: BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15
+Will set Vana = 80
+Fri Jul 29 15:03:15 2016
+ DiagWrapper Level 3: PixelSupervisor::stateDone:  Calib workloop cancelled.
+Fri Jul 29 15:03:15 2016
+ DiagWrapper Level 3: PixelSupervisor::stateDone: workloop active: 0, workloop type: waiting
+Terminating...

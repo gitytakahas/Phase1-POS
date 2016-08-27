@@ -38,15 +38,18 @@
 #include "xgi/Utils.h"
 #include "cgicc/HTMLClasses.h"
 
-#include <diagbag/DiagBagWizard.h>
-#include "DiagCompileOptions.h"
+// #include <diagbag/DiagBagWizard.h>
+// #include "DiagCompileOptions.h"
+#include "PixelFECSupervisor/include/DiagWrapper.h"
 
 #include "toolbox/task/Timer.h"
 #include "toolbox/task/TimerFactory.h"
 #include "toolbox/task/TimerListener.h"
 #include "toolbox/TimeInterval.h"
 #include "toolbox/BSem.h"
-
+#include "toolbox/task/WorkLoopFactory.h"
+#include "toolbox/task/WaitingWorkLoop.h"
+#include "toolbox/task/Action.h"
 
 
 #include "toolbox/fsm/AsynchronousFiniteStateMachine.h"
@@ -101,7 +104,7 @@ class PixelFECSupervisor: public xdaq::Application, public SOAPCommander, public
 
     // gio
     toolbox::BSem executeReconfMethodMutex;
-    DiagBagWizard * diagService_;
+    //DiagBagWizard * diagService_;
     //
 
     XDAQ_INSTANTIATOR();
@@ -290,11 +293,20 @@ class PixelFECSupervisor: public xdaq::Application, public SOAPCommander, public
 
     vector<string> tbmReadbackBadChannels_;
 #endif
-    void DIAG_CONFIGURE_CALLBACK();
-    void DIAG_APPLY_CALLBACK();
+    //void DIAG_CONFIGURE_CALLBACK();
+    //void DIAG_APPLY_CALLBACK();
 
     /* xgi method called when the link <display_diagsystem> is clicked */
-    void callDiagSystemPage(xgi::Input * in, xgi::Output * out ) throw (xgi::exception::Exception);
+    //void callDiagSystemPage(xgi::Input * in, xgi::Output * out ) throw (xgi::exception::Exception);
+
+    DiagWrapper* diagService_;
+    static const int DIAGDEBUG = 0;
+static const int DIAGTRACE = 1;
+	    static const int DIAGUSERINFO = 2;
+	    static const int DIAGINFO = 3;
+	    static const int DIAGWARN = 4;
+	    static const int DIAGERROR = 5;
+	    static const int DIAGFATAL = 6;
 
 };
 #endif

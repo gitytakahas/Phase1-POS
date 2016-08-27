@@ -5,6 +5,7 @@
 //#include <toolbox/convertstring.h>
 
 using namespace pos;
+using namespace std;
 
 PixelTBMDelayCalibration::PixelTBMDelayCalibration(const PixelSupervisorConfiguration & tempConfiguration, SOAPCommander* mySOAPCmdr)
   : PixelCalibrationBase(tempConfiguration, *mySOAPCmdr)
@@ -30,6 +31,7 @@ void PixelTBMDelayCalibration::beginCalibration() {
   CycleScopeChannels = tempCalibObject->parameterValue("CycleScopeChannels") == "yes";
   DelayBeforeFirstTrigger = tempCalibObject->parameterValue("DelayBeforeFirstTrigger") == "yes";
   DelayEveryTrigger = tempCalibObject->parameterValue("DelayEveryTrigger") == "yes";
+  
 }
 
 bool PixelTBMDelayCalibration::execute() {
@@ -51,6 +53,7 @@ bool PixelTBMDelayCalibration::execute() {
     const int which = em36 / 9;
     const int channel = em36 % 9;
     std::cout << "fiddling with SetScopeChannel event_ = " << event_ << " % 36 = " << em36 << " which = " << which << " channel = " << channel << std::endl;
+
     Attribute_Vector parametersToFED(2);
     parametersToFED[0].name_ = "Which"; parametersToFED[0].value_ = itoa(which);
     parametersToFED[1].name_ = "Ch";    parametersToFED[1].value_ = itoa(channel);
@@ -87,6 +90,7 @@ void PixelTBMDelayCalibration::endCalibration() {
   parametersToFED[0].name_ = "WhatToDo"; parametersToFED[0].value_ = "Analyze";
   parametersToFED[1].name_ = "StateNum"; parametersToFED[1].value_ = "0";
   commandToAllFEDCrates("FEDCalibrations", parametersToFED);
+
 }
 
 std::vector<std::string> PixelTBMDelayCalibration::calibrated() {

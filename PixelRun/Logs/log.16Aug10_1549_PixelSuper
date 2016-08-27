@@ -1,0 +1,473 @@
+nohup: ignoring input
+Run xdaq with options: -p 1953 -e /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml -c ../XDAQConfiguration/XDAQ_ConfigurationUZHLabTest_TTC.xml -z pixel
+LD_LIBRARY_PATH is  /opt/xdaq/lib:/home/cmspixel/root534/lib/root:/usr/lib64/root:/usr/lib64:/home/cmspixel/ph1_TriDAS/pixel/lib:/home/cmspixel/ph1_TriDAS/DiagSystem/tools/lib:/home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/lib:/opt/xdaq/lib/
+10 Aug 2016 13:49:07.134 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59, 64bit
+10 Aug 2016 13:49:07.136 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Loaded profile: /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml
+10 Aug 2016 13:49:07.136 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - b2innub version: 02.01.00, compiled on Oct 18 2012 at 19:18:29
+10 Aug 2016 13:49:07.137 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - executive version: 03.15.04, compiled on Oct 18 2012 at 19:18:12
+10 Aug 2016 13:49:07.138 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - pthttp version: 03.15.01, compiled on Dec  4 2013 at 11:04:24
+10 Aug 2016 13:49:07.138 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - ptfifo version: 04.01.01, compiled on Oct 18 2012 at 19:17:58
+10 Aug 2016 13:49:07.139 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xrelay version: 03.09.00, compiled on Oct 18 2012 at 19:18:25
+10 Aug 2016 13:49:07.140 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - hyperdaq version: 04.01.02, compiled on Oct 18 2012 at 19:18:24
+10 Aug 2016 13:49:07.140 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - pttcp version: 02.13.03, compiled on Oct 18 2012 at 19:19:19
+10 Aug 2016 13:49:07.141 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+10 Aug 2016 13:49:07.141 [140498729641824] DEBUG pixel.ch.uzh.physik.cmspixel.p:1953 <> - Create application descriptor for class: executive::Application id: 0
+10 Aug 2016 13:49:07.142 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Log URL not set (was already console)
+10 Aug 2016 13:49:07.142 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Log URL not set (was already console)
+10 Aug 2016 13:49:07.142 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Changed Log level to INFO
+10 Aug 2016 13:49:07.142 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.executive::Application.lid(0) <> - Changed Log level to INFO
+10 Aug 2016 13:49:07.149 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+10 Aug 2016 13:49:07.149 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+10 Aug 2016 13:49:07.150 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+10 Aug 2016 13:49:07.150 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+10 Aug 2016 13:49:07.152 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+10 Aug 2016 13:49:07.152 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+10 Aug 2016 13:49:07.179 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+10 Aug 2016 13:49:07.180 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - config version: 03.09.02, compiled on Oct 18 2012 at 19:14:13
+10 Aug 2016 13:49:07.181 [140498729641824] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/opt/xdaq/lib/liblog4cplus.so, version declaration missing.
+10 Aug 2016 13:49:07.182 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - toolbox version: 05.02.03, compiled on Oct 18 2012 at 19:14:55
+10 Aug 2016 13:49:07.200 [140498729641824] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/opt/xdaq/lib/libxalan-c.so, version declaration missing.
+10 Aug 2016 13:49:07.200 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59
+10 Aug 2016 13:49:07.200 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xdata version: 05.03.01, compiled on Oct 18 2012 at 19:16:07
+10 Aug 2016 13:49:07.200 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xgi version: 03.13.00, compiled on Oct 18 2012 at 19:16:48
+10 Aug 2016 13:49:07.201 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xoap version: 03.12.02, compiled on Oct 18 2012 at 19:15:32
+10 Aug 2016 13:49:07.201 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - xoapfilter version: 03.09.02, compiled on Oct 18 2012 at 19:15:33
+10 Aug 2016 13:49:07.460 [140498729641824] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so, version declaration missing.
+10 Aug 2016 13:49:07.461 [140498729641824] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so, version declaration missing.
+10 Aug 2016 13:49:07.465 [140498729641824] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFEDSupervisor/lib/linux/x86_64_slc6/libPixelFEDSupervisor.so, version declaration missing.
+10 Aug 2016 13:49:07.468 [140498729641824] WARN  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelSupervisor/lib/linux/x86_64_slc6/libPixelSupervisor.so, version declaration missing.
+10 Aug 2016 13:49:07.476 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - ttcttcci version: 01.07.02, compiled on Dec  4 2013 at 17:45:41
+10 Aug 2016 13:49:07.477 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - ttcutils version: 01.08.01, compiled on Dec  4 2013 at 17:43:10
+Wed Aug 10 15:49:07 2016
+ DiagWrapper Level 2: The DiagSystem is installed --- this is a bogus error message
+useTCDS is 0 ttc::TTCciControl 
+10 Aug 2016 13:49:07.526 [140498729641824] INFO  pixel.ch.uzh.physik.cmspixel.p:1953 <> - Ready.
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 3: Entered SOAP message callback method PixelSupervisor::Initialize
+Filling bad alias list with the following aliases:
+	CRAFT09_6
+	Physics_0ns_wbc155
+	test
+...done adding bad aliases.
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 3: 1 TTCSupervisor(s) of type ttc::TTCciControl found in the "daq" group in the Configuration XML file
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 0: PixelFECSupervisor instance 1 is in FSM state Initial
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 0: PixelFEDSupervisor instance 1 is in FSM state Initial
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 0: PixelTKFECSupervisor instance 1 is in FSM state Initial
+[PixelSupervisor::Initialize] PixelTKFECSupervisor 1 has FSM state = Initial
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 4: [PixelSupervisor::Initialize] PixelDCSFSMInterface not found in the XML file.
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 4: No psxServers(s) found in the "dcs" group.
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 4: No PixelDCStoTrkFECDpInterface(s) have been found in the "dcs" group.
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 0: 0 PixelSlinkMonitor(s) found in the "daq" group.
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 4: Failed to start Job Control monitoring. Exception: Group 'jc' not found
+10 Aug 2016 13:49:10.941 [140498363168512] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Did not find RCMS state listener. Classname:RCMSStateListener Instance:0
+10 Aug 2016 13:49:10.941 [140498363168512] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Did not find RCMS state listener. Classname:RCMSStateListener Instance:0
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 3: PixelSupervisor::stateHalted: aliases and keys reloaded
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 3: PixelSupervisor::stateHalted: workloop active: 0, workloop type: waiting
+10 Aug 2016 13:49:10.941 [140498363168512] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Halted
+10 Aug 2016 13:49:10.941 [140498363168512] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Halted
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 3: Exiting SOAP message callback method PixelSupervisor::Initialize
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFEDSupervisor Instance = 1 FSMState = Halted
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFEDSupervisor instance #1 state: Halted
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelTKFECSupervisor Instance = 1 FSMState = Halted
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelTKFECSupervisor instance #1 state: Halted
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFECSupervisor Instance = 1 FSMState = Halted
+Wed Aug 10 15:49:10 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFECSupervisor instance #1 state: Halted
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 3: Entering SOAP callback for Configure.
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 3: PixelSupervisor:: Run Type = Iana
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 3: Configuration key=21
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: detconfig 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: nametranslation 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: fedconfig 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: fecconfig 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: fedcard 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: dac 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: maxvsf 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: mask 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: trim 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: calib 21
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: tbm 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: portcard 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: portcardmap 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: ttcciconfig 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: ltcconfig 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: tkfecconfig 0
+
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 0: lowvoltagemap 0
+
+112]	[PixelDetectorConfig::PixelDetectorConfig()]		    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//detconfig/0/detectconfig.dat
+129]	[PixelDetectorConfig::PixelDetectorConfig()]		    New format of detconfig
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 1: Retrieving Name Translation table from database... 
+242]	[PixelNameTranslation::PixelNameTranslation()]		    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//nametranslation/0/translation.dat
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 A1
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Tr 1 B1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Tr2 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+ foundChannel: channel BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+PixelNameTranslation::  summarize tables size 16 16 2
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 1: ... Name Translation table retrieved.
+314]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    Opened:/home/cmspixel/ph1_TriDAS/pixel/config//calib/21/calib.dat
+323]	[PixelCalibConfiguration::PixelCalibConfiguration()]	    PixelCalibConfiguration mode=Iana
+PixelCalibConfiguration: dacs to scan (2 of them):
+0: name: Vana dacchannel: 2 isTBM: 0 values: [0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180 185 190 195 200 205 210 215 220 225 230 235 240 245 250 255 ]
+1: name: Vcal dacchannel: 25 isTBM: 0 values: [200 ]
+ next 0 
+ next 1 
+ next 2 
+ next 3 
+ next 4 
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 1: Retrieving TKFEC Configuration Table... 
+104]	[PixelTKFECConfig::PixelTKFECConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//tkfecconfig/0/tkfecconfig.dat
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 1: ... TKFEC Configuration Table retrieved.
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 1: Retrieving PortCard Map... 
+134]	[PixelPortcardMap::PixelPortcardMap()]			    Reading from: /home/cmspixel/ph1_TriDAS/pixel/config//portcardmap/0/portcardmap.dat
+A1
+Ch1 A1 10 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 A1
+B1
+Ch1 B1 12 1
+ pixelchannel1 BPix_BmO_SEC1_LYR2_LDR1H_MOD4 B1
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 1: ... PortCard Map retrieved.
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 1: Retrieving FEC Configuration Table... 
+108]	[[PixelFECConfig::PixelFECConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//fecconfig/0/fecconfig.dat
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 1: ... FEC Configuration Table retrieved.
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 1: Retrieving FED configuration... 
+148]	[PixelFEDConfig::PixelFEDConfig()]			    Opened: /home/cmspixel/ph1_TriDAS/pixel/config//fedconfig/0/fedconfig.dat
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 1: ... FED Configuration Table retrieved.
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Entering
+ Load ttci configuration file
+74]	[PixelTKFECConfig::PixelTKFECConfig()]			    Opened : /home/cmspixel/ph1_TriDAS/pixel/config//ttcciconfig/0/TTCciConfiguration.txt
+
+THIS IS THE REPLY: TTCciControlFSMReset
+The reply, just out of curiosity, was ParameterSetResponse
+Wed Aug 10 15:49:13 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Sending SOAP messages to PixelTTCSupervisors
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs exist...
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs instance 1 has state Halted
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Sending SOAP messages to PixelTKFECSupervisor 1
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFEC not configured yet
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: Exiting SOAP callback for Configure.
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelTKFECSupervisor Instance = 1 FSMState = Configuring
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelTKFECSupervisor instance #1 state: Configuring
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelTKFECSupervisor Instance = 1 FSMState = Configured
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Entering
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs exist...
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs instance 1 has state Configured
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FECs exist...
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FEC instance 1 has state Halted
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: ixelSupervisor::stateConfiguring: Sending SOAP messages to PixelFECSupervisor 
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] Cannot proceed to Configured because PixelFECSupervisor instance 1 is not Configured yet.
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FEDs exist...
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FED instance 1 has state Halted
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Sending SOAP messages to PixelFEDSupervisor 1
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Received SOAP reply from PixelFEDSupervisors
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] Cannot proceed to Configured because PixelFEDSupervisor instance 1 is not Configured yet.
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Exiting
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelTKFECSupervisor instance #1 state: Configured
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFECSupervisor Instance = 1 FSMState = Configuring
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFECSupervisor instance #1 state: Configuring
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFEDSupervisor Instance = 1 FSMState = Configuring
+Wed Aug 10 15:49:14 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFEDSupervisor instance #1 state: Configuring
+Wed Aug 10 15:49:18 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 15:49:18 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFECSupervisor Instance = 1 FSMState = Configured
+Wed Aug 10 15:49:18 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Entering
+Wed Aug 10 15:49:18 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs exist...
+Wed Aug 10 15:49:18 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs instance 1 has state Configured
+Wed Aug 10 15:49:18 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FECs exist...
+Wed Aug 10 15:49:18 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FEC instance 1 has state Configured
+Wed Aug 10 15:49:18 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FEDs exist...
+Wed Aug 10 15:49:18 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FED instance 1 has state Configuring
+Wed Aug 10 15:49:18 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] Cannot proceed to Configured because PixelFEDSupervisor instance 1 is not Configured yet.
+Wed Aug 10 15:49:18 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Exiting
+Wed Aug 10 15:49:18 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFECSupervisor instance #1 state: Configured
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFEDSupervisor Instance = 1 FSMState = Configured
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Entering
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs exist...
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] TKFECs instance 1 has state Configured
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FECs exist...
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FEC instance 1 has state Configured
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FEDs exist...
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 3: [PixelSupervisor::stateConfiguring] FED instance 1 has state Configured
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguration: TTC configuration time  :0
+10 Aug 2016 13:49:21.015 [140498363168512] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Configured
+10 Aug 2016 13:49:21.015 [140498363168512] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Configured
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 2: Total configuration time [files] = 7.70198
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 0: PixelSupervisor::stateConfigured: workloop active: 0, workloop type: waiting
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 3: PixelSupervisor::stateConfiguring: Exiting
+Wed Aug 10 15:49:21 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFEDSupervisor instance #1 state: Configured
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 3: Entering transition START
+[PixelSupervisorConfiguration::setupOutputDir] outputDir_=/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1639 does not exist. Will create
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 3: Start Run 1639
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 5: We are about to send Start to PixelSlinkMonitor
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 6: PixelSupervisor::stateRunning psxServers_.size()=0
+Expect to have exactly one psxServer in configuration.
+Greetings from the PixelCalibrationBase copy constructor.
+Greetings from the PixelIanaCalibration copy constructor.
+[PixelConfigDataUpdates::print()] npaths=0
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 3: [PixelSupervisor::Start]: Calib job submitted to the workloop.
+[PixelCalibrationBase::runBeginCalibration] theCalibObject_ = 0x7fc8300231a0
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 3: PixelSupervisor::Start: Calib workloop activated.
+[PixelCalibrationBase::runBeginCalibration]: will call sendBeginCalibrationToFEDs
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+10 Aug 2016 13:49:24.165 [140498363168512] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Running
+10 Aug 2016 13:49:24.165 [140498363168512] WARN  pixel.ch.uzh.physik.cmspixel.p:1953.PixelSupervisor.instance(0).RcmsStateNotifier <> - Unable to notify state change. RCMS state listener has not been found. Has findRcmsStateListener() been called at least once? State:Running
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 3: PixelSupervisor::stateRunning: workloop active: 1, workloop type: waiting
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 3: Exiting transition START
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelTKFECSupervisor Instance = 1 FSMState = Running
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelTKFECSupervisor instance #1 state: Running
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFECSupervisor Instance = 1 FSMState = Running
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFECSupervisor instance #1 state: Running
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 1: Entering SOAP callback for FSMStateNotification.
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 3: [PixelSupervisor::FSMStateNotification] Supervisor = PixelFEDSupervisor Instance = 1 FSMState = Running
+Wed Aug 10 15:49:24 2016
+ DiagWrapper Level 1: Exiting SOAP callback for FSMStateNotification for supervisor PixelFEDSupervisor instance #1 state: Running
+[PixelCalibrationBase::runBeginCalibration]: done calling sendBeginCalibrationToFEDs
+[PixelCalibrationBase::runBeginCalibration]: done calling beginCalibration
+Iana: 0% complete
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chA1
+BPix_BmO_SEC1_LYR2_LDR1H_MOD4_chB1
+Terminating...

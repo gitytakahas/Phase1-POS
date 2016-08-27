@@ -33,7 +33,7 @@
 #include "xercesc/dom/DOMNodeList.hpp"
 #include "xercesc/dom/DOMNode.hpp"
 
-#include <diagbag/DiagBagWizard.h>
+//#include <diagbag/DiagBagWizard.h>
 
 #include "PixelUtilities/PixelGUIUtilities/include/HTML2XGI.h"
 #include "PixelUtilities/PixelDCSUtilities/include/PixelDCSPVSSDpe.h"
@@ -95,7 +95,7 @@ PixelDCSFSMInterface::PixelDCSFSMInterface(xdaq::ApplicationStub* s) throw (xdaq
   : xdaq::Application(s), SOAPCommander(this), executeReconfMethodMutex(toolbox::BSem::FULL),fsm_("urn:toolbox-task-workloop:PixelDCSFSMInterface")
 {
 
-  diagService_ = new DiagBagWizard(("ReconfigurationModule") ,
+  /*diagService_ = new DiagBagWizard(("ReconfigurationModule") ,
 				   this->getApplicationLogger(),
 				   getApplicationDescriptor()->getClassName(),
 				   getApplicationDescriptor()->getInstance(),
@@ -105,7 +105,7 @@ PixelDCSFSMInterface::PixelDCSFSMInterface(xdaq::ApplicationStub* s) throw (xdaq
 				   "MYSUBSYTSTEM"
 				   );
   
-  diagService_->reportError("The DiagSystem is installed --- this is a bogus error message",DIAGUSERINFO);
+  diagService_->reportError("The DiagSystem is installed --- this is a bogus error message",DIAGUSERINFO);*/
 
   // A SOAP callback used for generic handshaking by retrieving the FSM state
   xoap::bind(this, &PixelDCSFSMInterface::FSMStateRequest, "FSMStateRequest", XDAQ_NS_URI);
@@ -195,7 +195,7 @@ PixelDCSFSMInterface::PixelDCSFSMInterface(xdaq::ApplicationStub* s) throw (xdaq
   smiCommander_ = new PixelDCSSMICommander(this, smiDescriptor);
 
    //diagsystem
-  DIAG_DECLARE_USER_APP
+  /*DIAG_DECLARE_USER_APP
    std::stringstream timerName;
    timerName << getApplicationDescriptor()->getContextDescriptor()->getURL() << ":";
    timerName << getApplicationDescriptor()->getClassName() << ":" << getApplicationDescriptor()->getLocalId() << ":" << getApplicationDescriptor()->getInstance();
@@ -203,7 +203,7 @@ PixelDCSFSMInterface::PixelDCSFSMInterface(xdaq::ApplicationStub* s) throw (xdaq
    toolbox::TimeInterval interval(AUTO_UP_CONFIGURE_DELAY,0);
    toolbox::TimeVal start;
    start = toolbox::TimeVal::gettimeofday() + interval;
-   timer->schedule( this, start,  0, "" );
+   timer->schedule( this, start,  0, "" );*/
    
 }
 
@@ -218,10 +218,10 @@ PixelDCSFSMInterface::~PixelDCSFSMInterface()
 }
 
 //diagsystem
-void PixelDCSFSMInterface::timeExpired (toolbox::task::TimerEvent& e)
+/*void PixelDCSFSMInterface::timeExpired (toolbox::task::TimerEvent& e)
 {
   DIAG_EXEC_FSM_INIT_TRANS
-}
+}*/
 
 xoap::MessageReference PixelDCSFSMInterface::FSMStateRequest (xoap::MessageReference msg) throw (xoap::exception::Exception)
 {

@@ -43,6 +43,18 @@
 #include "toolbox/fsm/FiniteStateMachine.h"
 #include "toolbox/fsm/FailedEvent.h"
 
+#include "toolbox/fsm/AsynchronousFiniteStateMachine.h"
+#include "toolbox/fsm/FailedEvent.h"
+#include "toolbox/exception/Handler.h"
+#include "toolbox/Event.h"
+
+#include "toolbox/task/WorkLoopFactory.h"
+#include "toolbox/task/WaitingWorkLoop.h"
+#include "toolbox/task/Action.h"
+#include "toolbox/lang/Class.h"
+#include "toolbox/net/URN.h"
+#include "toolbox/BSem.h"
+
 #include "xdaq2rc/RcmsStateNotifier.h"
 
 //#include "unistd.h"
@@ -54,8 +66,10 @@
 #include "PixelCalibrations/include/PixelCalibrationBase.h"
 
 // gio
-#include "diagbag/DiagBagWizard.h"
-#include "DiagCompileOptions.h"
+//*LC
+/* #include "diagbag/DiagBagWizard.h" */
+/* #include "DiagCompileOptions.h" */
+#include "PixelSupervisor/include/DiagWrapper.h"
 
 #include "toolbox/exception/Handler.h"
 #include "toolbox/Event.h"
@@ -71,7 +85,7 @@
 class PixelConfigDataUpdates;
 class PixelJobControlMonitor;
 
-class PixelSupervisor: public xdaq::Application, public PixelSupervisorConfiguration, public SOAPCommander, public toolbox::task::TimerListener
+class PixelSupervisor: public xdaq::Application, public PixelSupervisorConfiguration, public SOAPCommander//, public toolbox::task::TimerListener
 {
  public:
 
@@ -85,7 +99,7 @@ class PixelSupervisor: public xdaq::Application, public PixelSupervisorConfigura
   ~PixelSupervisor(){};
 
   //gio
-  void timeExpired (toolbox::task::TimerEvent& e);
+  //void timeExpired (toolbox::task::TimerEvent& e);
   //
 
   void Default(xgi::Input *in, xgi::Output *out) throw (xgi::exception::Exception);
@@ -315,15 +329,24 @@ class PixelSupervisor: public xdaq::Application, public PixelSupervisorConfigura
 
   void ClearErrors(std::string which);
 
-  void DIAG_CONFIGURE_CALLBACK();
-  void DIAG_APPLY_CALLBACK();
+  //void DIAG_CONFIGURE_CALLBACK();
+  //void DIAG_APPLY_CALLBACK();
 
   /* xgi method called when the link <display_diagsystem> is clicked */
-  void callDiagSystemPage(xgi::Input * in, xgi::Output * out ) throw (xgi::exception::Exception);
+  //void callDiagSystemPage(xgi::Input * in, xgi::Output * out ) throw (xgi::exception::Exception);
 
   bool extratimers_;
   PixelTimer configurationTimer_;
   bool runNumberFromLastFile_; 
+
+  DiagWrapper* diagService_;
+  static const int DIAGDEBUG = 0;
+  static const int DIAGTRACE = 1;
+  static const int DIAGUSERINFO = 2;
+  static const int DIAGINFO = 3;
+  static const int DIAGWARN = 4;
+  static const int DIAGERROR = 5;
+  static const int DIAGFATAL = 6;
 
 };
 

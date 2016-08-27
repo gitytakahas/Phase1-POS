@@ -33,7 +33,7 @@ Project=pixel
 Package=PixelFEDSupervisor
 
 #Give the framework the sources for compilation
-Sources= PixelFEDSupervisor.cc 
+Sources= PixelFEDSupervisor.cc DiagWrapper.cc
 
 #Include directories
 IncludeDirs = \

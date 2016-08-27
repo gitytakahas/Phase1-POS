@@ -1,0 +1,17 @@
+Mode: ROCDelay
+Parameters:
+DumpFIFOs        no
+ReadFifo1        yes
+ReadFifo3        no
+Rows:
+
+Cols:
+
+VcalHigh
+Scan: TBMADelay 63 127 1
+Set: Vcal 200
+Repeat:
+100
+Rocs:
+all
+

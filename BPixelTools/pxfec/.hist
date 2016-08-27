@@ -1,0 +1,423 @@
+readA
+readB
+readA
+readB
+reset
+tbm reset tbm
+readA
+readB
+exec data/d.ini
+readA
+module 15
+cn scan hubs
+readA
+tbm
+readA
+readB
+tbm disableauto
+readA
+readB
+exit
+tbm
+readA
+readB
+exit
+readA
+module 15
+tbm
+readA
+readB
+module 31
+tbm
+readA
+module 15
+tbm
+readA
+cn scan hubs
+module 15
+tbm
+readA
+readB
+readA
+readB
+exit
+tbm
+readA
+readB
+cn scan hubs
+readA
+readB
+readA
+readB
+exec data/d.ini
+module 15
+tbm
+readA
+readB
+tbm disable triggers
+readA
+readB
+cn scan hubs
+readA
+readB
+readA
+exec data/d.ini
+module 15
+cn scan hubs
+readA
+tbm
+readA
+readB
+module 15
+tb,
+tbm
+readA
+module 15
+cn scan hubs
+readA
+tbm
+readA
+readB
+readA
+readB
+cn scan hubs
+readA
+readB
+cn scan hubs
+readA
+readB
+cn scan hubs
+readA
+readB
+cn scan hubs
+readA
+readB
+readA
+module 15
+cn scan hubs
+readA
+tbvm
+tbm
+readA
+readB
+exec data/d.ini
+module 15
+tbm readA
+tbm readB
+cn scan hubs
+tbm readA
+tbm readB
+cn scan hubs
+tbm readA
+tbm readB
+cn scan hubs
+tbm readA
+tbm readB
+tbm disable triggers
+readA
+tbm readA
+tbm readB
+tbm reset tbm
+readA
+tbm readA
+tbm readB
+cn scan hubs
+tbm readA
+tbm readB
+cn scan hubs
+tbm readA
+tbm readB
+exit
+module 15
+cn scan hubs
+tbm readA
+tbm readB
+tbm
+readA
+readB
+tbm disableauto
+readA
+readB
+tbm disable triggers
+readA
+readB
+exec data/d.ini
+readA
+module 15
+tbm readA
+tbm readB
+exit
+module 15
+cn scan hubs
+tbm
+readA
+readB
+exit
+tbm
+cn scan hubs
+readA
+readB
+exec data/d.ini
+tbm
+readA
+readB
+exit
+tbm
+cn scan hubs
+readA
+readB
+exit
+cn scan hubs
+tbm
+readA
+readB
+exit
+cn scan hubs
+tbm
+readA
+tbm readB
+exit
+cn scan hubs
+readA
+readB
+tbm disableauto
+readA
+readB
+exit
+cn scan hubs
+readA
+readB
+disableauto
+readA
+exit
+cn scan hubs
+readA
+readB
+exit
+readA
+readB
+readA
+readB
+module 31
+tbm disable triggers
+tbm enable triggers
+exit
+cn scan hubs
+exit
+cn scan hubs
+readA
+module 31
+tbm readA
+readB
+tnm readB
+tbm readB
+tbm
+readA
+readB
+exec data/d.ini
+module 31
+tbm
+readA
+readB
+module 15
+tbm
+readA
+readB
+readA
+readB
+module 31
+tbm
+readA
+readB
+readA
+readB
+module 15
+tbm
+readA
+readB
+module 31
+tbm
+readA
+cn scan hubs
+module 31
+tbm
+readA
+cn scan hubs
+module 31
+readA
+tbm readA
+readA
+readB
+readA
+readB
+module 31
+readA
+tbm readA
+tbm readB
+module 15
+tbm readA
+tbm readB
+tbm readA
+tbm readB
+module 31
+tbm readA
+tbm readB
+tbm readA
+tbm readB
+module 15
+tbm readA
+tbm readB
+tbm readA
+tbm readB
+module 31
+tbm readA
+tbm readB
+tbm
+readA
+readB
+module 15
+tbm readA
+tbm readB
+tbm readA
+tbm readB
+module 31
+tbm readA
+tbm readB
+tbm
+readA
+readB
+readA
+readB
+readA
+readB
+readA
+readB
+readA
+readB
+module 15
+readA
+tbm
+readA
+readB
+readA
+readB
+module 31
+tbm
+readA
+readB
+readA
+readB
+readA
+readB
+readA
+readB
+module 15
+tbm
+readA
+readB
+exit
+module 30
+readA
+tbm
+readA
+readB
+module 15
+tbm
+readA
+readB
+module 31
+module 30
+tbm
+readA
+readB
+readA
+module 30
+readA
+tbm
+readA
+readB
+readA
+module 30
+readA
+tbm
+readA
+readB
+cn scan hubs
+readA
+readB
+module 15
+tbm
+readA
+readB
+readA
+module 15
+readA
+tbm
+readA
+readB
+module 30
+readA
+tbm
+readA
+module 30
+tbm
+readA
+cn scan hubs
+module 30
+readA
+tbm readA
+tbm readB
+readA
+tbm readA
+tbm readB
+tbm readA
+module 30
+tbm readA
+tbm readB
+cn scan hubs
+tbm
+readA
+readB
+module 15
+tbm readA
+tbm readB
+tbm
+readA
+readB
+module 30
+tbm
+readA
+readB
+cn scan hubs
+readA
+readB
+module 15
+tbm
+readA
+readB
+tbmadelay 100
+readA
+tbmbdelay
+tbmbdelay 100
+readB
+tbm disable triggers
+readA
+readB
+cn scan hubs
+readA
+readB
+module 3
+roc 8
+unmask
+mask
+arm 10 10
+exit
+module 3
+roc 8
+arm 10 10
+exec data/d.ini
+cn scan hubs
+Vana 0
+Vana 255
+exec data/d.ini
+exit

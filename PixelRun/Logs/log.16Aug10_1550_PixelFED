@@ -1,0 +1,48 @@
+nohup: ignoring input
+Run xdaq with options: -p 1956 -e /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml -c ../XDAQConfiguration/XDAQ_ConfigurationUZHLabTest_TTC.xml -z pixel
+LD_LIBRARY_PATH is  /opt/xdaq/lib:/home/cmspixel/root534/lib/root:/usr/lib64/root:/usr/lib64:/home/cmspixel/ph1_TriDAS/pixel/lib:/home/cmspixel/ph1_TriDAS/DiagSystem/tools/lib:/home/cmspixel/ph1_TriDAS/FecSoftwareV3_0/lib:/opt/xdaq/lib/
+10 Aug 2016 13:50:54.494 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59, 64bit
+10 Aug 2016 13:50:54.496 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Loaded profile: /home/cmspixel/ph1_TriDAS/pixel/XDAQConfiguration/Profile.xml
+10 Aug 2016 13:50:54.501 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - b2innub version: 02.01.00, compiled on Oct 18 2012 at 19:18:29
+10 Aug 2016 13:50:54.513 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - executive version: 03.15.04, compiled on Oct 18 2012 at 19:18:12
+10 Aug 2016 13:50:54.520 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - pthttp version: 03.15.01, compiled on Dec  4 2013 at 11:04:24
+10 Aug 2016 13:50:54.527 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - ptfifo version: 04.01.01, compiled on Oct 18 2012 at 19:17:58
+10 Aug 2016 13:50:54.535 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xrelay version: 03.09.00, compiled on Oct 18 2012 at 19:18:25
+10 Aug 2016 13:50:54.540 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - hyperdaq version: 04.01.02, compiled on Oct 18 2012 at 19:18:24
+10 Aug 2016 13:50:54.540 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - pttcp version: 02.13.03, compiled on Oct 18 2012 at 19:19:19
+10 Aug 2016 13:50:54.541 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+10 Aug 2016 13:50:54.541 [140366055774048] DEBUG pixel.ch.uzh.physik.cmspixel.p:1956 <> - Create application descriptor for class: executive::Application id: 0
+10 Aug 2016 13:50:54.542 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.executive::Application.lid(0) <> - Log URL not set (was already console)
+10 Aug 2016 13:50:54.542 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.executive::Application.lid(0) <> - Log URL not set (was already console)
+10 Aug 2016 13:50:54.542 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.executive::Application.lid(0) <> - Changed Log level to INFO
+10 Aug 2016 13:50:54.542 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.executive::Application.lid(0) <> - Changed Log level to INFO
+10 Aug 2016 13:50:54.547 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+10 Aug 2016 13:50:54.547 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.pt::tcp::PeerTransportTCP.lid(20) <> - stop receiver and sender threads
+10 Aug 2016 13:50:54.547 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+10 Aug 2016 13:50:54.547 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.pt::tcp::PeerTransportTCP.lid(20) <> - start receiver and sender threads
+10 Aug 2016 13:50:54.549 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+10 Aug 2016 13:50:54.549 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.pt::http::PeerTransportHTTP.lid(1) <> - No security policies on this server
+10 Aug 2016 13:50:54.592 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - b2inutils version: 04.01.00, compiled on May 30 2013 at 11:18:25
+10 Aug 2016 13:50:54.592 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - config version: 03.09.02, compiled on Oct 18 2012 at 19:14:13
+10 Aug 2016 13:50:54.592 [140366055774048] WARN  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/opt/xdaq/lib/liblog4cplus.so, version declaration missing.
+10 Aug 2016 13:50:54.592 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - toolbox version: 05.02.03, compiled on Oct 18 2012 at 19:14:55
+10 Aug 2016 13:50:54.597 [140366055774048] WARN  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/opt/xdaq/lib/libxalan-c.so, version declaration missing.
+10 Aug 2016 13:50:54.597 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xdaq version: 03.35.00, compiled on Oct 18 2012 at 19:16:59
+10 Aug 2016 13:50:54.597 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xdata version: 05.03.01, compiled on Oct 18 2012 at 19:16:07
+10 Aug 2016 13:50:54.597 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xgi version: 03.13.00, compiled on Oct 18 2012 at 19:16:48
+10 Aug 2016 13:50:54.598 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xoap version: 03.12.02, compiled on Oct 18 2012 at 19:15:32
+10 Aug 2016 13:50:54.598 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - xoapfilter version: 03.09.02, compiled on Oct 18 2012 at 19:15:33
+10 Aug 2016 13:50:55.079 [140366055774048] WARN  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelTKFECSupervisor/lib/linux/x86_64_slc6/libPixelTKFECSupervisor.so, version declaration missing.
+10 Aug 2016 13:50:55.081 [140366055774048] WARN  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFECSupervisor/lib/linux/x86_64_slc6/libPixelFECSupervisor.so, version declaration missing.
+10 Aug 2016 13:50:55.085 [140366055774048] WARN  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelFEDSupervisor/lib/linux/x86_64_slc6/libPixelFEDSupervisor.so, version declaration missing.
+10 Aug 2016 13:50:55.088 [140366055774048] WARN  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Could not perform version checking on module file:/home/cmspixel/ph1_TriDAS/pixel/PixelSupervisor/lib/linux/x86_64_slc6/libPixelSupervisor.so, version declaration missing.
+10 Aug 2016 13:50:55.135 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - ttcttcci version: 01.07.02, compiled on Dec  4 2013 at 17:45:41
+10 Aug 2016 13:50:55.136 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - ttcutils version: 01.08.01, compiled on Dec  4 2013 at 17:43:10
+Wed Aug 10 15:50:55 2016
+ DiagWrapper Level 2: The DiagSystem is installed --- this is a bogus error message
+InfoSpace was created
+10 Aug 2016 13:50:55.153 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCXDAQBase::actionPerformed for event type 'ItemChangedEvent', item 'Configuration'
+10 Aug 2016 13:50:55.153 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - Found '[file=...]' in XML variable 'Configuration' --> using file '/home/cmspixel/run/TTC/TTCciConfiguration.txt' for configuration.
+10 Aug 2016 13:50:55.153 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956.ttc::TTCciControl.instance(0)TTCciControl <> - TTCXDAQBase::actionPerformed for event type 'urn:xdaq-event:setDefaultValues'
+10 Aug 2016 13:50:55.192 [140366055774048] INFO  pixel.ch.uzh.physik.cmspixel.p:1956 <> - Ready.
+Terminating...

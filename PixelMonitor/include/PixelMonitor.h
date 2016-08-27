@@ -55,10 +55,11 @@
 
 
 /* Libraries for interfacing with DIAGSYSTEM */
-#include "diagbag/DiagBagWizard.h"
-#include "DiagCompileOptions.h"
-#include "toolbox/convertstring.h"
-#include "toolbox/BSem.h"
+//*LC
+/* #include "diagbag/DiagBagWizard.h" */
+/* #include "DiagCompileOptions.h" */
+/* #include "toolbox/convertstring.h" */
+/* #include "toolbox/BSem.h" */
 #include "iomanip"
 #include "toolbox/task/Timer.h"
 #include "toolbox/task/TimerFactory.h"
@@ -163,13 +164,14 @@ class PixelMonitor: public xdaq::Application, public toolbox::task::TimerListene
   PixelMonitor(xdaq::ApplicationStub * s) throw (xdaq::exception::Exception);	
 
   /* Used for sending error messages to diagnostic system */
-  DiagBagWizard  * diagService_; //FIXME:  might need to be private
+  //*LC
+  /* DiagBagWizard  * diagService_; //FIXME:  might need to be private */
 
-  void DIAG_CONFIGURE_CALLBACK();
-  void DIAG_APPLY_CALLBACK();
-  DIAG_FREELCLSEM_CALLBACK();
-  DIAG_FREEGLBSEM_CALLBACK();
-  DIAG_REQUEST_ENTRYPOINT(); 
+  /* void DIAG_CONFIGURE_CALLBACK(); */
+  /* void DIAG_APPLY_CALLBACK(); */
+  /* DIAG_FREELCLSEM_CALLBACK(); */
+  /* DIAG_FREEGLBSEM_CALLBACK(); */
+  /* DIAG_REQUEST_ENTRYPOINT();  */
 
 
   // Activated when timer is triggered. 

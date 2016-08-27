@@ -1,0 +1,16 @@
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC0.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC1.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC2.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC3.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC4.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC5.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC6.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC7.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC8.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC9.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC10.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC11.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC12.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC13.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC14.dat
+/home/cmspixel/ph1_TriDAS/pixel/PixelRun/Runs/Run_1000/Run_1027/ThrCalDelScan_BPix_BmO_SEC1_LYR2_LDR1H_MOD4_ROC15.dat

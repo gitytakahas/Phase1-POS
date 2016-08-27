@@ -1839,6 +1839,9 @@ int PixelFECInterface::progpix1(int mfec, int fecchannel,
   unsigned int ch1stat, ch2stat;
   int current, i, ndata;
 
+  //cout << "PROGPIX1, hubaddress:"<<hubaddress<<" portaddress:"
+   //<<portaddress<<" rocid:"<<rocid<<" "<<coladdr<<" "<<rowaddress<<" "<<hex<<dec<<" "<<buffermode<<endl;
+
   if (buffermode) {
 
     if (PRINT) cout<<"progpix1 buffered mask and trim"<<endl;
@@ -1990,7 +1993,7 @@ int PixelFECInterface::progpix(int mfec, int fecchannel,
   //unsigned int nnn = (unsigned int) databyte;
   //if(hubaddress==4 && rocid==0 && coladdr==0 && rowaddress==0) 
   //cout << "PROGPIX, hubaddress:"<<hubaddress<<" portaddress:"
-  // <<portaddress<<" rocid:"<<rocid<<" "<<coladdr<<" "<<rowaddress<<" "<<hex<<nnn<<dec<<" "<<buffermode<<endl;
+   //<<portaddress<<" rocid:"<<rocid<<" "<<coladdr<<" "<<rowaddress<<" "<<hex<<dec<<" "<<buffermode<<endl;
 
   if (buffermode) {
     if (PRINT) cout<<"progpix buffered databyte"<<endl;
@@ -2138,6 +2141,8 @@ int PixelFECInterface::calpix(int mfec, int fecchannel,
   unsigned int ch1stat, ch2stat;
   unsigned char coltemp0, coltemp1, coltemp2;
 
+    //cout << "CALPIX ROC CMD: mfec:"<<dec<<mfec<<" fecchannel:"<<fecchannel<<" hubaddress:"<<hubaddress<<" portaddress:"<<portaddress<<" rocid:"<<rocid<<" caldata:"<<caldata<<" buffermode " << buffermode << endl;
+
   if (buffermode) {
     if (PRINT) cout << "CALPIX ROC CMD: mfec:"<<dec<<mfec<<" fecchannel:"<<fecchannel<<" hubaddress:"<<hubaddress<<" portaddress:"<<portaddress<<" rocid:"<<rocid<<" caldata:"<<caldata<<endl;
     
@@ -2276,6 +2281,8 @@ int PixelFECInterface::dcolenable(int mfec, int fecchannel,
   int current, i, ndata;
   unsigned int ch1stat, ch2stat;
   unsigned char coltemp0;
+
+    //cout << "dcol CMD: mfec:"<<mfec<<" fecchannel:"<<fecchannel<<" hubaddress:"<<hubaddress<<" portaddress:"<<portaddress<<" rocid:"<<rocid<<" dcol:"<<dcol<<" dcolstate:"<<dcolstate<< " buffermode " << buffermode << endl;
 
   if (buffermode) {
     if (PRINT) cout << "dcol CMD: mfec:"<<mfec<<" fecchannel:"<<fecchannel<<" hubaddress:"<<hubaddress<<" portaddress:"<<portaddress<<" rocid:"<<rocid<<" dcol:"<<dcol<<" dcolstate:"<<dcolstate<<endl;
